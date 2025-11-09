@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pea": {
+      "conditions": {
+        "items": [
+          {
+            "items": "diversitydelight:pea"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "diversitydelight:pea_crate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pea"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "diversitydelight:pea_crate"
+    ]
+  }
+}

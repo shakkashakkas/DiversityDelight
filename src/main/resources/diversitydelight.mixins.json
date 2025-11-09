@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.shakkas.diversitydelight.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ItemRendererMixIn"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

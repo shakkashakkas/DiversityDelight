@@ -1,0 +1,29 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "farmersdelight:chicken_cuts"
+    },
+    {
+      "item": "farmersdelight:chicken_cuts"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "diversitydelight:celery"
+    },
+    {
+      "item": "diversitydelight:pea_seeds"
+    },
+    {
+      "item": "diversitydelight:pea_seeds"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "diversitydelight:buffalo_wings"
+  }
+}

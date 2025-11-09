@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "diversitydelight:chili"
+    },
+    {
+      "item": "diversitydelight:chili"
+    },
+    {
+      "item": "diversitydelight:bell_pepper"
+    },
+    {
+      "item": "farmersdelight:apple_cider"
+    },
+    {
+      "item": "farmersdelight:onion"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "diversitydelight:hot_sauce"
+  }
+}

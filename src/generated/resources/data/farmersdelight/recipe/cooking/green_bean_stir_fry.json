@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "c:crops/green_bean"
+    },
+    {
+      "tag": "c:crops/green_bean"
+    },
+    {
+      "tag": "c:crops/chili"
+    },
+    {
+      "tag": "c:crops/onion"
+    },
+    {
+      "item": "farmersdelight:ham"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "diversitydelight:green_bean_stir_fry"
+  }
+}

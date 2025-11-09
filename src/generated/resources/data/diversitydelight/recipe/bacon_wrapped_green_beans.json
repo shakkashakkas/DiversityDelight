@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "diversitydelight:green_bean"
+    },
+    {
+      "item": "diversitydelight:green_bean"
+    },
+    {
+      "item": "diversitydelight:green_bean"
+    },
+    {
+      "item": "farmersdelight:cooked_bacon"
+    },
+    {
+      "item": "farmersdelight:cooked_bacon"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "diversitydelight:bacon_wrapped_green_beans"
+  }
+}

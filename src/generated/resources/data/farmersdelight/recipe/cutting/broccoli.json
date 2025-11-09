@@ -1,0 +1,19 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "diversitydelight:broccoli"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "diversitydelight:broccoli_floret"
+      }
+    }
+  ],
+  "tool": {
+    "tag": "c:tools/knife"
+  }
+}

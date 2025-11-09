@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '2.0.116'
+    id 'net.neoforged.moddev' version '2.0.105'
     id 'idea'
 }
 
@@ -185,4 +185,12 @@ idea {
         downloadSources = true
         downloadJavadoc = true
     }
+}
+
+repositories {
+    maven { url = "https://www.cursemaven.com" }
+}
+
+dependencies {
+    implementation "curse.maven:farmers-delight-398521:6154807"
 }

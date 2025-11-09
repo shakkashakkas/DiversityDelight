@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_chili_crate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "diversitydelight:chili_crate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "diversitydelight:chili_from_crate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_chili_crate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "diversitydelight:chili_from_crate"
+    ]
+  }
+}

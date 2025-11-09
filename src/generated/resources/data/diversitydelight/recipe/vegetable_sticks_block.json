@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "diversitydelight:celery"
+    },
+    {
+      "item": "diversitydelight:bell_pepper"
+    },
+    {
+      "item": "diversitydelight:pea_seeds"
+    },
+    {
+      "item": "diversitydelight:pea_seeds"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "diversitydelight:vegetable_sticks_block"
+  }
+}

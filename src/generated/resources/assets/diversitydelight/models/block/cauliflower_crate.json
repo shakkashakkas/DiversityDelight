@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "diversitydelight:block/crate_bottom",
+    "side": "diversitydelight:block/cauliflower_crate_side",
+    "top": "diversitydelight:block/cauliflower_crate_top"
+  }
+}

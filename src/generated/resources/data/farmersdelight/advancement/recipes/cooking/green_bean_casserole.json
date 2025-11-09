@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_bean": {
+      "conditions": {
+        "items": [
+          {
+            "items": "diversitydelight:green_bean"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "farmersdelight:cooking/green_bean_casserole"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_bean"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "farmersdelight:cooking/green_bean_casserole"
+    ]
+  }
+}

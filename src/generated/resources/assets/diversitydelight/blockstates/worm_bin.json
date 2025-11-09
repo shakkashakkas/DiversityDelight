@@ -1,0 +1,139 @@
+{
+  "variants": {
+    "facing=east,level=0": {
+      "model": "diversitydelight:block/worm_bin_contents0",
+      "y": 90
+    },
+    "facing=east,level=1": {
+      "model": "diversitydelight:block/worm_bin_contents1",
+      "y": 90
+    },
+    "facing=east,level=2": {
+      "model": "diversitydelight:block/worm_bin_contents2",
+      "y": 90
+    },
+    "facing=east,level=3": {
+      "model": "diversitydelight:block/worm_bin_contents3",
+      "y": 90
+    },
+    "facing=east,level=4": {
+      "model": "diversitydelight:block/worm_bin_contents4",
+      "y": 90
+    },
+    "facing=east,level=5": {
+      "model": "diversitydelight:block/worm_bin_contents5",
+      "y": 90
+    },
+    "facing=east,level=6": {
+      "model": "diversitydelight:block/worm_bin_contents6",
+      "y": 90
+    },
+    "facing=east,level=7": {
+      "model": "diversitydelight:block/worm_bin_contents7",
+      "y": 90
+    },
+    "facing=east,level=8": {
+      "model": "diversitydelight:block/worm_bin_contents8",
+      "y": 90
+    },
+    "facing=north,level=0": {
+      "model": "diversitydelight:block/worm_bin_contents0"
+    },
+    "facing=north,level=1": {
+      "model": "diversitydelight:block/worm_bin_contents1"
+    },
+    "facing=north,level=2": {
+      "model": "diversitydelight:block/worm_bin_contents2"
+    },
+    "facing=north,level=3": {
+      "model": "diversitydelight:block/worm_bin_contents3"
+    },
+    "facing=north,level=4": {
+      "model": "diversitydelight:block/worm_bin_contents4"
+    },
+    "facing=north,level=5": {
+      "model": "diversitydelight:block/worm_bin_contents5"
+    },
+    "facing=north,level=6": {
+      "model": "diversitydelight:block/worm_bin_contents6"
+    },
+    "facing=north,level=7": {
+      "model": "diversitydelight:block/worm_bin_contents7"
+    },
+    "facing=north,level=8": {
+      "model": "diversitydelight:block/worm_bin_contents8"
+    },
+    "facing=south,level=0": {
+      "model": "diversitydelight:block/worm_bin_contents0",
+      "y": 180
+    },
+    "facing=south,level=1": {
+      "model": "diversitydelight:block/worm_bin_contents1",
+      "y": 180
+    },
+    "facing=south,level=2": {
+      "model": "diversitydelight:block/worm_bin_contents2",
+      "y": 180
+    },
+    "facing=south,level=3": {
+      "model": "diversitydelight:block/worm_bin_contents3",
+      "y": 180
+    },
+    "facing=south,level=4": {
+      "model": "diversitydelight:block/worm_bin_contents4",
+      "y": 180
+    },
+    "facing=south,level=5": {
+      "model": "diversitydelight:block/worm_bin_contents5",
+      "y": 180
+    },
+    "facing=south,level=6": {
+      "model": "diversitydelight:block/worm_bin_contents6",
+      "y": 180
+    },
+    "facing=south,level=7": {
+      "model": "diversitydelight:block/worm_bin_contents7",
+      "y": 180
+    },
+    "facing=south,level=8": {
+      "model": "diversitydelight:block/worm_bin_contents8",
+      "y": 180
+    },
+    "facing=west,level=0": {
+      "model": "diversitydelight:block/worm_bin_contents0",
+      "y": 270
+    },
+    "facing=west,level=1": {
+      "model": "diversitydelight:block/worm_bin_contents1",
+      "y": 270
+    },
+    "facing=west,level=2": {
+      "model": "diversitydelight:block/worm_bin_contents2",
+      "y": 270
+    },
+    "facing=west,level=3": {
+      "model": "diversitydelight:block/worm_bin_contents3",
+      "y": 270
+    },
+    "facing=west,level=4": {
+      "model": "diversitydelight:block/worm_bin_contents4",
+      "y": 270
+    },
+    "facing=west,level=5": {
+      "model": "diversitydelight:block/worm_bin_contents5",
+      "y": 270
+    },
+    "facing=west,level=6": {
+      "model": "diversitydelight:block/worm_bin_contents6",
+      "y": 270
+    },
+    "facing=west,level=7": {
+      "model": "diversitydelight:block/worm_bin_contents7",
+      "y": 270
+    },
+    "facing=west,level=8": {
+      "model": "diversitydelight:block/worm_bin_contents8",
+      "y": 270
+    }
+  }
+}

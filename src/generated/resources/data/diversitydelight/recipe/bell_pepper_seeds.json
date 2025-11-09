@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "diversitydelight:bell_pepper"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "diversitydelight:bell_pepper_seeds"
+  }
+}

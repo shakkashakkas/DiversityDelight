@@ -1,0 +1,15 @@
+{
+  "values": [
+    "diversitydelight:lower_bell_pepper_crop",
+    "diversitydelight:upper_bell_pepper_crop",
+    "diversitydelight:broccoli_crop",
+    "diversitydelight:cauliflower_crop",
+    "diversitydelight:celery_crop",
+    "diversitydelight:lower_chili_crop",
+    "diversitydelight:upper_chili_crop",
+    "diversitydelight:lower_green_bean_crop",
+    "diversitydelight:upper_green_bean_crop",
+    "diversitydelight:lower_pea_crop",
+    "diversitydelight:upper_pea_crop"
+  ]
+}

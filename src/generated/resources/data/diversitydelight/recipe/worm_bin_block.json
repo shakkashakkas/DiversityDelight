@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "c": {
+      "item": "minecraft:composter"
+    },
+    "g": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "pattern": [
+    "CgC",
+    "gcg",
+    "CgC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "diversitydelight:worm_bin_block"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "values": {
+    "diversitydelight:bell_pepper": {
+      "chance": 0.45
+    },
+    "diversitydelight:bell_pepper_seeds": {
+      "chance": 0.25
+    },
+    "diversitydelight:broccoli": {
+      "chance": 0.45
+    },
+    "diversitydelight:broccoli_seeds": {
+      "chance": 0.25
+    },
+    "diversitydelight:cauliflower": {
+      "chance": 0.45
+    },
+    "diversitydelight:cauliflower_seeds": {
+      "chance": 0.25
+    },
+    "diversitydelight:celery": {
+      "chance": 0.45
+    },
+    "diversitydelight:chili": {
+      "chance": 0.45
+    },
+    "diversitydelight:chili_seeds": {
+      "chance": 0.25
+    },
+    "diversitydelight:green_bean": {
+      "chance": 0.45
+    },
+    "diversitydelight:green_bean_seeds": {
+      "chance": 0.25
+    },
+    "diversitydelight:pea": {
+      "chance": 0.45
+    },
+    "diversitydelight:pea_seeds": {
+      "chance": 0.25
+    }
+  }
+}

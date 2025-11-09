@@ -1,0 +1,7 @@
+{
+  "type": "farmersdelight:add_features_by_filter",
+  "allowed_biomes": "#c:is_hot/overworld",
+  "denied_biomes": "#c:is_wet",
+  "features": "diversitydelight:patch_wild_bell_pepper",
+  "step": "vegetal_decoration"
+}

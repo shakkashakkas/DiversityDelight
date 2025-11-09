@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_celery": {
+      "conditions": {
+        "items": [
+          {
+            "items": "diversitydelight:celery"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "diversitydelight:vegetable_sticks_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_celery"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "diversitydelight:vegetable_sticks_block"
+    ]
+  }
+}

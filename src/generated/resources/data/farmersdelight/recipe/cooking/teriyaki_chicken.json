@@ -13,9 +13,6 @@
     },
     {
       "tag": "c:foods/cooked_chicken"
-    },
-    {
-      "item": "minecraft:sugar"
     }
   ],
   "recipe_book_tab": "meals",

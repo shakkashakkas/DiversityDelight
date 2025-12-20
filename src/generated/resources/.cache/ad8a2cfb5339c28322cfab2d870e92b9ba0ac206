@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-22T18:10:29.3091982	Tags for minecraft:item mod id diversitydelight
+// 1.21.1	2025-12-10T22:58:19.5468325	Tags for minecraft:item mod id diversitydelight
 327519b60f26022bc05929e18773b07e3a132a1f data/c/tags/item/crops/bell_pepper.json
 3fd16d106a50c78968f630ccd4fde636ea88f29a data/c/tags/item/crops/broccoli.json
 9afd94d0ca2362fc78823cfaa2dc987db93a4376 data/c/tags/item/crops/cauliflower.json
@@ -26,3 +26,7 @@ fec63f77d72995cb50e2eb45d6168af260a07ecc data/c/tags/item/storage_blocks/chili.j
 a164dc2945b9a49f3caf355cfcf9eb1f1d647d8c data/c/tags/item/storage_blocks/green_bean.json
 f4bd4ca0b0d0e62192b44f04ee42b1d38d76df30 data/c/tags/item/storage_blocks/pea.json
 b40264ad3922fb2c3553565951b22356f1a4f80b data/minecraft/tags/item/villager_plantable_seeds.json
+beb8556fd50e96f62f51a7a2ed5120e9a1069d6e data/sereneseasons/tags/item/autumn_crops.json
+63143c651063fab9ff8de71b44e55da25faa7378 data/sereneseasons/tags/item/spring_crops.json
+31f88dc59ba8e7b077f119cb70ad253d13f68dd1 data/sereneseasons/tags/item/summer_crops.json
+eb043be4c30ab11fae3e10bce8cfc0f0ef818be8 data/sereneseasons/tags/item/winter_crops.json

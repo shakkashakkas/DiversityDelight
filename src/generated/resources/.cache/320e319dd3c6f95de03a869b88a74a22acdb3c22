@@ -1,5 +1,6 @@
-// 1.21.1	2025-09-29T00:30:42.826774	Item Models: diversitydelight
+// 1.21.1	2025-12-17T15:58:39.4585665	Item Models: diversitydelight
 1bd7c5127c683d6e9d464ef4fcee184b0382fbb4 assets/diversitydelight/models/item/bacon_wrapped_green_beans.json
+bc1e486d0485526715425f3ac210f3a7428cecae assets/diversitydelight/models/item/banana.json
 69224b571d92c7e51833a956374d96684065b323 assets/diversitydelight/models/item/bell_pepper.json
 ce055d5874f3eb528ac469612babbaa78a80300b assets/diversitydelight/models/item/bell_pepper_seeds.json
 e5e6ca9aa97947232935d83a9203bc40061b2a96 assets/diversitydelight/models/item/broccoli.json
@@ -25,11 +26,17 @@ af149d70856f77770a216a3d99dc634bde161dbc assets/diversitydelight/models/item/gre
 093d30dcda3d373810bc2e1247c991b1e7edb1b4 assets/diversitydelight/models/item/gumbo.json
 42af8b7a5295f7c12333818a0305301ed06092b1 assets/diversitydelight/models/item/hot_sauce.json
 950a7d7525be0881dc6a2449e317509b582bba45 assets/diversitydelight/models/item/ketchup.json
+e6691477b5c57eebcf390efde45d88d73254ae5e assets/diversitydelight/models/item/kiwi.json
+3f691b1bd4ddf3795572a654f150fd285f7b2b82 assets/diversitydelight/models/item/lemon.json
+6dd6eaa78407d98f44436f925aaa1b51dce90cc9 assets/diversitydelight/models/item/mango.json
 ed12e1dec708477e317af43a9b4393ff0b7ceec3 assets/diversitydelight/models/item/mayonnaise.json
 2affaa443e642fcb47c6d9483ddf33d9880d1f2e assets/diversitydelight/models/item/mixed_vegetable_medley.json
+9dbdead0a5a33066378ccc09f7c513bfeb328fee assets/diversitydelight/models/item/orange.json
 04ea090fc86329c7e3204ee9ba09ea123fbba5e9 assets/diversitydelight/models/item/pea.json
+439c1128ddfde33e73e31c3d55b2764456bdcb12 assets/diversitydelight/models/item/pear.json
 560e18766bac861d0a9f05d8dc0a7bf9fb7ec3ec assets/diversitydelight/models/item/pea_pesto_pasta.json
 e2d3ee13c299d648f0892618ca3ed34c39185a11 assets/diversitydelight/models/item/pea_seeds.json
+f79a47f35e78c1ca66022ac1ba829881fe678a79 assets/diversitydelight/models/item/pineapple.json
 fbf91400bd0d567dea07d7aa2b4283b5de47cb6b assets/diversitydelight/models/item/smashed_peas_on_toast.json
 ed1ea08bf5b3f472139f90acb20d3008ee77b2df assets/diversitydelight/models/item/stuffed_bell_pepper.json
 60bc7d1602c8e5bcf8a77b1bc4472bd280fa2634 assets/diversitydelight/models/item/teriyaki_chicken.json

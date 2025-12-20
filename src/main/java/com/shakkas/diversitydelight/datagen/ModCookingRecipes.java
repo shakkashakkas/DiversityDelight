@@ -136,7 +136,6 @@ public class ModCookingRecipes {
                 .addIngredient(CommonTags.CROPS_RICE)
                 .addIngredient(DDCommonTags.CROPS_CHILI)
                 .addIngredient(CommonTags.FOODS_COOKED_CHICKEN)
-                .addIngredient(Items.SUGAR)
                 .unlockedByItems("has_broccoli", DDModItems.BROCCOLI)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(output);

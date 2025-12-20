@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-08T22:57:10.4345077	Recipes
+// 1.21.1	2025-12-10T22:58:19.5817221	Recipes
 e412b101c41f4faf4e02bf85904938e9b7df5cd2 data/diversitydelight/advancement/recipes/building_blocks/bell_pepper_crate.json
 07c5b60934e85e183e168d354ba8c29bc0d7e0d4 data/diversitydelight/advancement/recipes/building_blocks/broccoli_crate.json
 6880152522dd2a59165fc214a30d0a4c377e82bd data/diversitydelight/advancement/recipes/building_blocks/cauliflower_crate.json
@@ -74,6 +74,6 @@ dedd3f861eb5e861d40c0e4e40108c12aa4ca7c9 data/farmersdelight/recipe/cooking/chil
 bbb95b14a65f138236dfe7e267f8c44c85d8fdcc data/farmersdelight/recipe/cooking/mixed_vegetable_medley.json
 35522e1bc7d518a555cb2445826a296508954a2a data/farmersdelight/recipe/cooking/pea_pesto_pasta.json
 190baa1377a23ed15982041558f7326098cb88e3 data/farmersdelight/recipe/cooking/stuffed_bell_pepper.json
-acf3e7af0527995c5bd88a1feb7da25762729202 data/farmersdelight/recipe/cooking/teriyaki_chicken.json
+04c5c7d986e69bb8732b0393ef30ae44f50e720e data/farmersdelight/recipe/cooking/teriyaki_chicken.json
 924b535ed9cc1554a6bca521e0efbe60299e1a20 data/farmersdelight/recipe/cutting/broccoli.json
 d58fc7d80a2dc1c0a4808ddf87573fa46f668ba4 data/farmersdelight/recipe/cutting/cauliflower.json

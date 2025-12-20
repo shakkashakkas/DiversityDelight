@@ -1,4 +1,5 @@
 {
+  "item.diversitydelight.banana": "Banana",
   "item.diversitydelight.bell_pepper": "Bell Pepper",
   "item.diversitydelight.bell_pepper_seeds": "Bell Pepper Seeds",
   "item.diversitydelight.broccoli": "Broccoli",
@@ -12,8 +13,14 @@
   "item.diversitydelight.chili_seeds": "Chili Seeds",
   "item.diversitydelight.green_bean": "Green Bean",
   "item.diversitydelight.green_bean_seeds": "Green Bean Seeds",
+  "item.diversitydelight.kiwi": "Kiwi",
+  "item.diversitydelight.lemon": "Lemon",
+  "item.diversitydelight.mango": "Mango",
+  "item.diversitydelight.orange": "Orange",
   "item.diversitydelight.pea": "Pea",
   "item.diversitydelight.pea_seeds": "Pea Seeds",
+  "item.diversitydelight.pear": "Pear",
+  "item.diversitydelight.pineapple": "Pineapple",
 
   "item.diversitydelight.bacon_wrapped_green_beans": "Bacon Wrapped Green Beans",
   "item.diversitydelight.fritata": "Fritata",
@@ -49,6 +56,10 @@
   "block.diversitydelight.green_bean_crate": "Green Bean Crate",
   "block.diversitydelight.pea_crate": "Pea Crate",
   "block.diversitydelight.worm_bin": "Worm Bin",
+
+  "block.diversitydelight.orange_tree_log": "Orange Tree Log",
+  "block.diversitydelight.orange_tree_leaves": "Orange Tree Leaves",
+  "block.diversitydelight.orange_tree_fruiting_leaves": "Orange Tree Fruiting Leaves",
 
   "block.diversitydelight.wild_bell_pepper": "Wild Bell Pepper",
   "block.diversitydelight.wild_broccoli": "Wild Broccoli",

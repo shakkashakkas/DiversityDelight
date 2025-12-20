@@ -1,5 +1,8 @@
 {
   "values": {
+    "diversitydelight:banana": {
+      "chance": 0.45
+    },
     "diversitydelight:bell_pepper": {
       "chance": 0.45
     },
@@ -33,11 +36,29 @@
     "diversitydelight:green_bean_seeds": {
       "chance": 0.25
     },
+    "diversitydelight:kiwi": {
+      "chance": 0.45
+    },
+    "diversitydelight:lemon": {
+      "chance": 0.45
+    },
+    "diversitydelight:mango": {
+      "chance": 0.45
+    },
+    "diversitydelight:orange": {
+      "chance": 0.45
+    },
     "diversitydelight:pea": {
       "chance": 0.45
     },
     "diversitydelight:pea_seeds": {
       "chance": 0.25
+    },
+    "diversitydelight:pear": {
+      "chance": 0.45
+    },
+    "diversitydelight:pineapple": {
+      "chance": 0.45
     }
   }
 }

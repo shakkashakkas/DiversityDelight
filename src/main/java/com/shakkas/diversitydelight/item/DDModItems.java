@@ -17,6 +17,8 @@ public class DDModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(DiversityDelight.MODID);
 
     //CROPS
+    public static final DeferredItem<Item> BANANA = ITEMS.register("banana",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
     public static final DeferredItem<Item> BELL_PEPPER = ITEMS.register("bell_pepper",
             () -> new Item(new Item.Properties().food(ModFoodProperties.BELL_PEPPER)));
     public static final DeferredItem<Item> BELL_PEPPER_SEEDS = ITEMS.register("bell_pepper_seeds",
@@ -43,10 +45,22 @@ public class DDModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.GREEN_BEAN)));
     public static final DeferredItem<Item> GREEN_BEAN_SEEDS = ITEMS.register("green_bean_seeds",
             () -> new ItemNameBlockItem(ModBlocks.LOWER_GREEN_BEAN_CROP.get(), new Item.Properties()));
+    public static final DeferredItem<Item> KIWI = ITEMS.register("kiwi",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KIWI)));
+    public static final DeferredItem<Item> LEMON = ITEMS.register("lemon",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.LEMON)));
+    public static final DeferredItem<Item> MANGO = ITEMS.register("mango",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.MANGO)));
+    public static final DeferredItem<Item> ORANGE = ITEMS.register("orange",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.ORANGE)));
     public static final DeferredItem<Item> PEA = ITEMS.register("pea",
             () -> new Item(new Item.Properties().food(ModFoodProperties.PEA)));
     public static final DeferredItem<Item> PEA_SEEDS = ITEMS.register("pea_seeds",
             () -> new ItemNameBlockItem(ModBlocks.LOWER_PEA_CROP.get(), new Item.Properties().food(ModFoodProperties.PEA_SEEDS)));
+    public static final DeferredItem<Item> PEAR = ITEMS.register("pear",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PEAR)));
+    public static final DeferredItem<Item> PINEAPPLE = ITEMS.register("pineapple",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PINEAPPLE)));
 
     //FOODS
     //HANDHELD
@@ -118,6 +132,14 @@ public class DDModItems {
             () -> new BlockItem(ModBlocks.GREEN_BEAN_CRATE.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> PEA_CRATE = ITEMS.register("pea_crate",
             () -> new BlockItem(ModBlocks.PEA_CRATE.get(), new Item.Properties()));
+
+    //Fruit Trees
+    public static final DeferredItem<BlockItem> ORANGE_TREE_LOG = ITEMS.register("orange_tree_log",
+            () -> new BlockItem(ModBlocks.ORANGE_TREE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> ORANGE_TREE_LEAVES = ITEMS.register("orange_tree_leaves",
+            () -> new BlockItem(ModBlocks.ORANGE_TREE_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> ORANGE_TREE_FRUITING_LEAVES = ITEMS.register("orange_tree_fruiting_leaves",
+            () -> new BlockItem(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
 
     //Wild Crops
     public static final DeferredItem<BlockItem> WILD_BELL_PEPPER = ITEMS.register("wild_bell_pepper",

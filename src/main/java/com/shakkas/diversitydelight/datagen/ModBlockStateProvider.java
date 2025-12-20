@@ -7,12 +7,14 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import vectorwing.farmersdelight.common.block.FeastBlock;
 
 import javax.annotation.Nullable;
@@ -56,6 +58,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.customStageBlock(ModBlocks.UPPER_PEA_CROP.get(), mcLoc("cross"), "cross", UpperDoubleFruitingCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 4, 5));
 
         this.wormBinBlock((WormBinBlock) ModBlocks.WORM_BIN_BLOCK.get());
+        this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get());
 
         // Crop Crates
         this.crateBlock(ModBlocks.BELL_PEPPER_CRATE.get(), "bell_pepper");
@@ -78,6 +81,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.wildCropBlock(ModBlocks.WILD_CHILI.get());
         this.wildCropBlock(ModBlocks.WILD_GREEN_BEAN.get());
         this.wildCropBlock(ModBlocks.WILD_PEA.get());
+
+        logBlockAndItem(ModBlocks.ORANGE_TREE_LOG.get());
+        leafBlock(ModBlocks.ORANGE_TREE_LEAVES.get());
+
+    }
+
+    public void logBlockAndItem(Block block) {
+        String blockName = blockName(block);
+        logBlock((RotatedPillarBlock) block);
+        simpleBlockItem(block,models().cubeColumn(blockName,resourceBlock(blockName),resourceBlock(blockName+"_top")));
+    }
+
+    public void leafBlock(Block block) {
+        this.simpleBlockWithItem(block, models().cubeAll(blockName(block),resourceBlock(blockName(block))));
     }
 
     // Credits to vectorwing for datagen
@@ -85,6 +102,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.simpleBlockWithItem(block,
                 models().cubeBottomTop(blockName(block), resourceBlock(cropName + "_crate_side"), resourceBlock("crate_bottom"), resourceBlock(cropName + "_crate_top")));
     }
+
 
     public void wormBinBlock(WormBinBlock block) {
         getVariantBuilder(block)
@@ -96,6 +114,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
                             .rotationY(((int) state.getValue(WormBinBlock.FACING).toYRot() + 180) % 360);
                     return builder.build();
                 });
+    }
+
+    public void fruitingLeavesBlock(FruitingLeavesBlock block) {
+        getVariantBuilder(block)
+                .forAllStates(state -> {
+                    int age = state.getValue(FruitingLeavesBlock.AGE);
+                    String ageSuffix = "_stage" + age;
+                    ConfiguredModel.Builder<?> builder = ConfiguredModel.builder()
+                            .modelFile(models().cubeAll(blockName(block)+ageSuffix,resourceBlock(blockName(block)+ageSuffix)));
+                    return builder.build();
+                });
+        simpleBlockItem(block,models().cubeAll(blockName(block),resourceBlock(blockName(block)+"_stage3")));
     }
 
     // vectorwing code for datagen of custom crop block state
@@ -136,6 +166,5 @@ public class ModBlockStateProvider extends BlockStateProvider {
                             .build();
                 });
     }
-
 
 }

@@ -18,15 +18,22 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(DDModItems.BROCCOLI.get()))
                     .title(Component.translatable("creativetab.diversitydelight.crop_items"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(DDModItems.BANANA);
                         output.accept(DDModItems.BELL_PEPPER);
                         output.accept(DDModItems.BROCCOLI);
-                        output.accept(DDModItems.BROCCOLI_FLORET);
                         output.accept(DDModItems.CAULIFLOWER);
-                        output.accept(DDModItems.CAULIFLOWER_FLORET);
                         output.accept(DDModItems.CELERY);
                         output.accept(DDModItems.CHILI);
                         output.accept(DDModItems.GREEN_BEAN);
+                        output.accept(DDModItems.KIWI);
+                        output.accept(DDModItems.LEMON);
+                        output.accept(DDModItems.MANGO);
+                        output.accept(DDModItems.ORANGE);
                         output.accept(DDModItems.PEA);
+                        output.accept(DDModItems.PEAR);
+                        output.accept(DDModItems.PINEAPPLE);
+                        output.accept(DDModItems.BROCCOLI_FLORET);
+                        output.accept(DDModItems.CAULIFLOWER_FLORET);
                         output.accept(DDModItems.BELL_PEPPER_SEEDS);
                         output.accept(DDModItems.BROCCOLI_SEEDS);
                         output.accept(DDModItems.CAULIFLOWER_SEEDS);
@@ -73,6 +80,10 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.CHILI_CRATE);
                         output.accept(DDModItems.GREEN_BEAN_CRATE);
                         output.accept(DDModItems.PEA_CRATE);
+
+                        output.accept(DDModItems.ORANGE_TREE_LOG);
+                        output.accept(DDModItems.ORANGE_TREE_LEAVES);
+                        output.accept(DDModItems.ORANGE_TREE_FRUITING_LEAVES);
 
                         output.accept(DDModItems.WILD_BELL_PEPPER);
                         output.accept(DDModItems.WILD_BROCCOLI);

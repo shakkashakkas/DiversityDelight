@@ -9,6 +9,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import vectorwing.farmersdelight.common.tag.CompatibilityTags;
 
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
@@ -24,6 +25,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
         this.registerMinecraftTags();
         this.registerCommonTags();
         this.registerNeoForgeTags();
+        this.registerSereneSeasonTags();
     }
 
     private void registerMinecraftTags() {
@@ -83,5 +85,21 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(DDCommonTags.STORAGE_BLOCKS_ITEM_CHILI).add(DDModItems.CHILI_CRATE.get());
         tag(DDCommonTags.STORAGE_BLOCKS_ITEM_GREEN_BEAN).add(DDModItems.GREEN_BEAN_CRATE.get());
         tag(DDCommonTags.STORAGE_BLOCKS_ITEM_PEA).add(DDModItems.PEA_CRATE.get());
+    }
+
+    private void registerSereneSeasonTags() {
+        tag(CompatibilityTags.SERENE_SEASONS_SUMMER_CROPS)
+                .add(DDModItems.BELL_PEPPER.get())
+                .add(DDModItems.CELERY.get())
+                .add(DDModItems.CHILI.get())
+                .add(DDModItems.GREEN_BEAN.get());
+        tag(CompatibilityTags.SERENE_SEASONS_AUTUMN_CROPS)
+                .add(DDModItems.BROCCOLI.get());
+        tag(CompatibilityTags.SERENE_SEASONS_WINTER_CROPS)
+                .add(DDModItems.BROCCOLI.get())
+                .add(DDModItems.CAULIFLOWER.get());
+        tag(CompatibilityTags.SERENE_SEASONS_SPRING_CROPS)
+                .add(DDModItems.CELERY.get())
+                .add(DDModItems.PEA.get());
     }
 }

@@ -17,6 +17,7 @@ public class ModDataMapProvider extends DataMapProvider {
     @Override
     protected void gather(HolderLookup.Provider provider) {
         this.builder(NeoForgeDataMaps.COMPOSTABLES)
+                .add(DDModItems.BANANA.getId(), new Compostable(0.45f), false)
                 .add(DDModItems.BELL_PEPPER_SEEDS.getId(), new Compostable(0.25f), false)
                 .add(DDModItems.BELL_PEPPER.getId(), new Compostable(0.45f), false)
                 .add(DDModItems.BROCCOLI_SEEDS.getId(), new Compostable(0.25f), false)
@@ -28,7 +29,13 @@ public class ModDataMapProvider extends DataMapProvider {
                 .add(DDModItems.CELERY.getId(), new Compostable(0.45f), false)
                 .add(DDModItems.GREEN_BEAN.getId(), new Compostable(0.45f), false)
                 .add(DDModItems.GREEN_BEAN_SEEDS.getId(), new Compostable(0.25f), false)
+                .add(DDModItems.KIWI.getId(), new Compostable(0.45f), false)
+                .add(DDModItems.LEMON.getId(), new Compostable(0.45f), false)
+                .add(DDModItems.MANGO.getId(), new Compostable(0.45f), false)
+                .add(DDModItems.ORANGE.getId(), new Compostable(0.45f), false)
                 .add(DDModItems.PEA.getId(), new Compostable(0.45f), false)
-                .add(DDModItems.PEA_SEEDS.getId(), new Compostable(0.25f), false);
+                .add(DDModItems.PEA_SEEDS.getId(), new Compostable(0.25f), false)
+                .add(DDModItems.PEAR.getId(), new Compostable(0.45f), false)
+                .add(DDModItems.PINEAPPLE.getId(), new Compostable(0.45f), false);
     }
 }

@@ -1,4 +1,4 @@
-// 1.21.1	2025-11-08T22:21:46.2416604	Loot Tables
+// 1.21.1	2025-12-21T02:38:16.1461498	Loot Tables
 1e4aab23aaec7dd038d38d1cd888dc8b402e1730 data/diversitydelight/loot_table/blocks/bell_pepper_crate.json
 3fd62d45a74211795e85f87a9f14eaa1fb545d5f data/diversitydelight/loot_table/blocks/broccoli_crate.json
 5e44a95d57a481a1caef8e7fb9acedb7cae8cc1d data/diversitydelight/loot_table/blocks/broccoli_crop.json
@@ -13,6 +13,9 @@ bbb640b5c955e898683442853091b15a4fff71ab data/diversitydelight/loot_table/blocks
 f5e245919a59d5f416bb1da7b94e2fdce5c51aea data/diversitydelight/loot_table/blocks/lower_chili_crop.json
 3b22b5fcb3aa7f26554661e0d79b6585f33e2373 data/diversitydelight/loot_table/blocks/lower_green_bean_crop.json
 4e68f2e46bafd779ab79770808d8f12210fdc9bd data/diversitydelight/loot_table/blocks/lower_pea_crop.json
+9261ed351af72a74e7703ef13b64d8b9ac1ed48f data/diversitydelight/loot_table/blocks/orange_tree_fruiting_leaves.json
+97d70fc2f3c1d7bd886c5783a5340213ffd3f713 data/diversitydelight/loot_table/blocks/orange_tree_leaves.json
+f35422c3820de36f1f489c19c05578447563746f data/diversitydelight/loot_table/blocks/orange_tree_log.json
 da1243946b211eda0749455124e4c60eb9edafd7 data/diversitydelight/loot_table/blocks/pea_crate.json
 773ccfc900c42607e56ff7817cb0a7f9f00545ed data/diversitydelight/loot_table/blocks/upper_bell_pepper_crop.json
 bdb5da085588a4eeab635067cc277479a5ffc2bf data/diversitydelight/loot_table/blocks/upper_chili_crop.json

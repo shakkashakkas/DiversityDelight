@@ -84,6 +84,15 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WILD_PEA = BLOCKS.register("wild_pea",
             () -> new WildCropBlock(MobEffects.CONFUSION, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
 
+    //Fruit Trees
+    public static final DeferredBlock<Block> ORANGE_TREE_LOG = BLOCKS.register("orange_tree_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> ORANGE_TREE_LEAVES = BLOCKS.register("orange_tree_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> ORANGE_TREE_FRUITING_LEAVES = BLOCKS.register("orange_tree_fruiting_leaves",
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

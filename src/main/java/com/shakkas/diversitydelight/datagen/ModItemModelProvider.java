@@ -29,6 +29,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        basicItem(DDModItems.BANANA.get());
         basicItem(DDModItems.BELL_PEPPER.get());
         basicItem(DDModItems.BELL_PEPPER_SEEDS.get());
         basicItem(DDModItems.BROCCOLI.get());
@@ -42,8 +43,14 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.CHILI_SEEDS.get());
         basicItem(DDModItems.GREEN_BEAN.get());
         basicItem(DDModItems.GREEN_BEAN_SEEDS.get());
+        basicItem(DDModItems.KIWI.get());
+        basicItem(DDModItems.LEMON.get());
+        basicItem(DDModItems.MANGO.get());
+        basicItem(DDModItems.ORANGE.get());
         basicItem(DDModItems.PEA.get());
         basicItem(DDModItems.PEA_SEEDS.get());
+        basicItem(DDModItems.PEAR.get());
+        basicItem(DDModItems.PINEAPPLE.get());
         //HANDHELD
         basicItem(DDModItems.BACON_WRAPPED_GREEN_BEANS.get());
         basicItem(DDModItems.FRITATA.get());

@@ -81,6 +81,7 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.GREEN_BEAN_CRATE);
                         output.accept(DDModItems.PEA_CRATE);
 
+                        output.accept(DDModItems.ORANGE_TREE_SAPLING);
                         output.accept(DDModItems.ORANGE_TREE_LOG);
                         output.accept(DDModItems.ORANGE_TREE_LEAVES);
                         output.accept(DDModItems.ORANGE_TREE_FRUITING_LEAVES);

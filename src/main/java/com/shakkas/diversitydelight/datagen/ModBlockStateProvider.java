@@ -73,14 +73,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.feastBlock((FeastBlock) ModBlocks.CHICKEN_POT_PIE_BLOCK.get());
         this.feastBlock((FeastBlock) ModBlocks.VEGETABLE_STICKS_BLOCK.get());
 
+        // Saplings
+        this.crossCutOutBlock(ModBlocks.ORANGE_TREE_SAPLING.get());
+
         // Wild Crops
-        this.wildCropBlock(ModBlocks.WILD_BELL_PEPPER.get());
-        this.wildCropBlock(ModBlocks.WILD_BROCCOLI.get());
-        this.wildCropBlock(ModBlocks.WILD_CAULIFLOWER.get());
-        this.wildCropBlock(ModBlocks.WILD_CELERY.get());
-        this.wildCropBlock(ModBlocks.WILD_CHILI.get());
-        this.wildCropBlock(ModBlocks.WILD_GREEN_BEAN.get());
-        this.wildCropBlock(ModBlocks.WILD_PEA.get());
+        this.crossCutOutBlock(ModBlocks.WILD_BELL_PEPPER.get());
+        this.crossCutOutBlock(ModBlocks.WILD_BROCCOLI.get());
+        this.crossCutOutBlock(ModBlocks.WILD_CAULIFLOWER.get());
+        this.crossCutOutBlock(ModBlocks.WILD_CELERY.get());
+        this.crossCutOutBlock(ModBlocks.WILD_CHILI.get());
+        this.crossCutOutBlock(ModBlocks.WILD_GREEN_BEAN.get());
+        this.crossCutOutBlock(ModBlocks.WILD_PEA.get());
 
         logBlockAndItem(ModBlocks.ORANGE_TREE_LOG.get());
         leafBlock(ModBlocks.ORANGE_TREE_LEAVES.get());
@@ -144,7 +147,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 }, ignored);
     }
 
-    public void wildCropBlock(Block block) {
+    public void crossCutOutBlock(Block block) {
         this.simpleBlock(block, models().cross(blockName(block), resourceBlock(blockName(block))).renderType("cutout"));
     }
 

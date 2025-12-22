@@ -134,6 +134,8 @@ public class DDModItems {
             () -> new BlockItem(ModBlocks.PEA_CRATE.get(), new Item.Properties()));
 
     //Fruit Trees
+    public static final DeferredItem<BlockItem> ORANGE_TREE_SAPLING = ITEMS.register("orange_tree_sapling",
+            () -> new BlockItem(ModBlocks.ORANGE_TREE_SAPLING.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> ORANGE_TREE_LOG = ITEMS.register("orange_tree_log",
             () -> new BlockItem(ModBlocks.ORANGE_TREE_LOG.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> ORANGE_TREE_LEAVES = ITEMS.register("orange_tree_leaves",

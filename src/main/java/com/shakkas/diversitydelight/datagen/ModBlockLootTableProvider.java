@@ -127,9 +127,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PEA_CRATE.get());
 
         //Fruit Tree
+        dropSelf(ModBlocks.ORANGE_TREE_SAPLING.get());
         dropSelf(ModBlocks.ORANGE_TREE_LOG.get());
-        dropSelf(ModBlocks.ORANGE_TREE_LEAVES.get());
-        dropSelf(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get());
+        this.add(ModBlocks.ORANGE_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.ORANGE_TREE_LEAVES.get(),ModBlocks.ORANGE_TREE_SAPLING.get(),0.55F));
+        this.add(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(),ModBlocks.ORANGE_TREE_SAPLING.get(),0.55F));
+
 
 
 

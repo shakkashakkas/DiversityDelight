@@ -57,10 +57,29 @@
   "block.diversitydelight.pea_crate": "Pea Crate",
   "block.diversitydelight.worm_bin": "Worm Bin",
 
+  "block.diversitydelight.apple_tree_sapling": "Apple Tree Sapling",
+  "block.diversitydelight.apple_tree_leaves": "Apple Tree Leaves",
+  "block.diversitydelight.apple_tree_fruiting_leaves": "Apple Tree Fruiting Leaves",
+
   "block.diversitydelight.orange_tree_sapling": "Orange Tree Sapling",
   "block.diversitydelight.orange_tree_log": "Orange Tree Log",
   "block.diversitydelight.orange_tree_leaves": "Orange Tree Leaves",
   "block.diversitydelight.orange_tree_fruiting_leaves": "Orange Tree Fruiting Leaves",
+
+  "block.diversitydelight.lemon_tree_sapling": "Lemon Tree Sapling",
+  "block.diversitydelight.lemon_tree_log": "Lemon Tree Log",
+  "block.diversitydelight.lemon_tree_leaves": "Lemon Tree Leaves",
+  "block.diversitydelight.lemon_tree_fruiting_leaves": "Lemon Tree Fruiting Leaves",
+
+  "block.diversitydelight.pear_tree_sapling": "Pear Tree Sapling",
+  "block.diversitydelight.pear_tree_log": "Pear Tree Log",
+  "block.diversitydelight.pear_tree_leaves": "Pear Tree Leaves",
+  "block.diversitydelight.pear_tree_fruiting_leaves": "Pear Tree Fruiting Leaves",
+
+  "block.diversitydelight.mango_tree_sapling": "Mango Tree Sapling",
+  "block.diversitydelight.mango_tree_log": "Mango Tree Log",
+  "block.diversitydelight.mango_tree_leaves": "Mango Tree Leaves",
+  "block.diversitydelight.mango_tree_fruiting_leaves": "Mango Tree Fruiting Leaves",
 
   "block.diversitydelight.wild_bell_pepper": "Wild Bell Pepper",
   "block.diversitydelight.wild_broccoli": "Wild Broccoli",

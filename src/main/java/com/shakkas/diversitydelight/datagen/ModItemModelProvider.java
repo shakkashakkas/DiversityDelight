@@ -78,7 +78,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.MAYONNAISE.get());
         basicItem(DDModItems.HOT_SAUCE.get());
 
+        itemGeneratedModel(DDModItems.APPLE_TREE_SAPLING.get());
         itemGeneratedModel(DDModItems.ORANGE_TREE_SAPLING.get());
+        itemGeneratedModel(DDModItems.LEMON_TREE_SAPLING.get());
+        itemGeneratedModel(DDModItems.PEAR_TREE_SAPLING.get());
+        itemGeneratedModel(DDModItems.MANGO_TREE_SAPLING.get());
 
         withExistingParent(DDModItems.WORM_BIN_BLOCK.getId().toString(), modLoc("block/worm_bin_contents0"));
         itemGeneratedModel(DDModItems.WILD_BELL_PEPPER.get());

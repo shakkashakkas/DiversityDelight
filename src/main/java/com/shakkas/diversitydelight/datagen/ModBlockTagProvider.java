@@ -63,7 +63,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.LOWER_PEA_CROP.get()
         );
         tag(net.minecraft.tags.BlockTags.LOGS).add(
-                ModBlocks.ORANGE_TREE_LOG.get()
+                ModBlocks.ORANGE_TREE_LOG.get(),
+                ModBlocks.LEMON_TREE_LOG.get(),
+                ModBlocks.PEAR_TREE_LOG.get(),
+                ModBlocks.MANGO_TREE_LOG.get()
         );
     }
 

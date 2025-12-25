@@ -81,10 +81,29 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.GREEN_BEAN_CRATE);
                         output.accept(DDModItems.PEA_CRATE);
 
+                        output.accept(DDModItems.APPLE_TREE_SAPLING);
+                        output.accept(DDModItems.APPLE_TREE_LEAVES);
+                        output.accept(DDModItems.APPLE_TREE_FRUITING_LEAVES);
+
                         output.accept(DDModItems.ORANGE_TREE_SAPLING);
                         output.accept(DDModItems.ORANGE_TREE_LOG);
                         output.accept(DDModItems.ORANGE_TREE_LEAVES);
                         output.accept(DDModItems.ORANGE_TREE_FRUITING_LEAVES);
+
+                        output.accept(DDModItems.LEMON_TREE_SAPLING);
+                        output.accept(DDModItems.LEMON_TREE_LOG);
+                        output.accept(DDModItems.LEMON_TREE_LEAVES);
+                        output.accept(DDModItems.LEMON_TREE_FRUITING_LEAVES);
+
+                        output.accept(DDModItems.PEAR_TREE_SAPLING);
+                        output.accept(DDModItems.PEAR_TREE_LOG);
+                        output.accept(DDModItems.PEAR_TREE_LEAVES);
+                        output.accept(DDModItems.PEAR_TREE_FRUITING_LEAVES);
+
+                        output.accept(DDModItems.MANGO_TREE_SAPLING);
+                        output.accept(DDModItems.MANGO_TREE_LOG);
+                        output.accept(DDModItems.MANGO_TREE_LEAVES);
+                        output.accept(DDModItems.MANGO_TREE_FRUITING_LEAVES);
 
                         output.accept(DDModItems.WILD_BELL_PEPPER);
                         output.accept(DDModItems.WILD_BROCCOLI);

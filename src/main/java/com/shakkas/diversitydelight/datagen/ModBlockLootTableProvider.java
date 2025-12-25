@@ -127,12 +127,29 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PEA_CRATE.get());
 
         //Fruit Tree
+        dropSelf(ModBlocks.APPLE_TREE_SAPLING.get());
+        this.add(ModBlocks.APPLE_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.APPLE_TREE_LEAVES.get(),ModBlocks.APPLE_TREE_SAPLING.get(),0.55F));
+        this.add(ModBlocks.APPLE_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.APPLE_TREE_FRUITING_LEAVES.get(),ModBlocks.APPLE_TREE_SAPLING.get(),0.55F));
+
         dropSelf(ModBlocks.ORANGE_TREE_SAPLING.get());
         dropSelf(ModBlocks.ORANGE_TREE_LOG.get());
         this.add(ModBlocks.ORANGE_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.ORANGE_TREE_LEAVES.get(),ModBlocks.ORANGE_TREE_SAPLING.get(),0.55F));
         this.add(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(),ModBlocks.ORANGE_TREE_SAPLING.get(),0.55F));
 
+        dropSelf(ModBlocks.LEMON_TREE_SAPLING.get());
+        dropSelf(ModBlocks.LEMON_TREE_LOG.get());
+        this.add(ModBlocks.LEMON_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.LEMON_TREE_LEAVES.get(),ModBlocks.LEMON_TREE_SAPLING.get(),0.55F));
+        this.add(ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(),ModBlocks.LEMON_TREE_SAPLING.get(),0.55F));
 
+        dropSelf(ModBlocks.PEAR_TREE_SAPLING.get());
+        dropSelf(ModBlocks.PEAR_TREE_LOG.get());
+        this.add(ModBlocks.PEAR_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.PEAR_TREE_LEAVES.get(), ModBlocks.PEAR_TREE_SAPLING.get(), 0.55F));
+        this.add(ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(), ModBlocks.PEAR_TREE_SAPLING.get(), 0.55F));
+
+        dropSelf(ModBlocks.MANGO_TREE_SAPLING.get());
+        dropSelf(ModBlocks.MANGO_TREE_LOG.get());
+        this.add(ModBlocks.MANGO_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.MANGO_TREE_LEAVES.get(), ModBlocks.MANGO_TREE_SAPLING.get(), 0.55F));
+        this.add(ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(), ModBlocks.MANGO_TREE_SAPLING.get(), 0.55F));
 
 
     }

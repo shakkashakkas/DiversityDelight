@@ -134,6 +134,13 @@ public class DDModItems {
             () -> new BlockItem(ModBlocks.PEA_CRATE.get(), new Item.Properties()));
 
     //Fruit Trees
+    public static final DeferredItem<BlockItem> APPLE_TREE_SAPLING = ITEMS.register("apple_tree_sapling",
+            () -> new BlockItem(ModBlocks.APPLE_TREE_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> APPLE_TREE_LEAVES = ITEMS.register("apple_tree_leaves",
+            () -> new BlockItem(ModBlocks.APPLE_TREE_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> APPLE_TREE_FRUITING_LEAVES = ITEMS.register("apple_tree_fruiting_leaves",
+            () -> new BlockItem(ModBlocks.APPLE_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
+
     public static final DeferredItem<BlockItem> ORANGE_TREE_SAPLING = ITEMS.register("orange_tree_sapling",
             () -> new BlockItem(ModBlocks.ORANGE_TREE_SAPLING.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> ORANGE_TREE_LOG = ITEMS.register("orange_tree_log",
@@ -142,6 +149,34 @@ public class DDModItems {
             () -> new BlockItem(ModBlocks.ORANGE_TREE_LEAVES.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> ORANGE_TREE_FRUITING_LEAVES = ITEMS.register("orange_tree_fruiting_leaves",
             () -> new BlockItem(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
+
+    public static final DeferredItem<BlockItem> LEMON_TREE_SAPLING = ITEMS.register("lemon_tree_sapling",
+            () -> new BlockItem(ModBlocks.LEMON_TREE_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> LEMON_TREE_LOG = ITEMS.register("lemon_tree_log",
+            () -> new BlockItem(ModBlocks.LEMON_TREE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> LEMON_TREE_LEAVES = ITEMS.register("lemon_tree_leaves",
+            () -> new BlockItem(ModBlocks.LEMON_TREE_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> LEMON_TREE_FRUITING_LEAVES = ITEMS.register("lemon_tree_fruiting_leaves",
+            () -> new BlockItem(ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
+
+    public static final DeferredItem<BlockItem> PEAR_TREE_SAPLING = ITEMS.register("pear_tree_sapling",
+            () -> new BlockItem(ModBlocks.PEAR_TREE_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> PEAR_TREE_LOG = ITEMS.register("pear_tree_log",
+            () -> new BlockItem(ModBlocks.PEAR_TREE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> PEAR_TREE_LEAVES = ITEMS.register("pear_tree_leaves",
+            () -> new BlockItem(ModBlocks.PEAR_TREE_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> PEAR_TREE_FRUITING_LEAVES = ITEMS.register("pear_tree_fruiting_leaves",
+            () -> new BlockItem(ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
+
+    public static final DeferredItem<BlockItem> MANGO_TREE_SAPLING = ITEMS.register("mango_tree_sapling",
+            () -> new BlockItem(ModBlocks.MANGO_TREE_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> MANGO_TREE_LOG = ITEMS.register("mango_tree_log",
+            () -> new BlockItem(ModBlocks.MANGO_TREE_LOG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> MANGO_TREE_LEAVES = ITEMS.register("mango_tree_leaves",
+            () -> new BlockItem(ModBlocks.MANGO_TREE_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> MANGO_TREE_FRUITING_LEAVES = ITEMS.register("mango_tree_fruiting_leaves",
+            () -> new BlockItem(ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
+
 
     //Wild Crops
     public static final DeferredItem<BlockItem> WILD_BELL_PEPPER = ITEMS.register("wild_bell_pepper",

@@ -58,7 +58,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.customStageBlock(ModBlocks.UPPER_PEA_CROP.get(), mcLoc("cross"), "cross", UpperDoubleFruitingCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 4, 5));
 
         this.wormBinBlock((WormBinBlock) ModBlocks.WORM_BIN_BLOCK.get());
+        this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.APPLE_TREE_FRUITING_LEAVES.get());
         this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get());
+        this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.LEMON_TREE_FRUITING_LEAVES.get());
+        this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.PEAR_TREE_FRUITING_LEAVES.get());
+        this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.MANGO_TREE_FRUITING_LEAVES.get());
 
         // Crop Crates
         this.crateBlock(ModBlocks.BELL_PEPPER_CRATE.get(), "bell_pepper");
@@ -74,7 +78,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.feastBlock((FeastBlock) ModBlocks.VEGETABLE_STICKS_BLOCK.get());
 
         // Saplings
+        this.crossCutOutBlock(ModBlocks.APPLE_TREE_SAPLING.get());
         this.crossCutOutBlock(ModBlocks.ORANGE_TREE_SAPLING.get());
+        this.crossCutOutBlock(ModBlocks.LEMON_TREE_SAPLING.get());
+        this.crossCutOutBlock(ModBlocks.PEAR_TREE_SAPLING.get());
+        this.crossCutOutBlock(ModBlocks.MANGO_TREE_SAPLING.get());
 
         // Wild Crops
         this.crossCutOutBlock(ModBlocks.WILD_BELL_PEPPER.get());
@@ -85,8 +93,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.crossCutOutBlock(ModBlocks.WILD_GREEN_BEAN.get());
         this.crossCutOutBlock(ModBlocks.WILD_PEA.get());
 
+        leafBlock(ModBlocks.APPLE_TREE_LEAVES.get());
         logBlockAndItem(ModBlocks.ORANGE_TREE_LOG.get());
         leafBlock(ModBlocks.ORANGE_TREE_LEAVES.get());
+        logBlockAndItem(ModBlocks.LEMON_TREE_LOG.get());
+        leafBlock(ModBlocks.LEMON_TREE_LEAVES.get());
+        logBlockAndItem(ModBlocks.PEAR_TREE_LOG.get());
+        leafBlock(ModBlocks.PEAR_TREE_LEAVES.get());
+        logBlockAndItem(ModBlocks.MANGO_TREE_LOG.get());
+        leafBlock(ModBlocks.MANGO_TREE_LEAVES.get());
 
     }
 

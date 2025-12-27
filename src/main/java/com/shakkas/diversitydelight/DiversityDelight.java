@@ -6,6 +6,7 @@ import com.shakkas.diversitydelight.block.ModBlocks;
 import com.shakkas.diversitydelight.component.ModComponents;
 import com.shakkas.diversitydelight.item.ModCreativeModeTabs;
 import com.shakkas.diversitydelight.item.DDModItems;
+import com.shakkas.diversitydelight.world.tree.DDPlacerTypes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -34,6 +35,7 @@ public class DiversityDelight {
         DDModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModComponents.register(modEventBus);
+        DDPlacerTypes.register(modEventBus);
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us

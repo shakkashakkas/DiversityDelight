@@ -2,6 +2,8 @@ package com.shakkas.diversitydelight.world;
 
 import com.shakkas.diversitydelight.DiversityDelight;
 import com.shakkas.diversitydelight.block.ModBlocks;
+import com.shakkas.diversitydelight.world.tree.BananaFoliagePlacer;
+import com.shakkas.diversitydelight.world.tree.BananaTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -31,6 +33,7 @@ public class DDConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON_FRUIT_KEY = registerKey("lemon_fruit");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PEAR_FRUIT_KEY = registerKey("pear_fruit");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MANGO_FRUIT_KEY = registerKey("mango_fruit");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BANANA_FRUIT_KEY = registerKey("banana_fruit");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         register(context, APPLE_FRUIT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
@@ -63,7 +66,13 @@ public class DDConfiguredFeatures {
                 new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.MANGO_TREE_LEAVES.get().defaultBlockState(), 4).add(ModBlocks.MANGO_TREE_FRUITING_LEAVES.get().defaultBlockState(), 1).build()),
                 new CherryFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(4), 0.25F, 0.5F, 0.16666667F, 0F),
                 new TwoLayersFeatureSize(1, 1, 0)).build());
-
+        register(context, BANANA_FRUIT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.BANANA_TREE_STEM.get()),
+                new BananaTrunkPlacer(2, 1, 3),
+                BlockStateProvider.simple(ModBlocks.BANANA_TREE_FROND.get()),
+                new BananaFoliagePlacer(ConstantInt.of(3),ConstantInt.of(0)),
+                //new CherryFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(4), 0.25F, 0.5F, 0.16666667F, 0F),
+                new TwoLayersFeatureSize(1, 1, 0)).build());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

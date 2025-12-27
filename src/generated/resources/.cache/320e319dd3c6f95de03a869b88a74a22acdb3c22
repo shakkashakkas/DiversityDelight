@@ -1,7 +1,10 @@
-// 1.21.1	2025-12-25T14:02:18.0557517	Item Models: diversitydelight
+// 1.21.1	2025-12-27T23:07:37.0893314	Item Models: diversitydelight
 ea16c905e9e06823c57f825723002c83ca0a1898 assets/diversitydelight/models/item/apple_tree_sapling.json
 1bd7c5127c683d6e9d464ef4fcee184b0382fbb4 assets/diversitydelight/models/item/bacon_wrapped_green_beans.json
 bc1e486d0485526715425f3ac210f3a7428cecae assets/diversitydelight/models/item/banana.json
+4b864107946fe6b3aeda67382dfa9b9a5dbc1933 assets/diversitydelight/models/item/banana_bunch.json
+e35eca017a5642082eee14eef2ce976c26a11c61 assets/diversitydelight/models/item/banana_tree_frond.json
+d1a4921ae442b6a63a0d06d205b52bd0ea5e8c00 assets/diversitydelight/models/item/banana_tree_sapling.json
 69224b571d92c7e51833a956374d96684065b323 assets/diversitydelight/models/item/bell_pepper.json
 ce055d5874f3eb528ac469612babbaa78a80300b assets/diversitydelight/models/item/bell_pepper_seeds.json
 e5e6ca9aa97947232935d83a9203bc40061b2a96 assets/diversitydelight/models/item/broccoli.json

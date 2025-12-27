@@ -131,6 +131,14 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MANGO_TREE_FRUITING_LEAVES = BLOCKS.register("mango_tree_fruiting_leaves",
             () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), DDModItems.MANGO));
 
+    public static final DeferredBlock<Block> BANANA_TREE_SAPLING = BLOCKS.register("banana_tree_sapling",
+            () -> new SaplingBlock(DDTreeGrowers.BANANA_FRUIT, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> BANANA_TREE_FROND = BLOCKS.register("banana_tree_frond",
+            () -> new BananaFrond(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> BANANA_TREE_STEM = BLOCKS.register("banana_tree_stem",
+            () -> new BananaStem(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> BANANA_BUNCH = BLOCKS.register("banana_bunch",
+            () -> new BananaBunch(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

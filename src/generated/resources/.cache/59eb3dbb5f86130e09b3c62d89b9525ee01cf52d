@@ -1,7 +1,11 @@
-// 1.21.1	2025-12-25T14:02:18.1016289	Loot Tables
+// 1.21.1	2025-12-27T23:07:37.8029325	Loot Tables
 6148d418119cb2aa78a4671b74ef5b2a1312b593 data/diversitydelight/loot_table/blocks/apple_tree_fruiting_leaves.json
 cb907b859c7e91f89979fb88d5b6b90958af5242 data/diversitydelight/loot_table/blocks/apple_tree_leaves.json
 533f19dbe624e4e688df8d162cdb1039b38663a0 data/diversitydelight/loot_table/blocks/apple_tree_sapling.json
+07c745d63aef87151abf417bba30a777fe1b2bad data/diversitydelight/loot_table/blocks/banana_bunch.json
+b78f453bc04b2fd70dd784385150dd0e1d4215b4 data/diversitydelight/loot_table/blocks/banana_tree_frond.json
+2d5e2530deb0bb915f1d68e070000c4d48fd4410 data/diversitydelight/loot_table/blocks/banana_tree_sapling.json
+af84a4bf2593fb88b6b76a40b9ece2b00e7d977a data/diversitydelight/loot_table/blocks/banana_tree_stem.json
 1e4aab23aaec7dd038d38d1cd888dc8b402e1730 data/diversitydelight/loot_table/blocks/bell_pepper_crate.json
 3fd62d45a74211795e85f87a9f14eaa1fb545d5f data/diversitydelight/loot_table/blocks/broccoli_crate.json
 5e44a95d57a481a1caef8e7fb9acedb7cae8cc1d data/diversitydelight/loot_table/blocks/broccoli_crop.json

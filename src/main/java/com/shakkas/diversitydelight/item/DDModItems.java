@@ -177,6 +177,16 @@ public class DDModItems {
     public static final DeferredItem<BlockItem> MANGO_TREE_FRUITING_LEAVES = ITEMS.register("mango_tree_fruiting_leaves",
             () -> new BlockItem(ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
 
+    public static final DeferredItem<BlockItem> BANANA_TREE_SAPLING = ITEMS.register("banana_tree_sapling",
+            () -> new BlockItem(ModBlocks.BANANA_TREE_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> BANANA_TREE_FROND = ITEMS.register("banana_tree_frond",
+            () -> new BlockItem(ModBlocks.BANANA_TREE_FROND.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> BANANA_TREE_STEM = ITEMS.register("banana_tree_stem",
+            () -> new BlockItem(ModBlocks.BANANA_TREE_STEM.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> BANANA_BUNCH = ITEMS.register("banana_bunch",
+            () -> new BlockItem(ModBlocks.BANANA_BUNCH.get(), new Item.Properties()));
+
+
 
     //Wild Crops
     public static final DeferredItem<BlockItem> WILD_BELL_PEPPER = ITEMS.register("wild_bell_pepper",

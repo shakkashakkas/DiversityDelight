@@ -105,6 +105,11 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.MANGO_TREE_LEAVES);
                         output.accept(DDModItems.MANGO_TREE_FRUITING_LEAVES);
 
+                        output.accept(DDModItems.BANANA_TREE_SAPLING);
+                        output.accept(DDModItems.BANANA_TREE_FROND);
+                        output.accept(DDModItems.BANANA_TREE_STEM);
+                        output.accept(DDModItems.BANANA_BUNCH);
+
                         output.accept(DDModItems.WILD_BELL_PEPPER);
                         output.accept(DDModItems.WILD_BROCCOLI);
                         output.accept(DDModItems.WILD_CAULIFLOWER);

@@ -66,7 +66,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.ORANGE_TREE_LOG.get(),
                 ModBlocks.LEMON_TREE_LOG.get(),
                 ModBlocks.PEAR_TREE_LOG.get(),
-                ModBlocks.MANGO_TREE_LOG.get()
+                ModBlocks.MANGO_TREE_LOG.get(),
+                ModBlocks.BANANA_TREE_STEM.get()
         );
     }
 

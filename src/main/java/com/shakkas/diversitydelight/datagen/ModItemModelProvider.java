@@ -83,8 +83,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         itemGeneratedModel(DDModItems.LEMON_TREE_SAPLING.get());
         itemGeneratedModel(DDModItems.PEAR_TREE_SAPLING.get());
         itemGeneratedModel(DDModItems.MANGO_TREE_SAPLING.get());
+        itemGeneratedModel(DDModItems.BANANA_TREE_SAPLING.get());
 
         withExistingParent(DDModItems.WORM_BIN_BLOCK.getId().toString(), modLoc("block/worm_bin_contents0"));
+        withExistingParent(DDModItems.BANANA_TREE_FROND.getId().toString(), modLoc("block/banana_tree_frond"));
+        withExistingParent(DDModItems.BANANA_BUNCH.getId().toString(), modLoc("block/banana_bunch"));
         itemGeneratedModel(DDModItems.WILD_BELL_PEPPER.get());
         itemGeneratedModel(DDModItems.WILD_BROCCOLI.get());
         itemGeneratedModel(DDModItems.WILD_CAULIFLOWER.get());

@@ -3,11 +3,13 @@ package com.shakkas.diversitydelight.datagen;
 import com.shakkas.diversitydelight.DiversityDelight;
 import com.shakkas.diversitydelight.block.ModBlocks;
 import com.shakkas.diversitydelight.block.custom.*;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
@@ -20,6 +22,8 @@ import vectorwing.farmersdelight.common.block.FeastBlock;
 import javax.annotation.Nullable;
 import java.util.Arrays;
 import java.util.List;
+
+import static com.shakkas.diversitydelight.block.custom.BananaStem.STAGE;
 
 
 public class ModBlockStateProvider extends BlockStateProvider {
@@ -83,6 +87,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.crossCutOutBlock(ModBlocks.LEMON_TREE_SAPLING.get());
         this.crossCutOutBlock(ModBlocks.PEAR_TREE_SAPLING.get());
         this.crossCutOutBlock(ModBlocks.MANGO_TREE_SAPLING.get());
+        this.crossCutOutBlock(ModBlocks.BANANA_TREE_SAPLING.get());
 
         // Wild Crops
         this.crossCutOutBlock(ModBlocks.WILD_BELL_PEPPER.get());
@@ -103,6 +108,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlockAndItem(ModBlocks.MANGO_TREE_LOG.get());
         leafBlock(ModBlocks.MANGO_TREE_LEAVES.get());
 
+        //logBlockAndItem(ModBlocks.BANANA_TREE_STEM.get());
+        bananaStemBlock((BananaStem) ModBlocks.BANANA_TREE_STEM.get());
+        frondBlockAndItem(ModBlocks.BANANA_TREE_FROND.get());
+        bananaBunch(ModBlocks.BANANA_BUNCH.get());
+        //this.crossCutOutBlock(ModBlocks.BANANA_BUNCH.get());
+    }
+
+    public void frondBlockAndItem(Block block) {
+        String blockName = blockName(block);
+        horizontalBlock(block,existingModel(blockName));
+    }
+
+    public void bananaBunch(Block block) {
+        String blockName = blockName(block);
+        horizontalBlock(block,existingModel(blockName));
     }
 
     public void logBlockAndItem(Block block) {
@@ -144,6 +164,43 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     return builder.build();
                 });
         simpleBlockItem(block,models().cubeAll(blockName(block),resourceBlock(blockName(block)+"_stage3")));
+    }
+
+    public void bananaStemBlock(BananaStem block) {
+        String blockName = blockName(block);
+        getVariantBuilder(block)
+                .forAllStates(state -> {
+                    int stage = state.getValue(STAGE);
+                    String stemSuffix = "";
+                    switch (stage) {
+                        case 0 -> {
+                            stemSuffix = "";
+                        }
+                        case 1 -> {
+                            stemSuffix = "_transition";
+                        }
+                        case 2 -> {
+                            stemSuffix = "_upper";
+                        }
+                    }
+                    Direction.Axis axis = state.getValue(BlockStateProperties.AXIS);
+                    int rotX = 0; int rotY = 0;
+                    switch (axis) {
+                        case X -> {
+                            rotX = 90; rotY = 90;
+                        }
+                        case Y -> {
+                            rotX = 0; rotY = 0;
+                        }
+                        case Z -> {
+                            rotX = 90; rotY = 0;
+                        }
+                    }
+                    ConfiguredModel.Builder<?> builder = ConfiguredModel.builder()
+                            .modelFile(models().cubeColumn(blockName+stemSuffix,resourceBlock(blockName+stemSuffix),resourceBlock(blockName + "_top"+stemSuffix))).rotationX(rotX).rotationY(rotY);
+                    return builder.build();
+                });
+        simpleBlockItem(block,models().cubeColumn(blockName,resourceBlock(blockName),resourceBlock(blockName+"_top")));
     }
 
     // vectorwing code for datagen of custom crop block state

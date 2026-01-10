@@ -1,5 +1,6 @@
 package com.shakkas.diversitydelight.block.custom;
 
+import com.shakkas.diversitydelight.block.entity.FruitingLeavesBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -14,17 +15,20 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.neoforged.neoforge.common.CommonHooks;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.function.Supplier;
 
-public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBlock {
+public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBlock, EntityBlock {
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
     private final Supplier<Item> cropDrop;
@@ -39,6 +43,10 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
         return (getAge(state) < MAX_AGE);
     }
 
+    protected boolean beeCanPollinate(BlockState state) {
+        return (getAge(state) <= 1);
+    }
+
     @Override
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
         if (level.isAreaLoaded(pos, 1)) {
@@ -47,6 +55,9 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
                 int growthChance = 8;
                 if (age < this.getMaxAge()) {
                     if (CommonHooks.canCropGrow(level, pos, state, (random.nextInt(growthChance) == 0))) {
+                        if (beeCanPollinate(state) && (level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity)) {
+                            fruitingLeavesBlockEntity.setPollinated();
+                        }
                         level.setBlock(pos, state.setValue(AGE,age+1), 2);
                         CommonHooks.fireCropGrowPost(level, pos, state);
                     }
@@ -99,6 +110,9 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
             popResource(level, pos, new ItemStack(getCropDrop(), quantity));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             level.setBlock(pos, state.setValue(AGE, 0), 2);
+            if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+                fruitingLeavesBlockEntity.resetPollination();
+            }
             return InteractionResult.SUCCESS;
         } else {
             return super.useWithoutItem(state, level, pos, player, hit);
@@ -106,8 +120,36 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
     }
 
     @Override
+    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
+        if(state.getBlock() != newState.getBlock()) {
+            if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+                level.updateNeighbourForOutputSignal(pos, this);
+            }
+        }
+        super.onRemove(state, level, pos, newState, movedByPiston);
+    }
+
+    @Override
+    public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
+        super.onPlace(state, level, pos, oldState, movedByPiston);
+        if (!level.isClientSide && oldState.getBlock() != state.getBlock()) {
+            if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+                RandomSource random = level.getRandom();
+                fruitingLeavesBlockEntity.freshGenetics(random);
+            }
+        }
+    }
+
+
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
         builder.add(AGE);
     }
+
+    @Override
+    public @Nullable BlockEntity newBlockEntity(BlockPos blockPos, BlockState blockState) {
+        return new FruitingLeavesBlockEntity(blockPos, blockState);
+    }
+
 }

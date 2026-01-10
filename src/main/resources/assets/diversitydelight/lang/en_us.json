@@ -21,6 +21,7 @@
   "item.diversitydelight.pea_seeds": "Pea Seeds",
   "item.diversitydelight.pear": "Pear",
   "item.diversitydelight.pineapple": "Pineapple",
+  "item.diversitydelight.pineapple_slice": "Pineapple Slice",
 
   "item.diversitydelight.bacon_wrapped_green_beans": "Bacon Wrapped Green Beans",
   "item.diversitydelight.fritata": "Fritata",
@@ -28,10 +29,46 @@
   "item.diversitydelight.stuffed_bell_pepper": "Stuffed Bell Pepper",
   "item.diversitydelight.vegetable_sticks": "Vegetable Sticks",
 
+  "item.diversitydelight.banana_bread": "Banana Bread",
+  "item.diversitydelight.fruit_rollup": "Fruit Rollup",
+  "item.diversitydelight.lemon_jelly": "Lemon Jelly",
+  "item.diversitydelight.mango_jelly": "Mango Jelly",
+  "item.diversitydelight.kiwi_jelly": "Kiwi Jelly",
+  "item.diversitydelight.ice_cream_cone": "Ice Cream Cone",
+  "item.diversitydelight.lemon_ice_cream": "Lemon Ice Cream",
+  "item.diversitydelight.mango_ice_cream": "Mango Ice Cream",
+  "item.diversitydelight.chocolate_ice_cream": "Chocolate Ice Cream",
+  "item.diversitydelight.orange_juice": "Orange Juice",
+  "item.diversitydelight.pineapple_juice": "Pineapple Juice",
+  "item.diversitydelight.banana_milk": "Banana Milk",
+  "item.diversitydelight.mango_yoghurt": "Mango Yoghurt",
+  "item.diversitydelight.orange_yoghurt": "Orange Yoghurt",
+  "item.diversitydelight.poached_pear": "Poached Pear",
+
+  "item.diversitydelight.hawaiian_pizza": "Hawaiian Pizza",
+  "item.diversitydelight.banoffee_pie": "Banoffee Pie",
+  "item.diversitydelight.lemon_meringue_pie": "Lemon Meringue Pie",
+  "item.diversitydelight.pear_pie": "Pear Pie",
+  "item.diversitydelight.fruit_flan": "Fruit Flan",
+
+  "item.diversitydelight.hawaiian_pizza_slice": "Hawaiian Pizza Slice",
+  "item.diversitydelight.banoffee_pie_slice": "Banoffee Pie Slice",
+  "item.diversitydelight.lemon_meringue_pie_slice": "Lemon Meringue Pie Slice",
+  "item.diversitydelight.pear_pie_slice": "Pear Pie Slice",
+  "item.diversitydelight.fruit_flan_slice": "Fruit Flan Slice",
+
+
   "item.diversitydelight.cauliflower_soup": "Cauliflower Soup",
   "item.diversitydelight.chili_bean_soup": "Chili Bean Soup",
   "item.diversitydelight.gumbo": "Gumbo",
   "item.diversitydelight.teriyaki_chicken": "Teriyaki Chicken",
+
+  "item.diversitydelight.banana_chips": "Banana Chips",
+  "item.diversitydelight.cereal_bowl": "Cereal Bowl",
+  "item.diversitydelight.orange_chicken": "Orange Chicken",
+  "item.diversitydelight.sweet_and_sour_chicken": "Sweet And Sour Chicken",
+  "item.diversitydelight.sweet_sticky_rice": "Sweet Sticky Rice",
+  "item.diversitydelight.tropical_salad": "Tropical Salad",
 
   "item.diversitydelight.buffalo_wings": "Buffalo Wings",
   "item.diversitydelight.cauliflower_steak": "Cauliflower Steak",
@@ -44,8 +81,11 @@
   "item.diversitydelight.vegetable_sticks_block": "Vegetable Sticks Block",
   "block.diversitydelight.vegetable_sticks_block": "Vegetable Sticks Block",
 
+  "item.diversitydelight.apple_pear_crumble": "Apple Pear Crumble",
+
   "item.diversitydelight.ketchup": "Ketchup",
   "item.diversitydelight.mayonnaise": "Mayonnaise",
+  "item.diversitydelight.marmalade": "Marmalade",
   "item.diversitydelight.hot_sauce": "Hot Sauce",
 
   "block.diversitydelight.bell_pepper_crate": "Bell Pepper Crate",

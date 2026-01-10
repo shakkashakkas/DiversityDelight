@@ -69,6 +69,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.MANGO_TREE_LOG.get(),
                 ModBlocks.BANANA_TREE_STEM.get()
         );
+
+        tag(net.minecraft.tags.BlockTags.FLOWERS).add(
+                ModBlocks.APPLE_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.MANGO_TREE_FRUITING_LEAVES.get()
+        );
     }
 
     protected void registerCommonTags() {

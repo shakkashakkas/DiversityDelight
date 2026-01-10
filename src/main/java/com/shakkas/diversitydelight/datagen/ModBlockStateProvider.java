@@ -111,7 +111,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //logBlockAndItem(ModBlocks.BANANA_TREE_STEM.get());
         bananaStemBlock((BananaStem) ModBlocks.BANANA_TREE_STEM.get());
         frondBlockAndItem(ModBlocks.BANANA_TREE_FROND.get());
-        bananaBunch(ModBlocks.BANANA_BUNCH.get());
+        bananaBunch(ModBlocks.BANANA_BUNCH.get(),Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
         //this.crossCutOutBlock(ModBlocks.BANANA_BUNCH.get());
     }
 
@@ -120,9 +120,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         horizontalBlock(block,existingModel(blockName));
     }
 
-    public void bananaBunch(Block block) {
-        String blockName = blockName(block);
-        horizontalBlock(block,existingModel(blockName));
+    public void bananaBunch(Block block, List<Integer> suffixes) {
+        getVariantBuilder(block)
+                .forAllStates(state -> {
+                    int age = state.getValue(BananaBunch.AGE);
+                    int stage = suffixes.isEmpty() ? age : suffixes.get(Math.min(suffixes.size() - 1, age));
+                    String stageSuffix = "_stage" + stage;
+                    ConfiguredModel.Builder<?> builder = ConfiguredModel.builder()
+                            .modelFile(existingModel(blockName(block)+stageSuffix))
+                            .rotationY(((int) state.getValue(BananaBunch.FACING).toYRot() + 180) % 360);
+                    return builder.build();
+                });
     }
 
     public void logBlockAndItem(Block block) {

@@ -51,17 +51,55 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.PEA_SEEDS.get());
         basicItem(DDModItems.PEAR.get());
         basicItem(DDModItems.PINEAPPLE.get());
+        basicItem(DDModItems.PINEAPPLE_SLICE.get());
         //HANDHELD
         basicItem(DDModItems.BACON_WRAPPED_GREEN_BEANS.get());
         basicItem(DDModItems.FRITATA.get());
         basicItem(DDModItems.SMASHED_PEAS_ON_TOAST.get());
         basicItem(DDModItems.STUFFED_BELL_PEPPER.get());
         basicItem(DDModItems.VEGETABLE_STICKS.get());
+
+        basicItem(DDModItems.BANANA_BREAD.get());
+        basicItem(DDModItems.FRUIT_ROLLUP.get());
+        basicItem(DDModItems.POACHED_PEAR.get());
+        basicItem(DDModItems.LEMON_JELLY.get());
+        basicItem(DDModItems.MANGO_JELLY.get());
+        basicItem(DDModItems.KIWI_JELLY.get());
+        basicItem(DDModItems.ICE_CREAM_CONE.get());
+        basicItem(DDModItems.LEMON_ICE_CREAM.get());
+        basicItem(DDModItems.MANGO_ICE_CREAM.get());
+        basicItem(DDModItems.CHOCOLATE_ICE_CREAM.get());
+        basicItem(DDModItems.ORANGE_JUICE.get());
+        basicItem(DDModItems.PINEAPPLE_JUICE.get());
+        basicItem(DDModItems.BANANA_MILK.get());
+        basicItem(DDModItems.MANGO_YOGHURT.get());
+        basicItem(DDModItems.ORANGE_YOGHURT.get());
+
+
+        basicItem(DDModItems.HAWAIIAN_PIZZA.get());
+        basicItem(DDModItems.BANOFFEE_PIE.get());
+        basicItem(DDModItems.LEMON_MERINGUE_PIE.get());
+        basicItem(DDModItems.PEAR_PIE.get());
+        basicItem(DDModItems.FRUIT_FLAN.get());
+
+        basicItem(DDModItems.HAWAIIAN_PIZZA_SLICE.get());
+        basicItem(DDModItems.BANOFFEE_PIE_SLICE.get());
+        basicItem(DDModItems.LEMON_MERINGUE_PIE_SLICE.get());
+        basicItem(DDModItems.PEAR_PIE_SLICE.get());
+        basicItem(DDModItems.FRUIT_FLAN_SLICE.get());
+
+
         //BOWLS
         basicItem(DDModItems.CAULIFLOWER_SOUP.get());
         basicItem(DDModItems.CHILI_BEAN_SOUP.get());
         basicItem(DDModItems.GUMBO.get());
         basicItem(DDModItems.TERIYAKI_CHICKEN.get());
+
+        basicItem(DDModItems.BANANA_CHIPS.get());
+        basicItem(DDModItems.CEREAL_BOWL.get());
+        basicItem(DDModItems.ORANGE_CHICKEN.get());
+        basicItem(DDModItems.SWEET_AND_SOUR_CHICKEN.get());
+        basicItem(DDModItems.TROPICAL_SALAD.get());
         //PLATES
         basicItem(DDModItems.BUFFALO_WINGS.get());
         basicItem(DDModItems.CAULIFLOWER_STEAK.get());
@@ -73,8 +111,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.PEA_PESTO_PASTA.get());
         basicItem(DDModItems.VEGETABLE_STICKS_BLOCK.get());
 
+        basicItem(DDModItems.APPLE_PEAR_CRUMBLE.get());
+
         //CONDIMENTS
         basicItem(DDModItems.KETCHUP.get());
+        basicItem(DDModItems.MARMALADE.get());
         basicItem(DDModItems.MAYONNAISE.get());
         basicItem(DDModItems.HOT_SAUCE.get());
 
@@ -87,7 +128,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         withExistingParent(DDModItems.WORM_BIN_BLOCK.getId().toString(), modLoc("block/worm_bin_contents0"));
         withExistingParent(DDModItems.BANANA_TREE_FROND.getId().toString(), modLoc("block/banana_tree_frond"));
-        withExistingParent(DDModItems.BANANA_BUNCH.getId().toString(), modLoc("block/banana_bunch"));
+        withExistingParent(DDModItems.BANANA_BUNCH.getId().toString(), modLoc("block/banana_bunch_stage3"));
         itemGeneratedModel(DDModItems.WILD_BELL_PEPPER.get());
         itemGeneratedModel(DDModItems.WILD_BROCCOLI.get());
         itemGeneratedModel(DDModItems.WILD_CAULIFLOWER.get());

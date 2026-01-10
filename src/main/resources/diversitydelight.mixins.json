@@ -3,7 +3,9 @@
   "package": "com.shakkas.diversitydelight.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ItemRendererMixIn"
+    "ItemRendererMixIn",
+    "BeeMixIn",
+    "BeePollinateGoalMixIn"
   ],
   "injectors": {
     "defaultRequire": 1

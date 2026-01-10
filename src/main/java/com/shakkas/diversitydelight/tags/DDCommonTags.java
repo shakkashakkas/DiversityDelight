@@ -24,6 +24,15 @@ public class DDCommonTags {
     public static final TagKey<Item> FOODS_GREEN_BEAN = commonItemTag("foods/green_bean");
     public static final TagKey<Item> FOODS_PEA = commonItemTag("foods/pea");
 
+    public static final TagKey<Item> FOODS_ORANGE = commonItemTag("foods/orange");
+    public static final TagKey<Item> FOODS_BANANA = commonItemTag("foods/banana");
+    public static final TagKey<Item> FOODS_LEMON = commonItemTag("foods/lemon");
+    public static final TagKey<Item> FOODS_MANGO = commonItemTag("foods/mango");
+    public static final TagKey<Item> FOODS_KIWI = commonItemTag("foods/kiwi");
+    public static final TagKey<Item> FOODS_PEAR = commonItemTag("foods/pear");
+    public static final TagKey<Item> FOODS_PINEAPPLE = commonItemTag("foods/pineapple");
+
+
     public static final TagKey<Item> CROPS_BELL_PEPPER = commonItemTag("crops/bell_pepper");
     public static final TagKey<Item> CROPS_BROCCOLI = commonItemTag("crops/broccoli");
     public static final TagKey<Item> CROPS_CAULIFLOWER = commonItemTag("crops/cauliflower");
@@ -31,6 +40,15 @@ public class DDCommonTags {
     public static final TagKey<Item> CROPS_CHILI = commonItemTag("crops/chili");
     public static final TagKey<Item> CROPS_GREEN_BEAN = commonItemTag("crops/green_bean");
     public static final TagKey<Item> CROPS_PEA = commonItemTag("crops/pea");
+
+    public static final TagKey<Item> CROPS_ORANGE = commonItemTag("crops/orange");
+    public static final TagKey<Item> CROPS_BANANA = commonItemTag("crops/banana");
+    public static final TagKey<Item> CROPS_LEMON = commonItemTag("crops/lemon");
+    public static final TagKey<Item> CROPS_MANGO = commonItemTag("crops/mango");
+    public static final TagKey<Item> CROPS_KIWI = commonItemTag("crops/kiwi");
+    public static final TagKey<Item> CROPS_PEAR = commonItemTag("crops/pear");
+    public static final TagKey<Item> CROPS_PINEAPPLE = commonItemTag("crops/pineapple");
+
 
     public static final TagKey<Item> STORAGE_BLOCKS_ITEM_BELL_PEPPER = commonItemTag("storage_blocks/bell_pepper");
     public static final TagKey<Item> STORAGE_BLOCKS_ITEM_BROCCOLI = commonItemTag("storage_blocks/broccoli");

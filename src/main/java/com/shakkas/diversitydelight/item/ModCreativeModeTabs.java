@@ -34,6 +34,7 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.PINEAPPLE);
                         output.accept(DDModItems.BROCCOLI_FLORET);
                         output.accept(DDModItems.CAULIFLOWER_FLORET);
+                        output.accept(DDModItems.PINEAPPLE_SLICE);
                         output.accept(DDModItems.BELL_PEPPER_SEEDS);
                         output.accept(DDModItems.BROCCOLI_SEEDS);
                         output.accept(DDModItems.CAULIFLOWER_SEEDS);
@@ -48,11 +49,45 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.STUFFED_BELL_PEPPER);
                         output.accept(DDModItems.VEGETABLE_STICKS);
 
+                        output.accept(DDModItems.BANANA_BREAD);
+                        output.accept(DDModItems.FRUIT_ROLLUP);
+                        output.accept(DDModItems.POACHED_PEAR);
+                        output.accept(DDModItems.LEMON_JELLY);
+                        output.accept(DDModItems.MANGO_JELLY);
+                        output.accept(DDModItems.KIWI_JELLY);
+                        output.accept(DDModItems.ICE_CREAM_CONE);
+                        output.accept(DDModItems.LEMON_ICE_CREAM);
+                        output.accept(DDModItems.MANGO_ICE_CREAM);
+                        output.accept(DDModItems.CHOCOLATE_ICE_CREAM);
+                        output.accept(DDModItems.ORANGE_JUICE);
+                        output.accept(DDModItems.PINEAPPLE_JUICE);
+                        output.accept(DDModItems.BANANA_MILK);
+                        output.accept(DDModItems.MANGO_YOGHURT);
+                        output.accept(DDModItems.ORANGE_YOGHURT);
+
+                        output.accept(DDModItems.HAWAIIAN_PIZZA);
+                        output.accept(DDModItems.HAWAIIAN_PIZZA_SLICE);
+                        output.accept(DDModItems.BANOFFEE_PIE);
+                        output.accept(DDModItems.BANOFFEE_PIE_SLICE);
+                        output.accept(DDModItems.LEMON_MERINGUE_PIE);
+                        output.accept(DDModItems.LEMON_MERINGUE_PIE_SLICE);
+                        output.accept(DDModItems.PEAR_PIE);
+                        output.accept(DDModItems.PEAR_PIE_SLICE);
+                        output.accept(DDModItems.FRUIT_FLAN);
+                        output.accept(DDModItems.FRUIT_FLAN_SLICE);
+
+
                         //BOWLS
                         output.accept(DDModItems.CAULIFLOWER_SOUP);
                         output.accept(DDModItems.CHILI_BEAN_SOUP);
                         output.accept(DDModItems.GUMBO);
                         output.accept(DDModItems.TERIYAKI_CHICKEN);
+
+                        output.accept(DDModItems.BANANA_CHIPS);
+                        output.accept(DDModItems.CEREAL_BOWL);
+                        output.accept(DDModItems.ORANGE_CHICKEN);
+                        output.accept(DDModItems.SWEET_AND_SOUR_CHICKEN);
+                        output.accept(DDModItems.TROPICAL_SALAD);
 
                         //PLATES
                         output.accept(DDModItems.BUFFALO_WINGS);
@@ -65,8 +100,11 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.PEA_PESTO_PASTA);
                         output.accept(DDModItems.VEGETABLE_STICKS_BLOCK);
 
+                        output.accept(DDModItems.APPLE_PEAR_CRUMBLE);
+
                         //CONDIMENTS
                         output.accept(DDModItems.KETCHUP);
+                        output.accept(DDModItems.MARMALADE);
                         output.accept(DDModItems.MAYONNAISE);
                         output.accept(DDModItems.HOT_SAUCE);
 

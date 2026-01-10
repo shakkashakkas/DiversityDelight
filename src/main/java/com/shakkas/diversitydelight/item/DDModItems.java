@@ -12,6 +12,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
+import vectorwing.farmersdelight.common.item.DrinkableItem;
 
 public class DDModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(DiversityDelight.MODID);
@@ -61,6 +62,8 @@ public class DDModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.PEAR)));
     public static final DeferredItem<Item> PINEAPPLE = ITEMS.register("pineapple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.PINEAPPLE)));
+    public static final DeferredItem<Item> PINEAPPLE_SLICE = ITEMS.register("pineapple_slice",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PINEAPPLE)));
 
     //FOODS
     //HANDHELD
@@ -75,6 +78,60 @@ public class DDModItems {
     public static final DeferredItem<Item> VEGETABLE_STICKS = ITEMS.register("vegetable_sticks",
             () -> new Item(new Item.Properties().food(ModFoodProperties.VEGETABLE_STICKS)));
 
+    //HH - FRUITS AND CONFECTIONERIES
+    public static final DeferredItem<Item> BANANA_BREAD = ITEMS.register("banana_bread",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA_BREAD)));
+    public static final DeferredItem<Item> FRUIT_ROLLUP = ITEMS.register("fruit_rollup",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.FRUIT_ROLLUP),true));
+    public static final DeferredItem<Item> POACHED_PEAR = ITEMS.register("poached_pear",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.POACHED_PEAR)));
+    public static final DeferredItem<Item> LEMON_JELLY = ITEMS.register("lemon_jelly",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.JELLY),true));
+    public static final DeferredItem<Item> MANGO_JELLY = ITEMS.register("mango_jelly",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.JELLY),true));
+    public static final DeferredItem<Item> KIWI_JELLY = ITEMS.register("kiwi_jelly",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.JELLY),true));
+    public static final DeferredItem<Item> ICE_CREAM_CONE = ITEMS.register("ice_cream_cone",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.ICE_CREAM_CONE),true));
+    public static final DeferredItem<Item> LEMON_ICE_CREAM = ITEMS.register("lemon_ice_cream",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.LEMON_ICE_CREAM),true));
+    public static final DeferredItem<Item> MANGO_ICE_CREAM = ITEMS.register("mango_ice_cream",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.MANGO_ICE_CREAM),true));
+    public static final DeferredItem<Item> CHOCOLATE_ICE_CREAM = ITEMS.register("chocolate_ice_cream",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.CHOCOLATE_ICE_CREAM),true));
+    public static final DeferredItem<Item> ORANGE_JUICE = ITEMS.register("orange_juice",
+            () -> new DrinkableItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).food(ModFoodProperties.ORANGE_JUICE),true));
+    public static final DeferredItem<Item> PINEAPPLE_JUICE = ITEMS.register("pineapple_juice",
+            () -> new DrinkableItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).food(ModFoodProperties.PINEAPPLE_JUICE),true));
+    public static final DeferredItem<Item> BANANA_MILK = ITEMS.register("banana_milk",
+            () -> new DrinkableItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16).food(ModFoodProperties.BANANA_MILK),true));
+    public static final DeferredItem<Item> MANGO_YOGHURT = ITEMS.register("mango_yoghurt",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.YOGHURT),true));
+    public static final DeferredItem<Item> ORANGE_YOGHURT = ITEMS.register("orange_yoghurt",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.YOGHURT),true));
+
+    public static final DeferredItem<Item> HAWAIIAN_PIZZA = ITEMS.register("hawaiian_pizza",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PINEAPPLE)));
+    public static final DeferredItem<Item> BANOFFEE_PIE = ITEMS.register("banoffee_pie",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
+    public static final DeferredItem<Item> LEMON_MERINGUE_PIE = ITEMS.register("lemon_meringue_pie",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.LEMON)));
+    public static final DeferredItem<Item> PEAR_PIE = ITEMS.register("pear_pie",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PEAR)));
+    public static final DeferredItem<Item> FRUIT_FLAN = ITEMS.register("fruit_flan",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KIWI)));
+
+    public static final DeferredItem<Item> HAWAIIAN_PIZZA_SLICE = ITEMS.register("hawaiian_pizza_slice",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PINEAPPLE)));
+    public static final DeferredItem<Item> BANOFFEE_PIE_SLICE = ITEMS.register("banoffee_pie_slice",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
+    public static final DeferredItem<Item> LEMON_MERINGUE_PIE_SLICE = ITEMS.register("lemon_meringue_pie_slice",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.LEMON)));
+    public static final DeferredItem<Item> PEAR_PIE_SLICE = ITEMS.register("pear_pie_slice",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PEAR)));
+    public static final DeferredItem<Item> FRUIT_FLAN_SLICE = ITEMS.register("fruit_flan_slice",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.KIWI)));
+
     //BOWLS
     public static final DeferredItem<Item> CAULIFLOWER_SOUP = ITEMS.register("cauliflower_soup",
             () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.CAULIFLOWER_SOUP).craftRemainder(Items.BOWL).stacksTo(16),true));
@@ -84,6 +141,17 @@ public class DDModItems {
             () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.GUMBO).craftRemainder(Items.BOWL).stacksTo(16),true));
     public static final DeferredItem<Item> TERIYAKI_CHICKEN = ITEMS.register("teriyaki_chicken",
             () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.TERIYAKI_CHICKEN).craftRemainder(Items.BOWL).stacksTo(16),true));
+
+    public static final DeferredItem<Item> BANANA_CHIPS = ITEMS.register("banana_chips",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.BANANA_CHIPS).craftRemainder(Items.BOWL).stacksTo(16),true));
+    public static final DeferredItem<Item> CEREAL_BOWL = ITEMS.register("cereal_bowl",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.CEREAL_BOWL).craftRemainder(Items.BOWL).stacksTo(16),true));
+    public static final DeferredItem<Item> ORANGE_CHICKEN = ITEMS.register("orange_chicken",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.ORANGE_CHICKEN).craftRemainder(Items.BOWL).stacksTo(16),true));
+    public static final DeferredItem<Item> SWEET_AND_SOUR_CHICKEN = ITEMS.register("sweet_and_sour_chicken",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.SWEET_AND_SOUR_CHICKEN).craftRemainder(Items.BOWL).stacksTo(16),true));
+    public static final DeferredItem<Item> TROPICAL_SALAD = ITEMS.register("tropical_salad",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.TROPICAL_SALAD).craftRemainder(Items.BOWL).stacksTo(16),true));
 
     //PLATES
     public static final DeferredItem<Item> BUFFALO_WINGS = ITEMS.register("buffalo_wings",
@@ -105,11 +173,16 @@ public class DDModItems {
     public static final DeferredItem<Item> VEGETABLE_STICKS_BLOCK = ITEMS.register("vegetable_sticks_block",
             () -> new BlockItem(ModBlocks.VEGETABLE_STICKS_BLOCK.get(), new Item.Properties().stacksTo(1)));
 
+    public static final DeferredItem<Item> APPLE_PEAR_CRUMBLE = ITEMS.register("apple_pear_crumble",
+            () -> new ConsumableItem(new Item.Properties().food(ModFoodProperties.APPLE_PEAR_CRUMBLE).craftRemainder(Items.BOWL).stacksTo(16),true));
+
     //CONDIMENTS
     public static final DeferredItem<Item> KETCHUP = ITEMS.register("ketchup",
             () -> new CondimentItem(new Item.Properties().durability(16).component(ModComponents.CONDIMENT_PROPERTIES,ModCondimentProperties.KETCHUP)));
     public static final DeferredItem<Item> MAYONNAISE = ITEMS.register("mayonnaise",
             () -> new CondimentItem(new Item.Properties().durability(16).component(ModComponents.CONDIMENT_PROPERTIES,ModCondimentProperties.MAYONNAISE)));
+    public static final DeferredItem<Item> MARMALADE = ITEMS.register("marmalade",
+            () -> new CondimentItem(new Item.Properties().durability(16).component(ModComponents.CONDIMENT_PROPERTIES,ModCondimentProperties.MARMALADE)));
     public static final DeferredItem<Item> HOT_SAUCE = ITEMS.register("hot_sauce",
             () -> new CondimentItem(new Item.Properties().durability(16).component(ModComponents.CONDIMENT_PROPERTIES,ModCondimentProperties.HOT_SAUCE)));
 

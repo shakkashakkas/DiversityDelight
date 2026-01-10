@@ -38,7 +38,7 @@ public class DDConfiguredFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         register(context, APPLE_FRUIT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(Blocks.OAK_LOG),
-                new StraightTrunkPlacer(2, 1, 3),
+                new StraightTrunkPlacer(4, 1, 3),
                 new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.APPLE_TREE_LEAVES.get().defaultBlockState(), 4).add(ModBlocks.APPLE_TREE_FRUITING_LEAVES.get().defaultBlockState(), 1).build()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                 new TwoLayersFeatureSize(1, 0, 1)).build());

@@ -3,6 +3,7 @@ package com.shakkas.diversitydelight;
 
 import com.mojang.logging.LogUtils;
 import com.shakkas.diversitydelight.block.ModBlocks;
+import com.shakkas.diversitydelight.block.entity.ModBlockEntities;
 import com.shakkas.diversitydelight.component.ModComponents;
 import com.shakkas.diversitydelight.item.ModCreativeModeTabs;
 import com.shakkas.diversitydelight.item.DDModItems;
@@ -35,6 +36,7 @@ public class DiversityDelight {
         DDModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModComponents.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
         DDPlacerTypes.register(modEventBus);
         modEventBus.addListener(this::addCreative);
 

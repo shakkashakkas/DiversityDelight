@@ -3,7 +3,9 @@ package com.shakkas.diversitydelight.datagen;
 import com.shakkas.diversitydelight.item.DDModItems;
 import com.shakkas.diversitydelight.tags.DDCommonTags;
 import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Items;
+import net.neoforged.neoforge.common.Tags;
 import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
 import vectorwing.farmersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.tag.CommonTags;
@@ -20,6 +22,17 @@ public class ModCookingRecipes {
 
     public static void register(RecipeOutput output) {
         cookMeals(output);
+        cookMisc(output);
+    }
+
+    private static void cookMisc(RecipeOutput output) {
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.BANANA_MILK.get(), 1, NORMAL_COOKING, SMALL_EXP)
+                .addIngredient(DDModItems.BANANA.get())
+                .addIngredient(DDModItems.BANANA.get())
+                .addIngredient(CommonTags.FOODS_MILK)
+                .unlockedByItems("has_banana", DDModItems.BANANA.get())
+                .setRecipeBookTab(CookingPotRecipeBookTab.DRINKS)
+                .build(output);
     }
 
     private static void cookMeals(RecipeOutput output) {
@@ -137,6 +150,89 @@ public class ModCookingRecipes {
                 .addIngredient(DDCommonTags.CROPS_CHILI)
                 .addIngredient(CommonTags.FOODS_COOKED_CHICKEN)
                 .unlockedByItems("has_broccoli", DDModItems.BROCCOLI)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.APPLE_PEAR_CRUMBLE.get(), 1, NORMAL_COOKING, SMALL_EXP)
+                .addIngredient(Items.APPLE)
+                .addIngredient(Items.APPLE)
+                .addIngredient(DDCommonTags.CROPS_PEAR)
+                .addIngredient(DDCommonTags.CROPS_PEAR)
+                .addIngredient(Items.WHEAT)
+                .unlockedByItems("has_pear", DDModItems.PEAR)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.KIWI_JELLY.get(), 2, FAST_COOKING, SMALL_EXP)
+                .addIngredient(DDModItems.KIWI.get())
+                .addIngredient(DDModItems.KIWI.get())
+                .addIngredient(Items.BONE)
+                .addIngredient(Items.SUGAR)
+                .unlockedByItems("has_kiwi", DDModItems.KIWI)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.LEMON_JELLY.get(), 2, FAST_COOKING, SMALL_EXP)
+                .addIngredient(DDModItems.LEMON.get())
+                .addIngredient(DDModItems.LEMON.get())
+                .addIngredient(Items.BONE)
+                .addIngredient(Items.SUGAR)
+                .unlockedByItems("has_lemon", DDModItems.LEMON)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.MANGO_JELLY.get(), 2, FAST_COOKING, SMALL_EXP)
+                .addIngredient(DDModItems.MANGO.get())
+                .addIngredient(DDModItems.MANGO.get())
+                .addIngredient(Items.BONE)
+                .addIngredient(Items.SUGAR)
+                .unlockedByItems("has_mango", DDModItems.MANGO)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.MANGO_YOGHURT.get(), 1, SLOW_COOKING, MEDIUM_EXP)
+                .addIngredient(DDModItems.MANGO.get())
+                .addIngredient(DDModItems.MANGO.get())
+                .addIngredient(CommonTags.FOODS_MILK)
+                .addIngredient(Items.HONEY_BOTTLE)
+                .unlockedByItems("has_mango", DDModItems.MANGO)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.ORANGE_YOGHURT.get(), 1, SLOW_COOKING, MEDIUM_EXP)
+                .addIngredient(DDModItems.ORANGE.get())
+                .addIngredient(DDModItems.ORANGE.get())
+                .addIngredient(CommonTags.FOODS_MILK)
+                .addIngredient(Items.HONEY_BOTTLE)
+                .unlockedByItems("has_orange", DDModItems.ORANGE)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.ORANGE_CHICKEN.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
+                .addIngredient(DDModItems.ORANGE.get())
+                .addIngredient(DDModItems.ORANGE.get())
+                .addIngredient(CommonTags.FOODS_RAW_CHICKEN)
+                .addIngredient(CommonTags.FOODS_RAW_CHICKEN)
+                .addIngredient(Items.WHEAT)
+                .unlockedByItems("has_orange", DDModItems.ORANGE)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.POACHED_PEAR.get(), 2, NORMAL_COOKING, MEDIUM_EXP)
+                .addIngredient(DDModItems.PEAR.get())
+                .addIngredient(DDModItems.PEAR.get())
+                .addIngredient(Items.HONEY_BOTTLE)
+                .unlockedByItems("has_pear", DDModItems.PEAR)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.SWEET_AND_SOUR_CHICKEN.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
+                .addIngredient(DDModItems.BELL_PEPPER.get())
+                .addIngredient(DDCommonTags.FOODS_PINEAPPLE)
+                .addIngredient(CommonTags.FOODS_RAW_CHICKEN)
+                .addIngredient(CommonTags.FOODS_RAW_CHICKEN)
+                .addIngredient(ModItems.ONION.get())
+                .unlockedByItems("has_pineapple", DDModItems.PINEAPPLE)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(output);
     }

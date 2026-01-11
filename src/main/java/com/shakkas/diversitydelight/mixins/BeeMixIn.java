@@ -12,12 +12,14 @@ public abstract class BeeMixIn {
     private int mutation = 0;
     private int yield = 0;
     private int growth = 0;
+    private boolean hasPollinatedFlower = true;
 
     @Inject(method = "addAdditionalSaveData", at = @At("TAIL"))
     public void addAdditionalSaveData(CompoundTag compound, CallbackInfo ci) {
 //        compound.putInt("geneMutation", this.mutation);
 //        compound.putInt("geneYield", this.yield);
 //        compound.putInt("geneGrowth", this.growth);
+        compound.putBoolean("hasPollinatedFlower",this.hasPollinatedFlower);
     }
 
     @Inject(method = "readAdditionalSaveData", at = @At("TAIL"))

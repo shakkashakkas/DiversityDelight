@@ -1,6 +1,7 @@
 package com.shakkas.diversitydelight.block.custom;
 
 import com.shakkas.diversitydelight.block.entity.FruitingLeavesBlockEntity;
+import com.shakkas.diversitydelight.component.FruitTreeGeneticsProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -32,10 +33,12 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
     public static final int MAX_AGE = 3;
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
     private final Supplier<Item> cropDrop;
+    private final Supplier<FruitTreeGeneticsProperties> treeGenetics;
 
-    public FruitingLeavesBlock(Properties properties, Supplier<Item> cropDrop) {
+    public FruitingLeavesBlock(Properties properties, Supplier<Item> cropDrop, Supplier<FruitTreeGeneticsProperties> treeGenetics) {
         super(properties);
         this.cropDrop = cropDrop;
+        this.treeGenetics = treeGenetics;
     }
 
     @Override
@@ -52,12 +55,9 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
         if (level.isAreaLoaded(pos, 1)) {
             if (level.getRawBrightness(pos, 0) >= 9) {
                 int age = this.getAge(state);
-                int growthChance = 8;
+                int growthChance = 20;
                 if (age < this.getMaxAge()) {
                     if (CommonHooks.canCropGrow(level, pos, state, (random.nextInt(growthChance) == 0))) {
-                        if (beeCanPollinate(state) && (level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity)) {
-                            fruitingLeavesBlockEntity.setPollinated();
-                        }
                         level.setBlock(pos, state.setValue(AGE,age+1), 2);
                         CommonHooks.fireCropGrowPost(level, pos, state);
                     }
@@ -134,8 +134,8 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
         super.onPlace(state, level, pos, oldState, movedByPiston);
         if (!level.isClientSide && oldState.getBlock() != state.getBlock()) {
             if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
-                RandomSource random = level.getRandom();
-                fruitingLeavesBlockEntity.freshGenetics(random);
+                FruitTreeGeneticsProperties genetics = treeGenetics.get();
+                fruitingLeavesBlockEntity.freshGenetics(genetics);
             }
         }
     }

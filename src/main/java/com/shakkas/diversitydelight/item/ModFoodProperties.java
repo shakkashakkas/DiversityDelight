@@ -57,6 +57,9 @@ public class ModFoodProperties {
     public static final FoodProperties PINEAPPLE_SLICE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f)
             .build();
 
+    public static final FoodProperties EMERALD_PEAR = new FoodProperties.Builder().nutrition(3).saturationModifier(0.3f).effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 100, 1, false, true),1.0F).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 0, false, true),1.0F)
+            .build();
+
     //FOODS
     //HANDHELD
     public static final FoodProperties BACON_WRAPPED_GREEN_BEANS = new FoodProperties.Builder().nutrition(8).saturationModifier(0.75f)

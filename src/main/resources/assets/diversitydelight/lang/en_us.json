@@ -22,6 +22,7 @@
   "item.diversitydelight.pear": "Pear",
   "item.diversitydelight.pineapple": "Pineapple",
   "item.diversitydelight.pineapple_slice": "Pineapple Slice",
+  "item.diversitydelight.emerald_pear": "Emerald Pear",
 
   "item.diversitydelight.bacon_wrapped_green_beans": "Bacon Wrapped Green Beans",
   "item.diversitydelight.fritata": "Fritata",
@@ -95,11 +96,22 @@
   "block.diversitydelight.chili_crate": "Chili Crate",
   "block.diversitydelight.green_bean_crate": "Green Bean Crate",
   "block.diversitydelight.pea_crate": "Pea Crate",
+
+  "block.diversitydelight.apple_bag": "Apple Bag",
+  "block.diversitydelight.banana_bag": "Banana Bag",
+  "block.diversitydelight.kiwi_bag": "Kiwi Bag",
+  "block.diversitydelight.lemon_bag": "Lemon Bag",
+  "block.diversitydelight.mango_bag": "Mango Bag",
+  "block.diversitydelight.orange_bag": "Orange Bag",
+  "block.diversitydelight.pear_bag": "Pear Bag",
+  "block.diversitydelight.pineapple_bag": "Pineapple Bag",
+
   "block.diversitydelight.worm_bin": "Worm Bin",
 
   "block.diversitydelight.apple_tree_sapling": "Apple Tree Sapling",
   "block.diversitydelight.apple_tree_leaves": "Apple Tree Leaves",
   "block.diversitydelight.apple_tree_fruiting_leaves": "Apple Tree Fruiting Leaves",
+  "block.diversitydelight.golden_apple_tree_fruiting_leaves": "Golden Apple Tree Fruiting Leaves",
 
   "block.diversitydelight.orange_tree_sapling": "Orange Tree Sapling",
   "block.diversitydelight.orange_tree_log": "Orange Tree Log",
@@ -115,6 +127,7 @@
   "block.diversitydelight.pear_tree_log": "Pear Tree Log",
   "block.diversitydelight.pear_tree_leaves": "Pear Tree Leaves",
   "block.diversitydelight.pear_tree_fruiting_leaves": "Pear Tree Fruiting Leaves",
+  "block.diversitydelight.emerald_pear_tree_fruiting_leaves": "Emerald Pear Tree Fruiting Leaves",
 
   "block.diversitydelight.mango_tree_sapling": "Mango Tree Sapling",
   "block.diversitydelight.mango_tree_log": "Mango Tree Log",
@@ -133,6 +146,11 @@
   "block.diversitydelight.wild_chili": "Wild Chili",
   "block.diversitydelight.wild_green_bean": "Wild Green Bean",
   "block.diversitydelight.wild_pea": "Wild Pea",
+
+  "item.diversitydelight.fruit_probe": "Fruit Probe",
+  "item.diversitydelight.fruit_probe.mode_mutation": "Set to mutation mode",
+  "item.diversitydelight.fruit_probe.mode_yield": "Set to yield mode",
+  "item.diversitydelight.fruit_probe.mode_growth": "Set to growth mode",
 
   "creativetab.diversitydelight.crop_items": "Diversity Delight",
 

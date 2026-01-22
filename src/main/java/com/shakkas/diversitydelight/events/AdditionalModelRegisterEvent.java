@@ -17,6 +17,10 @@ public class AdditionalModelRegisterEvent {
         event.register(ModelResourceLocation.standalone(
                 ResourceLocation.fromNamespaceAndPath("diversitydelight", "item/ketchup_bowl_overlay")));
         event.register(ModelResourceLocation.standalone(
+                ResourceLocation.fromNamespaceAndPath("diversitydelight", "item/marmalade_overlay")));
+        event.register(ModelResourceLocation.standalone(
+                ResourceLocation.fromNamespaceAndPath("diversitydelight", "item/marmalade_bowl_overlay")));
+        event.register(ModelResourceLocation.standalone(
                 ResourceLocation.fromNamespaceAndPath("diversitydelight", "item/mayonnaise_overlay")));
         event.register(ModelResourceLocation.standalone(
                 ResourceLocation.fromNamespaceAndPath("diversitydelight", "item/mayonnaise_bowl_overlay")));

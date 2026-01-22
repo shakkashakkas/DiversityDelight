@@ -103,6 +103,31 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.UPPER_BELL_PEPPER_CROP.get(), this.createCropDrops(ModBlocks.UPPER_BELL_PEPPER_CROP.get(),
                 DDModItems.BELL_PEPPER.get(), DDModItems.BELL_PEPPER_SEEDS.get(), upperBellPepperCropLootItemConditionBuilder));
 
+        LootItemCondition.Builder bellPepperCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.BELL_PEPPER_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoubleCropBlock.AGE, DoubleCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.BELL_PEPPER_CROP.get(), this.createCropDrops(ModBlocks.BELL_PEPPER_CROP.get(),
+                DDModItems.BELL_PEPPER.get(), DDModItems.BELL_PEPPER_SEEDS.get(), bellPepperCropLootItemConditionBuilder));
+
+        LootItemCondition.Builder peaCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.PEA_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoubleCropBlock.AGE, DoubleCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.PEA_CROP.get(), this.createCropDrops(ModBlocks.PEA_CROP.get(),
+                DDModItems.PEA.get(), DDModItems.PEA_SEEDS.get(), peaCropLootItemConditionBuilder));
+
+        LootItemCondition.Builder greenBeanCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.GREEN_BEAN_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoubleCropBlock.AGE, DoubleCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.GREEN_BEAN_CROP.get(), this.createCropDrops(ModBlocks.GREEN_BEAN_CROP.get(),
+                DDModItems.GREEN_BEAN.get(), DDModItems.GREEN_BEAN_SEEDS.get(), greenBeanCropLootItemConditionBuilder));
+
+        LootItemCondition.Builder chiliCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.CHILI_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoubleCropBlock.AGE, DoubleCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.CHILI_CROP.get(), this.createCropDrops(ModBlocks.CHILI_CROP.get(),
+                DDModItems.CHILI.get(), DDModItems.CHILI_SEEDS.get(), chiliCropLootItemConditionBuilder));
+
+
         dropSelf(ModBlocks.WORM_BIN_BLOCK.get());
 
         // FEASTS
@@ -125,6 +150,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHILI_CRATE.get());
         dropSelf(ModBlocks.GREEN_BEAN_CRATE.get());
         dropSelf(ModBlocks.PEA_CRATE.get());
+
+        dropSelf(ModBlocks.APPLE_BAG.get());
+        dropSelf(ModBlocks.BANANA_BAG.get());
+        dropSelf(ModBlocks.KIWI_BAG.get());
+        dropSelf(ModBlocks.LEMON_BAG.get());
+        dropSelf(ModBlocks.MANGO_BAG.get());
+        dropSelf(ModBlocks.ORANGE_BAG.get());
+        dropSelf(ModBlocks.PEAR_BAG.get());
+        dropSelf(ModBlocks.PINEAPPLE_BAG.get());
+
 
         //Fruit Tree
         dropSelf(ModBlocks.APPLE_TREE_SAPLING.get());
@@ -155,6 +190,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.BANANA_TREE_FROND.get());
         dropSelf(ModBlocks.BANANA_TREE_STEM.get());
         dropSelf(ModBlocks.BANANA_BUNCH.get());
+
+        dropOther(ModBlocks.KIWI_BUDDING_CROP.get(),DDModItems.KIWI.get());
+        dropOther(ModBlocks.KIWI_CROP.get(),DDModItems.KIWI.get());
+
+        LootItemCondition.Builder pineappleLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.PINEAPPLE_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PineappleCropBlock.AGE, PineappleCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.PINEAPPLE_CROP.get(), this.createCropDrops(ModBlocks.PINEAPPLE_CROP.get(),
+                DDModItems.PINEAPPLE.get(), Items.AIR, pineappleLootItemConditionBuilder));
 
     }
 

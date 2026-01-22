@@ -2,15 +2,19 @@ package com.shakkas.diversitydelight.component;
 
 import java.util.List;
 
-public record FruitTreeGeneticsProperties(int baseMutation, int baseYield, int baseGrowth, List<String> stableFruits, List<String> neutralFruits, List<String> unstableFruits) {
+public record FruitTreeGeneticsProperties(int baseGrowthChance, int baseMutation, int baseYield, int baseGrowth, List<String> stableFruits, List<String> unstableFruits) {
     public static class Builder {
+        private int baseGrowthChance;
         private int baseMutation;
         private int baseYield;
         private int baseGrowth;
         private List<String> stableFruits;
-        private List<String> neutralFruits;
         private List<String> unstableFruits;
 
+        public Builder baseGrowthChance(int baseGrowthChance) {
+            this.baseGrowthChance = baseGrowthChance;
+            return this;
+        }
         public Builder baseMutation(int baseMutation) {
             this.baseMutation = baseMutation;
             return this;
@@ -28,17 +32,13 @@ public record FruitTreeGeneticsProperties(int baseMutation, int baseYield, int b
             this.stableFruits = stableFruits;
             return this;
         }
-        public Builder neutralFruits(List<String> neutralFruits) {
-            this.neutralFruits = neutralFruits;
-            return this;
-        }
         public Builder unstableFruits(List<String> unstableFruits) {
             this.unstableFruits = unstableFruits;
             return this;
         }
 
         public FruitTreeGeneticsProperties build() {
-            return new FruitTreeGeneticsProperties(this.baseMutation,this.baseYield,this.baseGrowth,this.stableFruits,this.neutralFruits,this.unstableFruits);
+            return new FruitTreeGeneticsProperties(this.baseGrowthChance,this.baseMutation,this.baseYield,this.baseGrowth,this.stableFruits,this.unstableFruits);
         }
     }
 }

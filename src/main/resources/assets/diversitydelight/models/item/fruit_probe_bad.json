@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "diversitydelight:item/fruit_probe_bad"
+  }
+}

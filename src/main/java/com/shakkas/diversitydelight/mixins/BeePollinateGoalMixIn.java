@@ -31,7 +31,8 @@ public abstract class BeePollinateGoalMixIn {
     public void stop(CallbackInfo ci) {
         if (this$0.getSavedFlowerPos() != null) {
             BlockEntity targetFlowerEntity = this$0.level().getBlockEntity(this$0.getSavedFlowerPos());
-            BlockState targetFlowerBlock = this$0.level().getBlockState(this$0.getSavedFlowerPos());
+            BlockState targetFlowerBlockState = this$0.level().getBlockState(this$0.getSavedFlowerPos());
+            Block targetFlowerBlock = targetFlowerBlockState.getBlock();
             if (targetFlowerEntity instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
                 CompoundTag compound = this$0.getPersistentData();
                 boolean hasPollinatedFlower = compound.getBoolean("hasPollinatedFlower");
@@ -46,14 +47,26 @@ public abstract class BeePollinateGoalMixIn {
                     RandomSource random = this$0.level().getRandom();
                     fruitingLeavesBlockEntity.crossPollinate(random, maleMutation, maleYield, maleGrowth, fruitType);
                     fruitingLeavesBlockEntity.setPollinated();
+                    if (targetFlowerBlock instanceof FruitingLeavesBlock fruitingLeavesBlock) {
+                        if ((fruitingLeavesBlock.hasMutatedVariant()) && (fruitingLeavesBlockEntity.mutation == FruitingLeavesBlockEntity.MAX_GENETIC_VALUE)) {
+                            int parentMutation = fruitingLeavesBlockEntity.mutation;
+                            int parentYield = fruitingLeavesBlockEntity.yield;
+                            int parentGrowth = fruitingLeavesBlockEntity.growth;
+                            this$0.level().setBlockAndUpdate(this$0.getSavedFlowerPos(),fruitingLeavesBlock.getMutatedVariant().defaultBlockState().setValue(FruitingLeavesBlock.AGE,fruitingLeavesBlock.getAge(targetFlowerBlockState)));
+                            BlockEntity newTargetFlowerEntity = this$0.level().getBlockEntity(this$0.getSavedFlowerPos());
+                            if (newTargetFlowerEntity instanceof FruitingLeavesBlockEntity newFruitingLeavesBlockEntity) {
+                                newFruitingLeavesBlockEntity.freshGenetics(parentMutation,parentYield,parentGrowth);
+                            }
+                        }
+                    }
                 }
                 updatePollinationStatus(compound,hasPollinatedFlower);
             }
         }
     }
 
-    public void copyFlowerGenetics(CompoundTag compound, FruitingLeavesBlockEntity fruitingLeavesBlockEntity, BlockState state) {
-        String fruitType = BuiltInRegistries.BLOCK.getKey(state.getBlock()).toString();
+    public void copyFlowerGenetics(CompoundTag compound, FruitingLeavesBlockEntity fruitingLeavesBlockEntity, Block block) {
+        String fruitType = BuiltInRegistries.BLOCK.getKey(block).toString();
         compound.putInt("geneMutation", fruitingLeavesBlockEntity.mutation);
         compound.putInt("geneYield", fruitingLeavesBlockEntity.yield);
         compound.putInt("geneGrowth", fruitingLeavesBlockEntity.growth);

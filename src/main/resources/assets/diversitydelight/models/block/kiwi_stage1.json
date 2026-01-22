@@ -1,0 +1,8 @@
+{
+  "parent": "diversitydelight:block/crop_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "diversitydelight:block/kiwi_crop_stage1"
+  }
+}
+

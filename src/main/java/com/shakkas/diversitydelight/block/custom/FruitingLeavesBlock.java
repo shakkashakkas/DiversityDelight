@@ -34,11 +34,23 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
     private final Supplier<Item> cropDrop;
     private final Supplier<FruitTreeGeneticsProperties> treeGenetics;
+    private final Supplier<Block> mutatedVariant;
+    private final boolean isMutated;
 
-    public FruitingLeavesBlock(Properties properties, Supplier<Item> cropDrop, Supplier<FruitTreeGeneticsProperties> treeGenetics) {
+    public FruitingLeavesBlock(Properties properties, Supplier<Item> cropDrop, Supplier<FruitTreeGeneticsProperties> treeGenetics, boolean isMutated) {
         super(properties);
         this.cropDrop = cropDrop;
         this.treeGenetics = treeGenetics;
+        this.mutatedVariant = null;
+        this.isMutated = isMutated;
+    }
+
+    public FruitingLeavesBlock(Properties properties, Supplier<Item> cropDrop, Supplier<FruitTreeGeneticsProperties> treeGenetics, Supplier<Block> mutatedVariant) {
+        super(properties);
+        this.cropDrop = cropDrop;
+        this.treeGenetics = treeGenetics;
+        this.mutatedVariant = mutatedVariant;
+        this.isMutated = false;
     }
 
     @Override
@@ -55,7 +67,7 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
         if (level.isAreaLoaded(pos, 1)) {
             if (level.getRawBrightness(pos, 0) >= 9) {
                 int age = this.getAge(state);
-                int growthChance = 20;
+                int growthChance = getGrowthChance(level,pos,getGrowthGene(level,pos));
                 if (age < this.getMaxAge()) {
                     if (CommonHooks.canCropGrow(level, pos, state, (random.nextInt(growthChance) == 0))) {
                         level.setBlock(pos, state.setValue(AGE,age+1), 2);
@@ -64,6 +76,34 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
                 }
             }
         }
+    }
+
+    protected int getYieldGene(Level level, BlockPos pos) {
+        if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+            return fruitingLeavesBlockEntity.yield;
+        }
+        return 0;
+    }
+
+    protected int getGrowthGene(Level level, BlockPos pos) {
+        if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+            return fruitingLeavesBlockEntity.growth;
+        }
+        return 0;
+    }
+
+    protected int getMutationGene(Level level, BlockPos pos) {
+        if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+            return fruitingLeavesBlockEntity.mutation;
+        }
+        return 0;
+    }
+
+    protected int getGrowthChance(ServerLevel level, BlockPos pos, int growthGene) {
+        int baseChance = this.treeGenetics.get().baseGrowthChance();
+        int skyLightFactor = level.canSeeSky(pos) ? 1 : 0;
+        int lightLevelFactor = level.getRawBrightness(pos,0);
+        return baseChance/((growthGene+1) + ((lightLevelFactor/5)+1) + skyLightFactor);
     }
 
     protected Item getCropDrop() {
@@ -76,6 +116,14 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
 
     public int getAge(BlockState state) {
         return state.getValue(AGE);
+    }
+
+    public boolean hasMutatedVariant() {
+        return (this.mutatedVariant != null);
+    }
+
+    public Block getMutatedVariant() {
+        return hasMutatedVariant() ? this.mutatedVariant.get() : null;
     }
 
     public BlockState getStateForAge(int age) {
@@ -106,7 +154,7 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         int age = getAge(state);
         if (age==MAX_AGE) {
-            int quantity = 1 + level.random.nextInt(2);
+            int quantity = 1 + level.random.nextInt(getYieldBonus(getYieldGene(level,pos)));
             popResource(level, pos, new ItemStack(getCropDrop(), quantity));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             level.setBlock(pos, state.setValue(AGE, 0), 2);
@@ -119,21 +167,16 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
         }
     }
 
-    @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if(state.getBlock() != newState.getBlock()) {
-            if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
-                level.updateNeighbourForOutputSignal(pos, this);
-            }
-        }
-        super.onRemove(state, level, pos, newState, movedByPiston);
+    protected int getYieldBonus(int yieldGene) {
+        int baseBonus = 2;
+        return baseBonus + (yieldGene/3);
     }
 
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
         if (!level.isClientSide && oldState.getBlock() != state.getBlock()) {
-            if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+            if (level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
                 FruitTreeGeneticsProperties genetics = treeGenetics.get();
                 fruitingLeavesBlockEntity.freshGenetics(genetics);
             }

@@ -18,6 +18,13 @@ public class ModComponents {
                     .networkSynchronized(CondimentProperties.STREAM_CODEC)
     );
 
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<FruitProbeMode>> FRUIT_PROBE_PROPERTIES = DATA_COMPONENTS.registerComponentType(
+            "fruit_probe_properties",
+            builder -> builder
+                    .persistent(FruitProbeProperties.CODEC)
+                    .networkSynchronized(FruitProbeProperties.STREAM_CODEC)
+    );
+
     public static void register(IEventBus bus) {
         DATA_COMPONENTS.register(bus);
     }

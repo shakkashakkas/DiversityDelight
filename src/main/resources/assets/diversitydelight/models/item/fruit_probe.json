@@ -1,0 +1,24 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "diversitydelight:item/fruit_probe_base"
+  },
+  "overrides": [
+    {
+      "predicate": { "custom_model_data": 0 },
+      "model": "diversitydelight:item/fruit_probe"
+    },
+    {
+      "predicate": { "custom_model_data": 1 },
+      "model": "diversitydelight:item/fruit_probe_great"
+    },
+    {
+      "predicate": { "custom_model_data": 2 },
+      "model": "diversitydelight:item/fruit_probe_okay"
+    },
+    {
+      "predicate": { "custom_model_data": 3 },
+      "model": "diversitydelight:item/fruit_probe_bad"
+    }
+  ]
+}

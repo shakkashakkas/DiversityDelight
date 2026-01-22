@@ -3,11 +3,11 @@ package com.shakkas.diversitydelight.item;
 
 import com.shakkas.diversitydelight.DiversityDelight;
 import com.shakkas.diversitydelight.block.ModBlocks;
+import com.shakkas.diversitydelight.component.FruitProbeMode;
 import com.shakkas.diversitydelight.component.ModComponents;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Items;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.CustomModelData;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -23,7 +23,7 @@ public class DDModItems {
     public static final DeferredItem<Item> BELL_PEPPER = ITEMS.register("bell_pepper",
             () -> new Item(new Item.Properties().food(ModFoodProperties.BELL_PEPPER)));
     public static final DeferredItem<Item> BELL_PEPPER_SEEDS = ITEMS.register("bell_pepper_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.LOWER_BELL_PEPPER_CROP.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.BELL_PEPPER_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> BROCCOLI = ITEMS.register("broccoli",
             () -> new Item(new Item.Properties().food(ModFoodProperties.BROCCOLI)));
     public static final DeferredItem<Item> BROCCOLI_FLORET = ITEMS.register("broccoli_floret",
@@ -41,13 +41,13 @@ public class DDModItems {
     public static final DeferredItem<Item> CHILI = ITEMS.register("chili",
             () -> new Item(new Item.Properties().food(ModFoodProperties.CHILI)));
     public static final DeferredItem<Item> CHILI_SEEDS = ITEMS.register("chili_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.LOWER_CHILI_CROP.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.CHILI_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> GREEN_BEAN = ITEMS.register("green_bean",
             () -> new Item(new Item.Properties().food(ModFoodProperties.GREEN_BEAN)));
     public static final DeferredItem<Item> GREEN_BEAN_SEEDS = ITEMS.register("green_bean_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.LOWER_GREEN_BEAN_CROP.get(), new Item.Properties()));
+            () -> new ItemNameBlockItem(ModBlocks.GREEN_BEAN_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> KIWI = ITEMS.register("kiwi",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.KIWI)));
+            () -> new ItemNameBlockItem(ModBlocks.KIWI_BUDDING_CROP.get(),new Item.Properties().food(ModFoodProperties.KIWI)));
     public static final DeferredItem<Item> LEMON = ITEMS.register("lemon",
             () -> new Item(new Item.Properties().food(ModFoodProperties.LEMON)));
     public static final DeferredItem<Item> MANGO = ITEMS.register("mango",
@@ -57,13 +57,17 @@ public class DDModItems {
     public static final DeferredItem<Item> PEA = ITEMS.register("pea",
             () -> new Item(new Item.Properties().food(ModFoodProperties.PEA)));
     public static final DeferredItem<Item> PEA_SEEDS = ITEMS.register("pea_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.LOWER_PEA_CROP.get(), new Item.Properties().food(ModFoodProperties.PEA_SEEDS)));
+            () -> new ItemNameBlockItem(ModBlocks.PEA_CROP.get(), new Item.Properties().food(ModFoodProperties.PEA_SEEDS)));
     public static final DeferredItem<Item> PEAR = ITEMS.register("pear",
             () -> new Item(new Item.Properties().food(ModFoodProperties.PEAR)));
     public static final DeferredItem<Item> PINEAPPLE = ITEMS.register("pineapple",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.PINEAPPLE)));
+            () -> new ItemNameBlockItem(ModBlocks.PINEAPPLE_CROP.get(),new Item.Properties().food(ModFoodProperties.PINEAPPLE)));
     public static final DeferredItem<Item> PINEAPPLE_SLICE = ITEMS.register("pineapple_slice",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.PINEAPPLE)));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PINEAPPLE_SLICE)));
+
+    //SPECIAL CROPS
+    public static final DeferredItem<Item> EMERALD_PEAR = ITEMS.register("emerald_pear",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.EMERALD_PEAR).rarity(Rarity.RARE)));
 
     //FOODS
     //HANDHELD
@@ -206,6 +210,24 @@ public class DDModItems {
     public static final DeferredItem<BlockItem> PEA_CRATE = ITEMS.register("pea_crate",
             () -> new BlockItem(ModBlocks.PEA_CRATE.get(), new Item.Properties()));
 
+    public static final DeferredItem<BlockItem> APPLE_BAG = ITEMS.register("apple_bag",
+            () -> new BlockItem(ModBlocks.APPLE_BAG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> BANANA_BAG = ITEMS.register("banana_bag",
+            () -> new BlockItem(ModBlocks.BANANA_BAG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> KIWI_BAG = ITEMS.register("kiwi_bag",
+            () -> new BlockItem(ModBlocks.KIWI_BAG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> LEMON_BAG = ITEMS.register("lemon_bag",
+            () -> new BlockItem(ModBlocks.LEMON_BAG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> MANGO_BAG = ITEMS.register("mango_bag",
+            () -> new BlockItem(ModBlocks.MANGO_BAG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> ORANGE_BAG = ITEMS.register("orange_bag",
+            () -> new BlockItem(ModBlocks.ORANGE_BAG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> PEAR_BAG = ITEMS.register("pear_bag",
+            () -> new BlockItem(ModBlocks.PEAR_BAG.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> PINEAPPLE_BAG = ITEMS.register("pineapple_bag",
+            () -> new BlockItem(ModBlocks.PINEAPPLE_BAG.get(), new Item.Properties()));
+
+
     //Fruit Trees
     public static final DeferredItem<BlockItem> APPLE_TREE_SAPLING = ITEMS.register("apple_tree_sapling",
             () -> new BlockItem(ModBlocks.APPLE_TREE_SAPLING.get(), new Item.Properties()));
@@ -213,6 +235,8 @@ public class DDModItems {
             () -> new BlockItem(ModBlocks.APPLE_TREE_LEAVES.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> APPLE_TREE_FRUITING_LEAVES = ITEMS.register("apple_tree_fruiting_leaves",
             () -> new BlockItem(ModBlocks.APPLE_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> GOLDEN_APPLE_TREE_FRUITING_LEAVES = ITEMS.register("golden_apple_tree_fruiting_leaves",
+            () -> new BlockItem(ModBlocks.GOLDEN_APPLE_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
 
     public static final DeferredItem<BlockItem> ORANGE_TREE_SAPLING = ITEMS.register("orange_tree_sapling",
             () -> new BlockItem(ModBlocks.ORANGE_TREE_SAPLING.get(), new Item.Properties()));
@@ -240,6 +264,8 @@ public class DDModItems {
             () -> new BlockItem(ModBlocks.PEAR_TREE_LEAVES.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> PEAR_TREE_FRUITING_LEAVES = ITEMS.register("pear_tree_fruiting_leaves",
             () -> new BlockItem(ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> EMERALD_PEAR_TREE_FRUITING_LEAVES = ITEMS.register("emerald_pear_tree_fruiting_leaves",
+            () -> new BlockItem(ModBlocks.EMERALD_PEAR_TREE_FRUITING_LEAVES.get(), new Item.Properties()));
 
     public static final DeferredItem<BlockItem> MANGO_TREE_SAPLING = ITEMS.register("mango_tree_sapling",
             () -> new BlockItem(ModBlocks.MANGO_TREE_SAPLING.get(), new Item.Properties()));
@@ -276,6 +302,10 @@ public class DDModItems {
             () -> new BlockItem(ModBlocks.WILD_GREEN_BEAN.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> WILD_PEA = ITEMS.register("wild_pea",
             () -> new BlockItem(ModBlocks.WILD_PEA.get(), new Item.Properties()));
+
+    //SPECIAL ITEMS
+    public static final DeferredItem<Item> FRUIT_PROBE = ITEMS.register("fruit_probe",
+            () -> new FruitProbeItem(new Item.Properties().component(ModComponents.FRUIT_PROBE_PROPERTIES, FruitProbeMode.NONE)));
 
 
     public static void register(IEventBus eventBus) {

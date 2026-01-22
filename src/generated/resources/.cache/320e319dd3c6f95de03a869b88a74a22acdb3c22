@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-09T16:56:48.7707839	Item Models: diversitydelight
+// 1.21.1	2026-01-14T00:11:50.0030444	Item Models: diversitydelight
 cb1093e1333e0ea4af402ed9e1a0a5016fd5ef3f assets/diversitydelight/models/item/apple_pear_crumble.json
 ea16c905e9e06823c57f825723002c83ca0a1898 assets/diversitydelight/models/item/apple_tree_sapling.json
 1bd7c5127c683d6e9d464ef4fcee184b0382fbb4 assets/diversitydelight/models/item/bacon_wrapped_green_beans.json
@@ -30,6 +30,7 @@ bffecad603571fdc8d4fca14de84adf23e99f9ee assets/diversitydelight/models/item/chi
 2adbe2035a8f2aef37ab61562da0bd6a1b89bbf6 assets/diversitydelight/models/item/chili_bean_soup.json
 0be4ff16f8b8212c7931bf3a0fb01421e1c95295 assets/diversitydelight/models/item/chili_seeds.json
 2591d92afb8e6b1599c311db0e10829e8b50e797 assets/diversitydelight/models/item/chocolate_ice_cream.json
+4bfd3f4d080c41a092debc504ece938d1de23a07 assets/diversitydelight/models/item/emerald_pear.json
 0c951722263b9c23da7f6824caf11986d8dcdad2 assets/diversitydelight/models/item/fritata.json
 50a186cc9d2536204ca6ad60d5f97c7175a8d53a assets/diversitydelight/models/item/fruit_flan.json
 9b8765b34c31bda6520a03c45f7bfb05aeea4df4 assets/diversitydelight/models/item/fruit_flan_slice.json

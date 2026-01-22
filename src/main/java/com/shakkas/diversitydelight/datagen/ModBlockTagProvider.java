@@ -71,10 +71,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         );
 
         tag(net.minecraft.tags.BlockTags.FLOWERS).add(
+                ModBlocks.GOLDEN_APPLE_TREE_FRUITING_LEAVES.get(),
                 ModBlocks.APPLE_TREE_FRUITING_LEAVES.get(),
                 ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(),
                 ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(),
                 ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.EMERALD_PEAR_TREE_FRUITING_LEAVES.get(),
                 ModBlocks.MANGO_TREE_FRUITING_LEAVES.get()
         );
     }

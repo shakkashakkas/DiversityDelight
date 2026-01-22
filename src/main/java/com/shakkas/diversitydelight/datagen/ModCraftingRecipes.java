@@ -21,6 +21,7 @@ public class ModCraftingRecipes {
         recipesFoodstuffs(output);
         recipesCraftedMeals(output);
         recipesFoodBlocks(output);
+        recipesItems(output);
     }
     private static void recipesBlocks(RecipeOutput output) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.BELL_PEPPER_CRATE.get(), 1)
@@ -78,6 +79,71 @@ public class ModCraftingRecipes {
                 .define('#', DDModItems.PEA.get())
                 .unlockedBy("has_pea", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEA.get()))
                 .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.APPLE_BAG.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', Items.APPLE)
+                .unlockedBy("has_apple", InventoryChangeTrigger.TriggerInstance.hasItems(Items.APPLE))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.BANANA_BAG.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', DDModItems.BANANA.get())
+                .unlockedBy("has_banana", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.BANANA.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.ORANGE_BAG.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', DDModItems.ORANGE.get())
+                .unlockedBy("has_orange", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ORANGE.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.KIWI_BAG.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', DDModItems.KIWI.get())
+                .unlockedBy("has_kiwi", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.KIWI.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.LEMON_BAG.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', DDModItems.LEMON.get())
+                .unlockedBy("has_lemon", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.LEMON.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.PEAR_BAG.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', DDModItems.PEAR.get())
+                .unlockedBy("has_pear", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEAR.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.MANGO_BAG.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', DDModItems.MANGO.get())
+                .unlockedBy("has_mango", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.MANGO.get()))
+                .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.PINEAPPLE_BAG.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', DDModItems.PINEAPPLE.get())
+                .unlockedBy("has_pineapple", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PINEAPPLE.get()))
+                .save(output);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WORM_BIN_BLOCK.get())
                 .pattern("CgC")
@@ -145,6 +211,47 @@ public class ModCraftingRecipes {
                 .requires(DDModItems.PEA.get())
                 .unlockedBy("has_pea", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEA.get()))
                 .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.APPLE, 9)
+                .requires(DDModItems.APPLE_BAG.get())
+                .unlockedBy("has_apple_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.APPLE_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "apple_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.BANANA, 9)
+                .requires(DDModItems.BANANA_BAG.get())
+                .unlockedBy("has_banana_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.BANANA_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "banana_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.ORANGE, 9)
+                .requires(DDModItems.ORANGE_BAG.get())
+                .unlockedBy("has_orange_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ORANGE_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "orange_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.KIWI, 9)
+                .requires(DDModItems.KIWI_BAG.get())
+                .unlockedBy("has_kiwi_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.KIWI_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "kiwi_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.LEMON, 9)
+                .requires(DDModItems.LEMON_BAG.get())
+                .unlockedBy("has_lemon_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.LEMON_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "lemon_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.PEAR, 9)
+                .requires(DDModItems.PEAR_BAG.get())
+                .unlockedBy("has_pear_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEAR_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "pear_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.MANGO, 9)
+                .requires(DDModItems.MANGO_BAG.get())
+                .unlockedBy("has_mango_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.MANGO_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "mango_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.PINEAPPLE, 9)
+                .requires(DDModItems.PINEAPPLE_BAG.get())
+                .unlockedBy("has_pineapple_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PINEAPPLE_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "pineapple_from_bag"));
+
     }
 
     private static void recipesFoodstuffs(RecipeOutput output) {
@@ -174,6 +281,15 @@ public class ModCraftingRecipes {
                 .requires(ModItems.ONION.get())
                 .requires(Items.GLASS_BOTTLE)
                 .unlockedBy("has_chili", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.CHILI.get()))
+                .save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.MARMALADE.get(), 1)
+                .requires(DDModItems.ORANGE.get())
+                .requires(DDModItems.ORANGE.get())
+                .requires(DDModItems.ORANGE.get())
+                .requires(DDModItems.LEMON.get())
+                .requires(Items.SUGAR)
+                .requires(Items.GLASS_BOTTLE)
+                .unlockedBy("has_orange", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ORANGE.get()))
                 .save(output);
     }
 
@@ -297,6 +413,15 @@ public class ModCraftingRecipes {
                 .requires(Items.BOWL)
                 .unlockedBy("has_pineapple", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PINEAPPLE.get()))
                 .save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DDModItems.EMERALD_PEAR.get(), 1)
+                .pattern("###")
+                .pattern("#a#")
+                .pattern("###")
+                .define('#', Items.EMERALD)
+                .define('a', Items.APPLE)
+                .unlockedBy("has_emerald", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD))
+                .save(output);
     }
 
     private static void recipesFoodBlocks(RecipeOutput output) {
@@ -405,6 +530,18 @@ public class ModCraftingRecipes {
                 .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "fruit_flan_from_slices"));
 
 
+    }
+
+    private static void recipesItems(RecipeOutput output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, DDModItems.FRUIT_PROBE.get(), 1)
+                .pattern("ccc")
+                .pattern("cac")
+                .pattern("crc")
+                .define('c', Items.COPPER_INGOT)
+                .define('a', Items.AMETHYST_SHARD)
+                .define('r', Items.REDSTONE)
+                .unlockedBy("has_copper_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
+                .save(output);
     }
 
 }

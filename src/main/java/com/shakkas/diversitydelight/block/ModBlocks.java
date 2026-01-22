@@ -46,6 +46,23 @@ public class ModBlocks {
     public static final DeferredBlock<Block> UPPER_PEA_CROP = BLOCKS.register("upper_pea_crop",
             () -> new UpperDoubleFruitingCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.PEA, DDModItems.PEA_SEEDS,ModBlocks.LOWER_PEA_CROP));
 
+    public static final DeferredBlock<Block> BELL_PEPPER_CROP = BLOCKS.register("bell_pepper_crop",
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),3,DDModItems.BELL_PEPPER,DDModItems.BELL_PEPPER_SEEDS));
+    public static final DeferredBlock<Block> PEA_CROP = BLOCKS.register("pea_crop",
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),2,DDModItems.PEA,DDModItems.PEA_SEEDS));
+    public static final DeferredBlock<Block> GREEN_BEAN_CROP = BLOCKS.register("green_bean_crop",
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),3,DDModItems.GREEN_BEAN,DDModItems.GREEN_BEAN_SEEDS));
+    public static final DeferredBlock<Block> CHILI_CROP = BLOCKS.register("chili_crop",
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),5,DDModItems.CHILI,DDModItems.CHILI_SEEDS));
+
+    public static final DeferredBlock<Block> KIWI_BUDDING_CROP = BLOCKS.register("kiwi_budding_crop",
+            () -> new BuddingKiwiBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+    public static final DeferredBlock<Block> KIWI_CROP = BLOCKS.register("kiwi_crop",
+            () -> new KiwiVineBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+    public static final DeferredBlock<Block> PINEAPPLE_CROP = BLOCKS.register("pineapple_crop",
+            () -> new PineappleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+
     public static final DeferredBlock<Block> WORM_BIN_BLOCK = BLOCKS.register("worm_bin",
                 () -> new WormBinBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COMPOSTER)));
 
@@ -64,6 +81,24 @@ public class ModBlocks {
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
     public static final DeferredBlock<Block> PEA_CRATE = BLOCKS.register("pea_crate",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+
+    public static final DeferredBlock<Block> APPLE_BAG = BLOCKS.register("apple_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> BANANA_BAG = BLOCKS.register("banana_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> KIWI_BAG = BLOCKS.register("kiwi_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> LEMON_BAG = BLOCKS.register("lemon_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> MANGO_BAG = BLOCKS.register("mango_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> ORANGE_BAG = BLOCKS.register("orange_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> PEAR_BAG = BLOCKS.register("pear_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> PINEAPPLE_BAG = BLOCKS.register("pineapple_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+
 
     // Feasts
     public static final DeferredBlock<Block> CHICKEN_POT_PIE_BLOCK = BLOCKS.register("chicken_pot_pie_block",
@@ -93,7 +128,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> APPLE_TREE_LEAVES = BLOCKS.register("apple_tree_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<Block> APPLE_TREE_FRUITING_LEAVES = BLOCKS.register("apple_tree_fruiting_leaves",
-            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), () -> Items.APPLE,() -> ModFruitTreeGenetics.APPLE));
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), () -> Items.APPLE,() -> ModFruitTreeGenetics.APPLE, ModBlocks.GOLDEN_APPLE_TREE_FRUITING_LEAVES));
+    public static final DeferredBlock<Block> GOLDEN_APPLE_TREE_FRUITING_LEAVES = BLOCKS.register("golden_apple_tree_fruiting_leaves",
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), () -> Items.GOLDEN_APPLE,() -> ModFruitTreeGenetics.GOLDEN_APPLE,true));
 
     public static final DeferredBlock<Block> ORANGE_TREE_SAPLING = BLOCKS.register("orange_tree_sapling",
             () -> new SaplingBlock(DDTreeGrowers.ORANGE_FRUIT,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
@@ -102,7 +139,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> ORANGE_TREE_LEAVES = BLOCKS.register("orange_tree_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<Block> ORANGE_TREE_FRUITING_LEAVES = BLOCKS.register("orange_tree_fruiting_leaves",
-            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES),DDModItems.ORANGE,() -> ModFruitTreeGenetics.ORANGE));
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES),DDModItems.ORANGE,() -> ModFruitTreeGenetics.ORANGE,false));
 
     public static final DeferredBlock<Block> LEMON_TREE_SAPLING = BLOCKS.register("lemon_tree_sapling",
             () -> new SaplingBlock(DDTreeGrowers.LEMON_FRUIT,BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
@@ -111,7 +148,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> LEMON_TREE_LEAVES = BLOCKS.register("lemon_tree_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<Block> LEMON_TREE_FRUITING_LEAVES = BLOCKS.register("lemon_tree_fruiting_leaves",
-            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES),DDModItems.LEMON,() -> ModFruitTreeGenetics.LEMON));
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES),DDModItems.LEMON,() -> ModFruitTreeGenetics.LEMON,false));
 
     public static final DeferredBlock<Block> PEAR_TREE_SAPLING = BLOCKS.register("pear_tree_sapling",
             () -> new SaplingBlock(DDTreeGrowers.PEAR_FRUIT, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
@@ -120,7 +157,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PEAR_TREE_LEAVES = BLOCKS.register("pear_tree_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<Block> PEAR_TREE_FRUITING_LEAVES = BLOCKS.register("pear_tree_fruiting_leaves",
-            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), DDModItems.PEAR,() -> ModFruitTreeGenetics.PEAR));
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), DDModItems.PEAR,() -> ModFruitTreeGenetics.PEAR,ModBlocks.EMERALD_PEAR_TREE_FRUITING_LEAVES));
+    public static final DeferredBlock<Block> EMERALD_PEAR_TREE_FRUITING_LEAVES = BLOCKS.register("emerald_pear_tree_fruiting_leaves",
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), DDModItems.EMERALD_PEAR,() -> ModFruitTreeGenetics.EMERALD_PEAR,true));
 
     public static final DeferredBlock<Block> MANGO_TREE_SAPLING = BLOCKS.register("mango_tree_sapling",
             () -> new SaplingBlock(DDTreeGrowers.MANGO_FRUIT, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
@@ -129,7 +168,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MANGO_TREE_LEAVES = BLOCKS.register("mango_tree_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
     public static final DeferredBlock<Block> MANGO_TREE_FRUITING_LEAVES = BLOCKS.register("mango_tree_fruiting_leaves",
-            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), DDModItems.MANGO,() -> ModFruitTreeGenetics.MANGO));
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), DDModItems.MANGO,() -> ModFruitTreeGenetics.MANGO,false));
 
     public static final DeferredBlock<Block> BANANA_TREE_SAPLING = BLOCKS.register("banana_tree_sapling",
             () -> new SaplingBlock(DDTreeGrowers.BANANA_FRUIT, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));

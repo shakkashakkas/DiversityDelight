@@ -41,26 +41,27 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     protected void registerMinecraftTags() {
         tag(net.minecraft.tags.BlockTags.CROPS).add(
-                ModBlocks.LOWER_BELL_PEPPER_CROP.get(),
-                ModBlocks.UPPER_BELL_PEPPER_CROP.get(),
+                ModBlocks.BELL_PEPPER_CROP.get(),
                 ModBlocks.BROCCOLI_CROP.get(),
                 ModBlocks.CAULIFLOWER_CROP.get(),
                 ModBlocks.CELERY_CROP.get(),
-                ModBlocks.LOWER_CHILI_CROP.get(),
-                ModBlocks.UPPER_CHILI_CROP.get(),
-                ModBlocks.LOWER_GREEN_BEAN_CROP.get(),
-                ModBlocks.UPPER_GREEN_BEAN_CROP.get(),
-                ModBlocks.LOWER_PEA_CROP.get(),
-                ModBlocks.UPPER_PEA_CROP.get()
+                ModBlocks.CHILI_CROP.get(),
+                ModBlocks.GREEN_BEAN_CROP.get(),
+                ModBlocks.PEA_CROP.get(),
+                ModBlocks.KIWI_BUDDING_CROP.get(),
+                ModBlocks.KIWI_CROP.get(),
+                ModBlocks.PINEAPPLE_CROP.get()
         );
         tag(net.minecraft.tags.BlockTags.MAINTAINS_FARMLAND).add(
-                ModBlocks.LOWER_BELL_PEPPER_CROP.get(),
+                ModBlocks.BELL_PEPPER_CROP.get(),
                 ModBlocks.BROCCOLI_CROP.get(),
                 ModBlocks.CAULIFLOWER_CROP.get(),
                 ModBlocks.CELERY_CROP.get(),
-                ModBlocks.LOWER_CHILI_CROP.get(),
-                ModBlocks.LOWER_GREEN_BEAN_CROP.get(),
-                ModBlocks.LOWER_PEA_CROP.get()
+                ModBlocks.CHILI_CROP.get(),
+                ModBlocks.GREEN_BEAN_CROP.get(),
+                ModBlocks.PEA_CROP.get(),
+                ModBlocks.KIWI_BUDDING_CROP.get(),
+                ModBlocks.PINEAPPLE_CROP.get()
         );
         tag(net.minecraft.tags.BlockTags.LOGS).add(
                 ModBlocks.ORANGE_TREE_LOG.get(),
@@ -79,6 +80,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.EMERALD_PEAR_TREE_FRUITING_LEAVES.get(),
                 ModBlocks.MANGO_TREE_FRUITING_LEAVES.get()
         );
+
+        tag(net.minecraft.tags.BlockTags.CLIMBABLE).add(
+                ModBlocks.KIWI_CROP.get());
     }
 
     protected void registerCommonTags() {
@@ -89,7 +93,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 DDCommonTags.STORAGE_BLOCKS_CELERY,
                 DDCommonTags.STORAGE_BLOCKS_CHILI,
                 DDCommonTags.STORAGE_BLOCKS_GREEN_BEAN,
-                DDCommonTags.STORAGE_BLOCKS_PEA
+                DDCommonTags.STORAGE_BLOCKS_PEA,
+                DDCommonTags.STORAGE_BLOCKS_APPLE,
+                DDCommonTags.STORAGE_BLOCKS_BANANA,
+                DDCommonTags.STORAGE_BLOCKS_ORANGE,
+                DDCommonTags.STORAGE_BLOCKS_LEMON,
+                DDCommonTags.STORAGE_BLOCKS_MANGO,
+                DDCommonTags.STORAGE_BLOCKS_PINEAPPLE,
+                DDCommonTags.STORAGE_BLOCKS_PEAR,
+                DDCommonTags.STORAGE_BLOCKS_KIWI
         );
 
         tag(DDCommonTags.STORAGE_BLOCKS_BELL_PEPPER).add(ModBlocks.BELL_PEPPER_CRATE.get());
@@ -99,25 +111,44 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(DDCommonTags.STORAGE_BLOCKS_CHILI).add(ModBlocks.CHILI_CRATE.get());
         tag(DDCommonTags.STORAGE_BLOCKS_GREEN_BEAN).add(ModBlocks.GREEN_BEAN_CRATE.get());
         tag(DDCommonTags.STORAGE_BLOCKS_PEA).add(ModBlocks.PEA_CRATE.get());
+
+        tag(DDCommonTags.STORAGE_BLOCKS_APPLE).add(ModBlocks.APPLE_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_BANANA).add(ModBlocks.BANANA_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_ORANGE).add(ModBlocks.ORANGE_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_LEMON).add(ModBlocks.LEMON_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_MANGO).add(ModBlocks.MANGO_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_PINEAPPLE).add(ModBlocks.PINEAPPLE_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_PEAR).add(ModBlocks.PEAR_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_KIWI).add(ModBlocks.KIWI_BAG.get());
+
     }
 
     protected void registerSereneSeasonTags() {
         tag(CompatibilityTags.SERENE_SEASONS_SUMMER_CROPS_BLOCK).add(
-                ModBlocks.LOWER_BELL_PEPPER_CROP.get(),
-                ModBlocks.UPPER_BELL_PEPPER_CROP.get(),
+                ModBlocks.BELL_PEPPER_CROP.get(),
                 ModBlocks.CELERY_CROP.get(),
-                ModBlocks.LOWER_CHILI_CROP.get(),
-                ModBlocks.UPPER_CHILI_CROP.get(),
-                ModBlocks.LOWER_GREEN_BEAN_CROP.get(),
-                ModBlocks.UPPER_GREEN_BEAN_CROP.get());
+                ModBlocks.CHILI_CROP.get(),
+                ModBlocks.GREEN_BEAN_CROP.get(),
+                ModBlocks.BANANA_BUNCH.get(),
+                ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.PINEAPPLE_CROP.get());
         tag(CompatibilityTags.SERENE_SEASONS_AUTUMN_CROPS_BLOCK).add(
-                ModBlocks.BROCCOLI_CROP.get());
+                ModBlocks.BROCCOLI_CROP.get(),
+                ModBlocks.BANANA_BUNCH.get(),
+                ModBlocks.KIWI_CROP.get(),
+                ModBlocks.KIWI_BUDDING_CROP.get(),
+                ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.PINEAPPLE_CROP.get());
         tag(CompatibilityTags.SERENE_SEASONS_WINTER_CROPS_BLOCK).add(
                 ModBlocks.BROCCOLI_CROP.get(),
-                ModBlocks.CAULIFLOWER_CROP.get());
+                ModBlocks.CAULIFLOWER_CROP.get(),
+                ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.LEMON_TREE_FRUITING_LEAVES.get());
         tag(CompatibilityTags.SERENE_SEASONS_SPRING_CROPS_BLOCK).add(
                 ModBlocks.CELERY_CROP.get(),
-                ModBlocks.LOWER_PEA_CROP.get(),
-                ModBlocks.UPPER_PEA_CROP.get());
+                ModBlocks.PEA_CROP.get(),
+                ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.LEMON_TREE_FRUITING_LEAVES.get());
     }
 }

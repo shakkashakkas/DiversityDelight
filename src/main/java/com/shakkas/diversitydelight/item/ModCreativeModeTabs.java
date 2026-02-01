@@ -88,6 +88,7 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.CEREAL_BOWL);
                         output.accept(DDModItems.ORANGE_CHICKEN);
                         output.accept(DDModItems.SWEET_AND_SOUR_CHICKEN);
+                        output.accept(DDModItems.SWEET_STICKY_RICE);
                         output.accept(DDModItems.TROPICAL_SALAD);
 
                         //PLATES
@@ -167,6 +168,8 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.WILD_CHILI);
                         output.accept(DDModItems.WILD_GREEN_BEAN);
                         output.accept(DDModItems.WILD_PEA);
+                        output.accept(DDModItems.WILD_KIWI);
+                        output.accept(DDModItems.WILD_PINEAPPLE);
 
                         output.accept(DDModItems.FRUIT_PROBE);
                     }).build());

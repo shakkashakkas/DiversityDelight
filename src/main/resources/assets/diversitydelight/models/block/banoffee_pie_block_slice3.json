@@ -1,0 +1,10 @@
+{
+  "parent": "diversitydelight:block/pie_slice3",
+  "textures": {
+    "particle": "diversitydelight:block/banoffee_pie_top",
+    "bottom": "diversitydelight:block/pie_bottom",
+    "inner": "diversitydelight:block/banoffee_pie_inner",
+    "side": "diversitydelight:block/pie_side",
+    "top": "diversitydelight:block/banoffee_pie_top"
+  }
+}

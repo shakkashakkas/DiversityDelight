@@ -75,7 +75,11 @@ public class ModFoodProperties {
 
     public static final FoodProperties BANANA_BREAD = new FoodProperties.Builder().nutrition(8).saturationModifier(0.8f)
             .build();
-    public static final FoodProperties JELLY = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).fast().effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, BRIEF_DURATION, 0, false, false),1.0F)
+    public static final FoodProperties MANGO_JELLY = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).fast().effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, BRIEF_DURATION, 0, false, false),1.0F)
+            .build();
+    public static final FoodProperties LEMON_JELLY = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).fast().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, BRIEF_DURATION, 0, false, false),1.0F)
+            .build();
+    public static final FoodProperties KIWI_JELLY = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).fast().effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, BRIEF_DURATION, 0, false, false),1.0F)
             .build();
     public static final FoodProperties FRUIT_ROLLUP = new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).fast().effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, BRIEF_DURATION, 1, false, false),1.0F)
             .build();
@@ -83,20 +87,34 @@ public class ModFoodProperties {
             .build();
     public static final FoodProperties LEMON_ICE_CREAM = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, BRIEF_DURATION, 0, false, false),1.0F)
             .build();
-    public static final FoodProperties MANGO_ICE_CREAM = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).effect(() -> new MobEffectInstance(MobEffects.REGENERATION, BRIEF_DURATION, 0, false, false),1.0F)
+    public static final FoodProperties MANGO_ICE_CREAM = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, BRIEF_DURATION, 0, false, false),1.0F)
             .build();
     public static final FoodProperties CHOCOLATE_ICE_CREAM = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, BRIEF_DURATION, 0, false, false),1.0F)
             .build();
-    public static final FoodProperties ORANGE_JUICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).alwaysEdible().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, SHORT_DURATION, 0, false, false),1.0F)
+    public static final FoodProperties ORANGE_JUICE = new FoodProperties.Builder().nutrition(1).saturationModifier(0.2f).alwaysEdible().effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, SHORT_DURATION, 0, false, false),1.0F)
             .build();
-    public static final FoodProperties PINEAPPLE_JUICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).alwaysEdible().effect(() -> new MobEffectInstance(MobEffects.HEAL, 0, 0, false, false),1.0F)
+    public static final FoodProperties PINEAPPLE_JUICE = new FoodProperties.Builder().nutrition(1).saturationModifier(0.2f).alwaysEdible().effect(() -> new MobEffectInstance(MobEffects.HEAL, 0, 0, false, false),1.0F)
             .build();
-    public static final FoodProperties BANANA_MILK = new FoodProperties.Builder().nutrition(8).saturationModifier(0.8f)
+    public static final FoodProperties BANANA_MILK = new FoodProperties.Builder().nutrition(1).saturationModifier(0.4f).effect(() -> new MobEffectInstance(MobEffects.JUMP, 0, 0, false, false),1.0F)
             .build();
-    public static final FoodProperties YOGHURT = new FoodProperties.Builder().nutrition(8).saturationModifier(0.8f)
+    public static final FoodProperties MANGO_YOGHURT = new FoodProperties.Builder().nutrition(3).saturationModifier(0.5f).effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, 0, 0, false, false),1.0F)
             .build();
-    public static final FoodProperties POACHED_PEAR = new FoodProperties.Builder().nutrition(8).saturationModifier(0.8f)
+    public static final FoodProperties ORANGE_YOGHURT = new FoodProperties.Builder().nutrition(3).saturationModifier(0.5f).effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 0, 0, false, false),1.0F)
             .build();
+    public static final FoodProperties POACHED_PEAR = new FoodProperties.Builder().nutrition(6).saturationModifier(0.6f)
+            .build();
+
+    //HANDHELD SLICES
+    public static final FoodProperties PEAR_PIE_SLICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.3f).fast()
+            .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, BRIEF_DURATION, 0, false, false), 1.0F).build();
+    public static final FoodProperties LEMON_MERINGUE_PIE_SLICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.3f).fast()
+            .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, BRIEF_DURATION, 0, false, false), 1.0F).build();
+    public static final FoodProperties BANOFFEE_PIE_SLICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.3f).fast()
+            .effect(() -> new MobEffectInstance(MobEffects.JUMP, BRIEF_DURATION, 0, false, false), 1.0F).build();
+    public static final FoodProperties FRUIT_FLAN_SLICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.3f).fast()
+            .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, BRIEF_DURATION, 0, false, false), 1.0F).build();
+    public static final FoodProperties HAWAIIAN_PIZZA_SLICE = new FoodProperties.Builder().nutrition(3).saturationModifier(0.3f).fast()
+            .effect(() -> comfort(SHORT_DURATION),1.0F).build();
 
     //BOWLS
     public static final FoodProperties CAULIFLOWER_SOUP = new FoodProperties.Builder().nutrition(12).saturationModifier(0.7f)
@@ -108,18 +126,18 @@ public class ModFoodProperties {
     public static final FoodProperties TERIYAKI_CHICKEN = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
             .effect(() -> nourishment(MEDIUM_DURATION),1.0F).build();
 
-    public static final FoodProperties BANANA_CHIPS = new FoodProperties.Builder().nutrition(12).saturationModifier(0.7f)
+    public static final FoodProperties BANANA_CHIPS = new FoodProperties.Builder().nutrition(6).saturationModifier(0.5f)
+            .build();
+    public static final FoodProperties CEREAL_BOWL = new FoodProperties.Builder().nutrition(7).saturationModifier(0.7f)
+            .build();
+    public static final FoodProperties ORANGE_CHICKEN = new FoodProperties.Builder().nutrition(10).saturationModifier(0.7f)
             .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
-    public static final FoodProperties CEREAL_BOWL = new FoodProperties.Builder().nutrition(12).saturationModifier(0.7f)
+    public static final FoodProperties SWEET_AND_SOUR_CHICKEN = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f)
+            .effect(() -> nourishment(MEDIUM_DURATION),1.0F).build();
+    public static final FoodProperties SWEET_STICKY_RICE = new FoodProperties.Builder().nutrition(7).saturationModifier(0.6f)
             .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
-    public static final FoodProperties ORANGE_CHICKEN = new FoodProperties.Builder().nutrition(12).saturationModifier(0.7f)
-            .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
-    public static final FoodProperties SWEET_AND_SOUR_CHICKEN = new FoodProperties.Builder().nutrition(12).saturationModifier(0.7f)
-            .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
-    public static final FoodProperties SWEET_STICKY_RICE = new FoodProperties.Builder().nutrition(12).saturationModifier(0.7f)
-            .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
-    public static final FoodProperties TROPICAL_SALAD = new FoodProperties.Builder().nutrition(12).saturationModifier(0.7f)
-            .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
+    public static final FoodProperties TROPICAL_SALAD = new FoodProperties.Builder().nutrition(8).saturationModifier(0.3f)
+            .effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, SHORT_DURATION, 0, false, false),1.0F).build();
 
     //PLATES
     public static final FoodProperties BUFFALO_WINGS = new FoodProperties.Builder().nutrition(16).saturationModifier(0.8f)
@@ -137,6 +155,6 @@ public class ModFoodProperties {
     public static final FoodProperties PEA_PESTO_PASTA = new FoodProperties.Builder().nutrition(10).saturationModifier(0.7f)
             .effect(() -> comfort(SHORT_DURATION),1.0F).build();
 
-    public static final FoodProperties APPLE_PEAR_CRUMBLE = new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f)
+    public static final FoodProperties APPLE_PEAR_CRUMBLE = new FoodProperties.Builder().nutrition(9).saturationModifier(0.6f)
             .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
 }

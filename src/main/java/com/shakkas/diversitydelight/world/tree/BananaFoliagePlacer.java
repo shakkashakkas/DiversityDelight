@@ -1,8 +1,10 @@
 package com.shakkas.diversitydelight.world.tree;
 
+import com.jcraft.jorbis.Block;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.shakkas.diversitydelight.block.ModBlocks;
+import com.shakkas.diversitydelight.block.custom.BananaFrond;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
@@ -24,6 +26,8 @@ public class BananaFoliagePlacer extends FoliagePlacer {
         super(radius, offset);
     }
 
+    private int leafDistance = 1;
+
     @Override
     protected FoliagePlacerType<?> type() {
         return DDPlacerTypes.BANANA_FOLIAGE.get();
@@ -36,6 +40,7 @@ public class BananaFoliagePlacer extends FoliagePlacer {
         createLowerFrondLeaf(blockSetter,random,config,attachment.pos(),Direction.EAST);
         createLowerFrondLeaf(blockSetter,random,config,attachment.pos(),Direction.WEST);
 
+        this.leafDistance = 1;
         if (random.nextInt(1) == 0) {
             placeFrondBlock(blockSetter,random,config,attachment.pos(),Direction.EAST);
             createMiddleFrondLeaves(blockSetter,random,config,attachment.pos(),Direction.EAST);
@@ -51,6 +56,7 @@ public class BananaFoliagePlacer extends FoliagePlacer {
     protected void createMiddleFrondLeaves(FoliageSetter blockSetter,RandomSource random,TreeConfiguration config, BlockPos pos, Direction dir) {
         BlockPos.MutableBlockPos frondCursorRight = pos.mutable();
         BlockPos.MutableBlockPos frondCursorLeft = pos.mutable();
+        this.leafDistance = 2;
         for (int i = 0; i < 2; ++i) {
             frondCursorRight.move(Direction.UP);
             frondCursorRight.move(dir.getClockWise());
@@ -61,6 +67,7 @@ public class BananaFoliagePlacer extends FoliagePlacer {
             frondCursorLeft.move(dir.getCounterClockWise());
             frondCursorLeft.move(dir);
             placeFrondBlock(blockSetter,random,config, frondCursorLeft, dir);
+            leafDistance++;
         }
         Direction bendDirectionRight = (random.nextInt(1) == 0) ? dir : dir.getClockWise();
         Direction bendDirectionLeft = (random.nextInt(1) == 0) ? dir : dir.getCounterClockWise();
@@ -69,19 +76,23 @@ public class BananaFoliagePlacer extends FoliagePlacer {
             frondCursorLeft.move(bendDirectionLeft);
             placeFrondBlock(blockSetter,random,config, frondCursorRight, bendDirectionRight);
             placeFrondBlock(blockSetter,random,config, frondCursorLeft, bendDirectionLeft);
+            leafDistance++;
         }
     }
 
     protected void createLowerFrondLeaf(FoliageSetter blockSetter,RandomSource random,TreeConfiguration config, BlockPos pos, Direction dir) {
         BlockPos.MutableBlockPos frondCursor = pos.mutable();
+        this.leafDistance = 1;
         //First leaf outward at same y-level
         frondCursor.move(Direction.DOWN);
         frondCursor.move(dir);
         placeFrondBlock(blockSetter,random,config, frondCursor, dir);
+        leafDistance++;
         placeBananaBunch(blockSetter,frondCursor,dir);
         //Second leaf outward at same y-level
         frondCursor.move(dir);
         placeFrondBlock(blockSetter,random,config, frondCursor, dir);
+        leafDistance++;
         //Third leaf down 1 y-level and out again
         frondCursor.move(dir);
         frondCursor.move(Direction.DOWN);
@@ -91,7 +102,7 @@ public class BananaFoliagePlacer extends FoliagePlacer {
     protected void placeFrondBlock(FoliageSetter blockSetter, RandomSource random, TreeConfiguration config, BlockPos pos, Direction dir) {
         BlockState foliageState = config.foliageProvider.getState(random, pos);
         if (foliageState.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) {
-            foliageState = foliageState.setValue(BlockStateProperties.HORIZONTAL_FACING,dir);
+            foliageState = foliageState.setValue(BlockStateProperties.HORIZONTAL_FACING,dir).setValue(BlockStateProperties.DISTANCE,this.leafDistance);
         }
         blockSetter.set(pos,foliageState);
     }

@@ -55,7 +55,7 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
 
     @Override
     protected boolean isRandomlyTicking(BlockState state) {
-        return (getAge(state) < MAX_AGE);
+        return ((getAge(state) < MAX_AGE) || (state.getValue(DISTANCE) == 7 && !state.getValue(PERSISTENT)));
     }
 
     protected boolean beeCanPollinate(BlockState state) {
@@ -75,6 +75,9 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
                     }
                 }
             }
+        }
+        if (state.getValue(DISTANCE) == 7 && !state.getValue(PERSISTENT)) {
+            super.randomTick(state,level,pos,random);
         }
     }
 

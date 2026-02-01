@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-08T16:07:45.8618838	Tags for minecraft:item mod id diversitydelight
+// 1.21.1	2026-01-23T16:38:50.301534	Tags for minecraft:item mod id diversitydelight
 74001fc21de6056968c6130b1d698daa7a6742f7 data/c/tags/item/crops/banana.json
 327519b60f26022bc05929e18773b07e3a132a1f data/c/tags/item/crops/bell_pepper.json
 3fd16d106a50c78968f630ccd4fde636ea88f29a data/c/tags/item/crops/broccoli.json
@@ -33,14 +33,22 @@ cb9eeba92a737fb02c0b8e562afe2f568e714fd8 data/c/tags/item/foods/pear.json
 2ffccb510703ee68d1abeb3a64e8a2e809abf823 data/c/tags/item/foods/pineapple.json
 aa953861dc46f0e19852b45b54c86a08765e1937 data/c/tags/item/foods/soup.json
 499e14deeaa0637a2fdccf2ac4ea948c65961a85 data/c/tags/item/foods/vegetable.json
+a1a0a65024b5ece837fda40a18735957b70a98db data/c/tags/item/storage_blocks/apple.json
+50dc6bb8496cdcfb4743c3e298bf1d9af1de8459 data/c/tags/item/storage_blocks/banana.json
 17f292746ea8f27e268cf9d80290f35a05bdd7f1 data/c/tags/item/storage_blocks/bell_pepper.json
 b36424d4bb51e75d4606ab34864f3047fe973cf0 data/c/tags/item/storage_blocks/broccoli.json
 99166d8c7bb71163fce6615c631f59bc97f308f5 data/c/tags/item/storage_blocks/cauliflower.json
 366ba0df8758d2d73740d3974618e279162ec7d8 data/c/tags/item/storage_blocks/celery.json
 fec63f77d72995cb50e2eb45d6168af260a07ecc data/c/tags/item/storage_blocks/chili.json
 a164dc2945b9a49f3caf355cfcf9eb1f1d647d8c data/c/tags/item/storage_blocks/green_bean.json
+773bac039119c6faacb70ea636db770cdb497706 data/c/tags/item/storage_blocks/kiwi.json
+376c1da53c07ebb184c3b253285915c1f9b339c0 data/c/tags/item/storage_blocks/lemon.json
+5593b9ab113144a5fbb40ab3f7db4d517bcd6001 data/c/tags/item/storage_blocks/mango.json
+8238811b101e99a0551897f05cb8bac300fd94e2 data/c/tags/item/storage_blocks/orange.json
 f4bd4ca0b0d0e62192b44f04ee42b1d38d76df30 data/c/tags/item/storage_blocks/pea.json
-b40264ad3922fb2c3553565951b22356f1a4f80b data/minecraft/tags/item/villager_plantable_seeds.json
+7e916415ec6ad7b727ec54dd54003f4b07c5fff2 data/c/tags/item/storage_blocks/pear.json
+1d220896a2cdbdc0bb89dae5d6073b508cbdabd2 data/c/tags/item/storage_blocks/pineapple.json
+be177741898b4864cb3172e6d1f2c2b0d9eb90ba data/minecraft/tags/item/villager_plantable_seeds.json
 02f4ef9f714c855e6275a973c961ca4a2e189279 data/sereneseasons/tags/item/autumn_crops.json
 b9ab6f14c8cf06fea10619f2cadb7d9e48e4bcd8 data/sereneseasons/tags/item/spring_crops.json
 9575ec43d3a408651146618e83fdd3baf2991263 data/sereneseasons/tags/item/summer_crops.json

@@ -30,16 +30,18 @@ import net.neoforged.neoforge.common.CommonHooks;
 import java.util.function.Supplier;
 
 public class DoubleCropBlock extends CropBlock {
-    public DoubleCropBlock(Properties properties, int ageForUpper, Supplier<Item> cropDrop, Supplier<Item> seedDrop) {
+    public DoubleCropBlock(Properties properties, int ageForUpper, Supplier<Item> cropDrop, Supplier<Item> seedDrop, boolean isTall) {
         super(properties);
         this.ageForUpper = ageForUpper;
         this.cropDrop = cropDrop;
         this.seedDrop = seedDrop;
+        this.isTall = isTall;
         this.registerDefaultState((this.stateDefinition.any()).setValue(this.getAgeProperty(), 0).setValue(HALF,DoubleBlockHalf.LOWER));
     }
     private final int ageForUpper;
     private final Supplier<Item> cropDrop;
     private final Supplier<Item> seedDrop;
+    private final boolean isTall;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
 
     public int getAgeForUpper() {
@@ -60,27 +62,42 @@ public class DoubleCropBlock extends CropBlock {
     private static final VoxelShape[] SHAPE_BY_AGE_LOWER = new VoxelShape[]{
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D)};
 
-    private static final VoxelShape[] SHAPE_BY_AGE_UPPER = new VoxelShape[]{
+    private static final VoxelShape[] SHAPE_BY_AGE_TALL_UPPER = new VoxelShape[]{
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 14.0D, 16.0D)};
+
+    private static final VoxelShape[] SHAPE_BY_AGE_MEDIUM_UPPER = new VoxelShape[]{
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 4.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 6.0D, 16.0D),
             Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D),
-            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D)};
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D),
+            Block.box(0.0D, 0.0D, 0.0D, 16.0D, 8.0D, 16.0D)};
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         int age = state.getValue(this.getAgeProperty());
-        return state.getValue(HALF) == DoubleBlockHalf.LOWER ? SHAPE_BY_AGE_LOWER[age] : SHAPE_BY_AGE_UPPER[age];
+        if (isTall) {
+            return state.getValue(HALF) == DoubleBlockHalf.LOWER ? SHAPE_BY_AGE_LOWER[age] : SHAPE_BY_AGE_TALL_UPPER[age];
+        }
+        else {
+            return state.getValue(HALF) == DoubleBlockHalf.LOWER ? SHAPE_BY_AGE_LOWER[age] : SHAPE_BY_AGE_MEDIUM_UPPER[age];
+        }
     }
 
     @Override

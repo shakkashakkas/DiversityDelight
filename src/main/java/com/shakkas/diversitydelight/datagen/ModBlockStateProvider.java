@@ -20,6 +20,7 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import vectorwing.farmersdelight.FarmersDelight;
 import vectorwing.farmersdelight.common.block.FeastBlock;
+import vectorwing.farmersdelight.common.block.PieBlock;
 
 import javax.annotation.Nullable;
 import java.util.Arrays;
@@ -53,17 +54,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        this.customStageBlock(ModBlocks.BROCCOLI_CROP.get(), mcLoc("cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 4, 5));
-        this.customStageBlock(ModBlocks.CAULIFLOWER_CROP.get(), mcLoc("cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 2, 2, 3, 3, 4, 5));
+        this.customStageBlock(ModBlocks.BROCCOLI_CROP.get(), mcLoc("cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
+        this.customStageBlock(ModBlocks.CAULIFLOWER_CROP.get(), mcLoc("cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
         this.customStageBlock(ModBlocks.CELERY_CROP.get(), mcLoc("crop"), "crop", CeleryCropBlock.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
-        this.customStageBlock(ModBlocks.LOWER_BELL_PEPPER_CROP.get(), mcLoc("crop"), "crop", LowerDoubleSupportCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
-        this.customStageBlock(ModBlocks.UPPER_BELL_PEPPER_CROP.get(), mcLoc("crop"), "crop", UpperDoubleFruitingCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 4, 5, 5, 6));
-        this.customStageBlock(ModBlocks.LOWER_CHILI_CROP.get(), mcLoc("crop"), "crop", LowerDoubleSupportCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
-        this.customStageBlock(ModBlocks.UPPER_CHILI_CROP.get(), mcLoc("crop"), "crop", UpperDoubleFruitingCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
-        this.customStageBlock(ModBlocks.LOWER_GREEN_BEAN_CROP.get(), mcLoc("crop"), "crop", LowerDoubleFruitingCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 4, 5));
-        this.customStageBlock(ModBlocks.UPPER_GREEN_BEAN_CROP.get(), mcLoc("crop"), "crop", UpperDoubleFruitingCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 4, 5));
-        this.customStageBlock(ModBlocks.LOWER_PEA_CROP.get(), mcLoc("cross"), "cross", LowerDoubleFruitingCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 4, 5));
-        this.customStageBlock(ModBlocks.UPPER_PEA_CROP.get(), mcLoc("cross"), "cross", UpperDoubleFruitingCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 4, 5));
         this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.BELL_PEPPER_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
         this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.PEA_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
         this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.GREEN_BEAN_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
@@ -104,6 +97,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.feastBlock((FeastBlock) ModBlocks.CHICKEN_POT_PIE_BLOCK.get());
         this.feastBlock((FeastBlock) ModBlocks.VEGETABLE_STICKS_BLOCK.get());
 
+        //Pies and Pizzas
+        this.pieBlock(ModBlocks.BANOFFEE_PIE_BLOCK.get());
+        this.pieBlock(ModBlocks.FRUIT_FLAN_BLOCK.get());
+        this.pieBlock(ModBlocks.LEMON_MERINGUE_PIE_BLOCK.get());
+        this.pieBlock(ModBlocks.PEAR_PIE_BLOCK.get());
+        this.pieBlock(ModBlocks.HAWAIIAN_PIZZA_BLOCK.get());
+
         // Saplings
         this.crossCutOutBlock(ModBlocks.APPLE_TREE_SAPLING.get());
         this.crossCutOutBlock(ModBlocks.ORANGE_TREE_SAPLING.get());
@@ -120,6 +120,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.crossCutOutBlock(ModBlocks.WILD_CHILI.get());
         this.crossCutOutBlock(ModBlocks.WILD_GREEN_BEAN.get());
         this.crossCutOutBlock(ModBlocks.WILD_PEA.get());
+        this.crossCutOutBlock(ModBlocks.WILD_KIWI.get());
+        this.crossCutOutBlock(ModBlocks.WILD_PINEAPPLE.get());
 
         leafBlock(ModBlocks.APPLE_TREE_LEAVES.get());
         logBlockAndItem(ModBlocks.ORANGE_TREE_LOG.get());
@@ -300,6 +302,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
                             .rotationY(((int) state.getValue(FeastBlock.FACING).toYRot() + 180) % 360)
                             .build();
                 });
+    }
+
+    public void pieBlock(Block block) {
+        getVariantBuilder(block)
+                .forAllStates(state -> {
+                            int bites = state.getValue(PieBlock.BITES);
+                            String suffix = bites > 0 ? "_slice" + bites : "";
+                            return ConfiguredModel.builder()
+                                    .modelFile(existingModel(blockName(block) + suffix))
+                                    .rotationY(((int) state.getValue(PieBlock.FACING).toYRot() + 180) % 360)
+                                    .build();
+                        }
+                );
     }
 
 }

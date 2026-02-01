@@ -16,4 +16,5 @@ public class FruitProbeProperties {
 
     public static final StreamCodec<FriendlyByteBuf, FruitProbeMode> STREAM_CODEC =
             NeoForgeStreamCodecs.enumCodec(FruitProbeMode.class);
+
 }

@@ -13,6 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -68,6 +69,11 @@ public class BananaBunch extends CropBlock {
     }
 
     @Override
+    protected ItemLike getBaseSeedId() {
+        return DDModItems.BANANA;
+    }
+
+    @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
         return state.getBlock() instanceof BananaFrond;
     }
@@ -95,7 +101,7 @@ public class BananaBunch extends CropBlock {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(AGE,0);
+        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection()).setValue(AGE,0);
     }
 
     @Override

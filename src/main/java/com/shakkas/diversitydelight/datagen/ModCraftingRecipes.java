@@ -154,6 +154,31 @@ public class ModCraftingRecipes {
                 .define('C', Items.COPPER_INGOT)
                 .unlockedBy("has_copper_ingot", InventoryChangeTrigger.TriggerInstance.hasItems(Items.COPPER_INGOT))
                 .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.OAK_PLANKS, 4)
+                .requires(DDModItems.ORANGE_TREE_LOG.get())
+                .unlockedBy("has_orange_tree_log", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ORANGE_TREE_LOG.get()))
+                .save(output,ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "oak_planks_from_orange_tree_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.OAK_PLANKS, 4)
+                .requires(DDModItems.LEMON_TREE_LOG.get())
+                .unlockedBy("has_lemon_tree_log", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.LEMON_TREE_LOG.get()))
+                .save(output,ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "oak_planks_from_lemon_tree_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.BIRCH_PLANKS, 4)
+                .requires(DDModItems.PEAR_TREE_LOG.get())
+                .unlockedBy("has_pear_tree_log", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEAR_TREE_LOG.get()))
+                .save(output,ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "birch_planks_from_pear_tree_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.JUNGLE_PLANKS, 4)
+                .requires(DDModItems.MANGO_TREE_LOG.get())
+                .unlockedBy("has_mango_tree_log", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.MANGO_TREE_LOG.get()))
+                .save(output,ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "jungle_planks_from_mango_tree_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.JUNGLE_PLANKS, 4)
+                .requires(DDModItems.BANANA_TREE_STEM.get())
+                .unlockedBy("has_banana_tree_stem", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.BANANA_TREE_STEM.get()))
+                .save(output,ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "jungle_planks_from_banana_tree_stem"));
     }
 
     private static void recipesMaterials(RecipeOutput output) {
@@ -351,7 +376,7 @@ public class ModCraftingRecipes {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.CHOCOLATE_ICE_CREAM.get(), 1)
                 .requires(Items.COCOA_BEANS)
                 .requires(CommonTags.FOODS_MILK)
-                .requires(Items.ICE)
+                .requires(Items.SNOWBALL)
                 .requires(DDModItems.ICE_CREAM_CONE.get())
                 .unlockedBy("has_ice_cream_cone", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ICE_CREAM_CONE.get()))
                 .save(output);
@@ -359,7 +384,7 @@ public class ModCraftingRecipes {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.LEMON_ICE_CREAM.get(), 1)
                 .requires(DDModItems.LEMON.get())
                 .requires(CommonTags.FOODS_MILK)
-                .requires(Items.ICE)
+                .requires(Items.SNOWBALL)
                 .requires(DDModItems.ICE_CREAM_CONE.get())
                 .unlockedBy("has_ice_cream_cone", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ICE_CREAM_CONE.get()))
                 .save(output);
@@ -367,7 +392,7 @@ public class ModCraftingRecipes {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.MANGO_ICE_CREAM.get(), 1)
                 .requires(DDModItems.MANGO.get())
                 .requires(CommonTags.FOODS_MILK)
-                .requires(Items.ICE)
+                .requires(Items.SNOWBALL)
                 .requires(DDModItems.ICE_CREAM_CONE.get())
                 .unlockedBy("has_ice_cream_cone", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ICE_CREAM_CONE.get()))
                 .save(output);
@@ -413,15 +438,6 @@ public class ModCraftingRecipes {
                 .requires(Items.BOWL)
                 .unlockedBy("has_pineapple", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PINEAPPLE.get()))
                 .save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DDModItems.EMERALD_PEAR.get(), 1)
-                .pattern("###")
-                .pattern("#a#")
-                .pattern("###")
-                .define('#', Items.EMERALD)
-                .define('a', Items.APPLE)
-                .unlockedBy("has_emerald", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EMERALD))
-                .save(output);
     }
 
     private static void recipesFoodBlocks(RecipeOutput output) {
@@ -458,9 +474,8 @@ public class ModCraftingRecipes {
                 .save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DDModItems.HAWAIIAN_PIZZA.get(), 1)
-                .pattern("###")
-                .pattern("# #")
-                .pattern("###")
+                .pattern("##")
+                .pattern("##")
                 .define('#', DDModItems.HAWAIIAN_PIZZA_SLICE.get())
                 .unlockedBy("has_hawaiian_pizza_slice",
                         InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.HAWAIIAN_PIZZA_SLICE.get()))
@@ -529,7 +544,14 @@ public class ModCraftingRecipes {
                 .group("dd_fruit_flan")
                 .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "fruit_flan_from_slices"));
 
-
+        ShapedRecipeBuilder.shaped(RecipeCategory.FOOD, DDModItems.EMERALD_PEAR.get(), 1)
+                .pattern("eee")
+                .pattern("epe")
+                .pattern("eee")
+                .define('e', Items.EMERALD)
+                .define('p', DDModItems.PEAR.get())
+                .unlockedBy("has_pear", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEAR.get()))
+                .save(output);
     }
 
     private static void recipesItems(RecipeOutput output) {

@@ -100,6 +100,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.CEREAL_BOWL.get());
         basicItem(DDModItems.ORANGE_CHICKEN.get());
         basicItem(DDModItems.SWEET_AND_SOUR_CHICKEN.get());
+        basicItem(DDModItems.SWEET_STICKY_RICE.get());
         basicItem(DDModItems.TROPICAL_SALAD.get());
         //PLATES
         basicItem(DDModItems.BUFFALO_WINGS.get());
@@ -137,6 +138,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         itemGeneratedModel(DDModItems.WILD_CHILI.get());
         itemGeneratedModel(DDModItems.WILD_GREEN_BEAN.get());
         itemGeneratedModel(DDModItems.WILD_PEA.get());
+        itemGeneratedModel(DDModItems.WILD_KIWI.get());
+        itemGeneratedModel(DDModItems.WILD_PINEAPPLE.get());
 
 
 

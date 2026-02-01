@@ -22,7 +22,7 @@ public class FruitingLeavesBlockEntity extends BlockEntity {
     }
     public static int MAX_GENETIC_VALUE = 9;
     public static int MIN_GENETIC_VALUE = 0;
-    public static int DIST_DOMINANCE = 6;
+    public static int DIST_DOMINANCE = 3;
     public int mutation = 0;
     public int yield = 0;
     public int growth = 0;
@@ -106,7 +106,7 @@ public class FruitingLeavesBlockEntity extends BlockEntity {
     public int mutateGene(RandomSource random, int gene, String fruitType) {
         boolean isUnstable = isMatching(this.unstable,fruitType);
         if (isUnstable && (random.nextInt(2) == 0)) {
-            return gene + 2;
+            return gene + 1;
         }
         return gene;
     }

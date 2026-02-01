@@ -7,6 +7,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
@@ -27,45 +28,82 @@ public class BananaFrond extends LeavesBlock {
     }
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public static final BooleanProperty CONNECTED = BooleanProperty.create("connected");
 
     @Override
     protected void createBlockStateDefinition(final StateDefinition.Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
-        builder.add(FACING,CONNECTED);
+        builder.add(FACING);
     }
 
-    @Override
-    protected boolean isRandomlyTicking(BlockState state) {
-        return !state.getValue(PERSISTENT) && !state.getValue(CONNECTED);
+    public static BlockState updateDistance(BlockState state, LevelAccessor level, BlockPos pos) {
+        int i = 7;
+
+        int xDist = 1; int yDist = 1; int zDist = 1;
+        BlockPos vertex1 = pos.offset(-xDist,-yDist,-zDist);
+        BlockPos vertex2 = pos.offset(xDist,yDist,zDist);
+        if (state.getValue(DISTANCE) >= 2) {
+            for (BlockPos targetPos : BlockPos.betweenClosed(vertex1, vertex2)) {
+                BlockState targetState = level.getBlockState(targetPos);
+                // Do not consider the block's own position in the for loop
+                if (targetPos.equals(pos)) {
+                    continue;
+                }
+                if (targetState.hasProperty(DISTANCE)) {
+                    i = Math.min(i, targetState.getValue(DISTANCE)+1);
+                }
+                if (i == 1) {
+                    break;
+                }
+            }
+        }
+
+        BlockPos.MutableBlockPos cursor = new BlockPos.MutableBlockPos();
+
+        for(Direction direction : Direction.values()) {
+            cursor.setWithOffset(pos, direction);
+            BlockState targetState = level.getBlockState(cursor);
+            i = Math.min(i, getOptionalDistanceAt(targetState).orElse(7)+1);
+            if (i == 1) {
+                break;
+            }
+        }
+        return state.setValue(DISTANCE, i);
     }
 
-    protected boolean checkConnection(BlockState state, LevelAccessor level, BlockPos pos) {
+
+    public boolean isAdjacentToValidLeaf(BlockState state, BlockPos pos, ServerLevel level) {
         int xDist = 1; int yDist = 1; int zDist = 1;
         BlockPos vertex1 = pos.offset(-xDist,-yDist,-zDist);
         BlockPos vertex2 = pos.offset(xDist,yDist,zDist);
         for (BlockPos targetPos : BlockPos.betweenClosed(vertex1, vertex2)) {
             BlockState targetState = level.getBlockState(targetPos);
-            // Do not consider the block's own position in the for loop
             if (targetPos.equals(pos)) {
                 continue;
             }
-            if (targetState.is(BlockTags.LOGS)) {
-                return true;
-            }
-
-            if (targetState.getBlock() instanceof BananaFrond) {
-                if (targetState.getValue(CONNECTED)) {
-                    return true;
+            if (targetState.hasProperty(DISTANCE)) {
+                if (state.getValue(DISTANCE) >= 2) {
+                    if (targetState.getValue(DISTANCE) == (state.getValue(DISTANCE) - 1)) {
+                        return true;
+                    }
                 }
             }
         }
         return false;
     }
 
-    protected BlockState updateConnection(BlockState state, LevelAccessor level, BlockPos pos) {
-        return (checkConnection(state,level,pos)) ? state.setValue(CONNECTED,true) : state.setValue(CONNECTED,false);
+    public boolean isFacingLog(BlockPos pos, ServerLevel level) {
+        BlockPos.MutableBlockPos cursor = new BlockPos.MutableBlockPos();
+
+        for(Direction direction : Direction.values()) {
+            cursor.setWithOffset(pos, direction);
+            BlockState targetState = level.getBlockState(cursor);
+            if (targetState.is(BlockTags.LOGS)) {
+                return true;
+            }
+        }
+        return false;
     }
+
 
     @Override
     protected BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
@@ -75,19 +113,28 @@ public class BananaFrond extends LeavesBlock {
 
     @Override
     protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        if (!state.getValue(PERSISTENT) && !state.getValue(CONNECTED)) {
+        if (!isAdjacentToValidLeaf(state,pos,level) && !isFacingLog(pos,level)) {
             dropResources(state, level, pos);
             level.removeBlock(pos, false);
         }
     }
+    @Override
+    protected boolean isRandomlyTicking(BlockState state) {
+        return !state.getValue(PERSISTENT);
+    }
 
     @Override
     protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
-        level.setBlock(pos, updateConnection(state, level, pos), 3);
+        level.setBlock(pos, updateDistance(state, level, pos), 3);
     }
 
+    @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite()).setValue(PERSISTENT, false).setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER).setValue(CONNECTED,false);
+        FluidState fluidContext = context.getLevel().getFluidState(context.getClickedPos());
+        Level level = context.getLevel();
+        BlockPos posContext = context.getClickedPos();
+        Direction dirContext = context.getHorizontalDirection().getOpposite();
+        BlockState stateContext = (this.defaultBlockState().setValue(PERSISTENT, true)).setValue(WATERLOGGED, fluidContext.getType() == Fluids.WATER).setValue(FACING, dirContext);
+        return updateDistance(stateContext, level, posContext);
     }
 }

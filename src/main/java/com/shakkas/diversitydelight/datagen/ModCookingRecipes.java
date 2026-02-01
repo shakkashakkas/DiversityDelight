@@ -235,5 +235,14 @@ public class ModCookingRecipes {
                 .unlockedByItems("has_pineapple", DDModItems.PINEAPPLE)
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(output);
+
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.SWEET_STICKY_RICE.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
+                .addIngredient(DDModItems.MANGO.get())
+                .addIngredient(DDModItems.MANGO.get())
+                .addIngredient(CommonTags.CROPS_RICE)
+                .addIngredient(Items.SUGAR)
+                .unlockedByItems("has_mango", DDModItems.MANGO)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(output);
     }
 }

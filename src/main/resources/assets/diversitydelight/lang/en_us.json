@@ -51,6 +51,11 @@
   "item.diversitydelight.lemon_meringue_pie": "Lemon Meringue Pie",
   "item.diversitydelight.pear_pie": "Pear Pie",
   "item.diversitydelight.fruit_flan": "Fruit Flan",
+  "block.diversitydelight.hawaiian_pizza_block": "Hawaiian Pizza",
+  "block.diversitydelight.banoffee_pie_block": "Banoffee Pie",
+  "block.diversitydelight.lemon_meringue_pie_block": "Lemon Meringue Pie",
+  "block.diversitydelight.pear_pie_block": "Pear Pie",
+  "block.diversitydelight.fruit_flan_block": "Fruit Flan",
 
   "item.diversitydelight.hawaiian_pizza_slice": "Hawaiian Pizza Slice",
   "item.diversitydelight.banoffee_pie_slice": "Banoffee Pie Slice",
@@ -146,6 +151,8 @@
   "block.diversitydelight.wild_chili": "Wild Chili",
   "block.diversitydelight.wild_green_bean": "Wild Green Bean",
   "block.diversitydelight.wild_pea": "Wild Pea",
+  "block.diversitydelight.wild_kiwi": "Wild Kiwi",
+  "block.diversitydelight.wild_pineapple": "Wild Pineapple",
 
   "item.diversitydelight.fruit_probe": "Fruit Probe",
   "item.diversitydelight.fruit_probe.mode_mutation": "Set to mutation mode",

@@ -12,6 +12,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -63,45 +64,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE))))));
 
-        dropOther(ModBlocks.LOWER_CHILI_CROP.get(), DDModItems.CHILI_SEEDS);
-
-        LootItemCondition.Builder upperChiliCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.UPPER_CHILI_CROP.get())
-                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(UpperDoubleFruitingCropBlock.AGE, UpperDoubleFruitingCropBlock.MAX_AGE));
-
-        this.add(ModBlocks.UPPER_CHILI_CROP.get(), this.createCropDrops(ModBlocks.UPPER_CHILI_CROP.get(),
-                DDModItems.CHILI.get(), DDModItems.CHILI_SEEDS.get(), upperChiliCropLootItemConditionBuilder));
-
-        LootItemCondition.Builder lowerGreenBeanCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.LOWER_GREEN_BEAN_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(LowerDoubleFruitingCropBlock.AGE, LowerDoubleFruitingCropBlock.MAX_AGE));
-
-        this.add(ModBlocks.LOWER_GREEN_BEAN_CROP.get(), this.createCropDrops(ModBlocks.LOWER_GREEN_BEAN_CROP.get(),
-                DDModItems.GREEN_BEAN.get(), DDModItems.GREEN_BEAN_SEEDS.get(), lowerGreenBeanCropLootItemConditionBuilder));
-
-        LootItemCondition.Builder upperGreenBeanCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.UPPER_GREEN_BEAN_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(UpperDoubleFruitingCropBlock.AGE, UpperDoubleFruitingCropBlock.MAX_AGE));
-
-        this.add(ModBlocks.UPPER_GREEN_BEAN_CROP.get(), this.createCropDrops(ModBlocks.UPPER_GREEN_BEAN_CROP.get(),
-                DDModItems.GREEN_BEAN.get(), DDModItems.GREEN_BEAN_SEEDS.get(), upperGreenBeanCropLootItemConditionBuilder));
-
-        LootItemCondition.Builder lowerPeaCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.LOWER_PEA_CROP.get())
-                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(LowerDoubleFruitingCropBlock.AGE, LowerDoubleFruitingCropBlock.MAX_AGE));
-
-        this.add(ModBlocks.LOWER_PEA_CROP.get(), this.createCropDrops(ModBlocks.LOWER_PEA_CROP.get(),
-                DDModItems.PEA.get(), DDModItems.PEA_SEEDS.get(), lowerPeaCropLootItemConditionBuilder));
-
-        LootItemCondition.Builder upperPeaCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.UPPER_PEA_CROP.get())
-                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(UpperDoubleFruitingCropBlock.AGE, UpperDoubleFruitingCropBlock.MAX_AGE));
-
-        this.add(ModBlocks.UPPER_PEA_CROP.get(), this.createCropDrops(ModBlocks.UPPER_PEA_CROP.get(),
-                DDModItems.PEA.get(), DDModItems.PEA_SEEDS.get(), upperPeaCropLootItemConditionBuilder));
-
-        dropOther(ModBlocks.LOWER_BELL_PEPPER_CROP.get(), DDModItems.BELL_PEPPER_SEEDS);
-
-        LootItemCondition.Builder upperBellPepperCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.UPPER_BELL_PEPPER_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(UpperDoubleFruitingCropBlock.AGE, UpperDoubleFruitingCropBlock.MAX_AGE));
-
-        this.add(ModBlocks.UPPER_BELL_PEPPER_CROP.get(), this.createCropDrops(ModBlocks.UPPER_BELL_PEPPER_CROP.get(),
-                DDModItems.BELL_PEPPER.get(), DDModItems.BELL_PEPPER_SEEDS.get(), upperBellPepperCropLootItemConditionBuilder));
 
         LootItemCondition.Builder bellPepperCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.BELL_PEPPER_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoubleCropBlock.AGE, DoubleCropBlock.MAX_AGE));
@@ -164,41 +126,54 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         //Fruit Tree
         dropSelf(ModBlocks.APPLE_TREE_SAPLING.get());
         this.add(ModBlocks.APPLE_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.APPLE_TREE_LEAVES.get(),ModBlocks.APPLE_TREE_SAPLING.get(),0.55F));
-        this.add(ModBlocks.APPLE_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.APPLE_TREE_FRUITING_LEAVES.get(),ModBlocks.APPLE_TREE_SAPLING.get(),0.55F));
+        this.add(ModBlocks.APPLE_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(Blocks.AIR,ModBlocks.APPLE_TREE_SAPLING.get(),0.55F));
 
         dropSelf(ModBlocks.ORANGE_TREE_SAPLING.get());
         dropSelf(ModBlocks.ORANGE_TREE_LOG.get());
         this.add(ModBlocks.ORANGE_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.ORANGE_TREE_LEAVES.get(),ModBlocks.ORANGE_TREE_SAPLING.get(),0.55F));
-        this.add(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(),ModBlocks.ORANGE_TREE_SAPLING.get(),0.55F));
+        this.add(ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(Blocks.AIR,ModBlocks.ORANGE_TREE_SAPLING.get(),0.55F));
 
         dropSelf(ModBlocks.LEMON_TREE_SAPLING.get());
         dropSelf(ModBlocks.LEMON_TREE_LOG.get());
         this.add(ModBlocks.LEMON_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.LEMON_TREE_LEAVES.get(),ModBlocks.LEMON_TREE_SAPLING.get(),0.55F));
-        this.add(ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(),ModBlocks.LEMON_TREE_SAPLING.get(),0.55F));
+        this.add(ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(Blocks.AIR,ModBlocks.LEMON_TREE_SAPLING.get(),0.55F));
 
         dropSelf(ModBlocks.PEAR_TREE_SAPLING.get());
         dropSelf(ModBlocks.PEAR_TREE_LOG.get());
         this.add(ModBlocks.PEAR_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.PEAR_TREE_LEAVES.get(), ModBlocks.PEAR_TREE_SAPLING.get(), 0.55F));
-        this.add(ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(), ModBlocks.PEAR_TREE_SAPLING.get(), 0.55F));
+        this.add(ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(Blocks.AIR, ModBlocks.PEAR_TREE_SAPLING.get(), 0.55F));
 
         dropSelf(ModBlocks.MANGO_TREE_SAPLING.get());
         dropSelf(ModBlocks.MANGO_TREE_LOG.get());
         this.add(ModBlocks.MANGO_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.MANGO_TREE_LEAVES.get(), ModBlocks.MANGO_TREE_SAPLING.get(), 0.55F));
-        this.add(ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(), ModBlocks.MANGO_TREE_SAPLING.get(), 0.55F));
+        this.add(ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(Blocks.AIR, ModBlocks.MANGO_TREE_SAPLING.get(), 0.55F));
 
         dropSelf(ModBlocks.BANANA_TREE_SAPLING.get());
-        dropSelf(ModBlocks.BANANA_TREE_FROND.get());
+        this.add(ModBlocks.BANANA_TREE_FROND.get(), this.createLeavesDrops(ModBlocks.BANANA_TREE_FROND.get(),ModBlocks.BANANA_TREE_SAPLING.get(),0.55F));
         dropSelf(ModBlocks.BANANA_TREE_STEM.get());
-        dropSelf(ModBlocks.BANANA_BUNCH.get());
 
         dropOther(ModBlocks.KIWI_BUDDING_CROP.get(),DDModItems.KIWI.get());
         dropOther(ModBlocks.KIWI_CROP.get(),DDModItems.KIWI.get());
+        dropOther(ModBlocks.GOLDEN_APPLE_TREE_FRUITING_LEAVES.get(), Blocks.AIR);
+        dropOther(ModBlocks.EMERALD_PEAR_TREE_FRUITING_LEAVES.get(), Blocks.AIR);
+
+        dropWhenSilkTouch(ModBlocks.BANOFFEE_PIE_BLOCK.get());
+        dropWhenSilkTouch(ModBlocks.LEMON_MERINGUE_PIE_BLOCK.get());
+        dropWhenSilkTouch(ModBlocks.FRUIT_FLAN_BLOCK.get());
+        dropWhenSilkTouch(ModBlocks.PEAR_PIE_BLOCK.get());
+        dropWhenSilkTouch(ModBlocks.HAWAIIAN_PIZZA_BLOCK.get());
 
         LootItemCondition.Builder pineappleLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.PINEAPPLE_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PineappleCropBlock.AGE, PineappleCropBlock.MAX_AGE));
 
         this.add(ModBlocks.PINEAPPLE_CROP.get(), this.createCropDrops(ModBlocks.PINEAPPLE_CROP.get(),
                 DDModItems.PINEAPPLE.get(), Items.AIR, pineappleLootItemConditionBuilder));
+
+        LootItemCondition.Builder bananaLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.BANANA_BUNCH.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(BananaBunch.AGE, BananaBunch.MAX_AGE));
+
+        this.add(ModBlocks.BANANA_BUNCH.get(), this.createCropDrops(ModBlocks.BANANA_BUNCH.get(),
+                DDModItems.BANANA.get(), Items.AIR, bananaLootItemConditionBuilder));
 
     }
 

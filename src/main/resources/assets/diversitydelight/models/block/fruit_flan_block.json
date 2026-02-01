@@ -1,0 +1,9 @@
+{
+  "parent": "diversitydelight:block/pie",
+  "textures": {
+    "particle": "diversitydelight:block/fruit_flan_top",
+    "bottom": "diversitydelight:block/pie_bottom",
+    "side": "diversitydelight:block/pie_side",
+    "top": "diversitydelight:block/fruit_flan_top"
+  }
+}

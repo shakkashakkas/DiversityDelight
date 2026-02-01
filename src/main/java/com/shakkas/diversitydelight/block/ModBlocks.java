@@ -14,6 +14,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import vectorwing.farmersdelight.common.block.PieBlock;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
 import java.util.function.Supplier;
@@ -29,31 +30,14 @@ public class ModBlocks {
             () -> new ColeCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.CAULIFLOWER_SEEDS));
     public static final DeferredBlock<Block> CELERY_CROP = BLOCKS.register("celery_crop",
             () -> new CeleryCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CARROTS)));
-    public static final DeferredBlock<Block> LOWER_BELL_PEPPER_CROP = BLOCKS.register("lower_bell_pepper_crop",
-            () -> new LowerDoubleSupportCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.BELL_PEPPER_SEEDS,ModBlocks.UPPER_BELL_PEPPER_CROP));
-    public static final DeferredBlock<Block> UPPER_BELL_PEPPER_CROP = BLOCKS.register("upper_bell_pepper_crop",
-            () -> new UpperDoubleFruitingCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.BELL_PEPPER, DDModItems.BELL_PEPPER_SEEDS,ModBlocks.LOWER_BELL_PEPPER_CROP));
-    public static final DeferredBlock<Block> LOWER_CHILI_CROP = BLOCKS.register("lower_chili_crop",
-            () -> new LowerDoubleSupportCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.CHILI_SEEDS,ModBlocks.UPPER_CHILI_CROP));
-    public static final DeferredBlock<Block> UPPER_CHILI_CROP = BLOCKS.register("upper_chili_crop",
-            () -> new UpperDoubleFruitingCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.CHILI, DDModItems.CHILI_SEEDS,ModBlocks.LOWER_CHILI_CROP));
-    public static final DeferredBlock<Block> LOWER_GREEN_BEAN_CROP = BLOCKS.register("lower_green_bean_crop",
-            () -> new LowerDoubleFruitingCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.GREEN_BEAN, DDModItems.GREEN_BEAN_SEEDS,ModBlocks.UPPER_GREEN_BEAN_CROP));
-    public static final DeferredBlock<Block> UPPER_GREEN_BEAN_CROP = BLOCKS.register("upper_green_bean_crop",
-            () -> new UpperDoubleFruitingCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.GREEN_BEAN, DDModItems.GREEN_BEAN_SEEDS,ModBlocks.LOWER_GREEN_BEAN_CROP));
-    public static final DeferredBlock<Block> LOWER_PEA_CROP = BLOCKS.register("lower_pea_crop",
-            () -> new LowerDoubleFruitingCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.PEA, DDModItems.PEA_SEEDS,ModBlocks.UPPER_PEA_CROP));
-    public static final DeferredBlock<Block> UPPER_PEA_CROP = BLOCKS.register("upper_pea_crop",
-            () -> new UpperDoubleFruitingCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT), DDModItems.PEA, DDModItems.PEA_SEEDS,ModBlocks.LOWER_PEA_CROP));
-
     public static final DeferredBlock<Block> BELL_PEPPER_CROP = BLOCKS.register("bell_pepper_crop",
-            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),3,DDModItems.BELL_PEPPER,DDModItems.BELL_PEPPER_SEEDS));
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),3,DDModItems.BELL_PEPPER,DDModItems.BELL_PEPPER_SEEDS,false));
     public static final DeferredBlock<Block> PEA_CROP = BLOCKS.register("pea_crop",
-            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),2,DDModItems.PEA,DDModItems.PEA_SEEDS));
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),2,DDModItems.PEA,DDModItems.PEA_SEEDS,true));
     public static final DeferredBlock<Block> GREEN_BEAN_CROP = BLOCKS.register("green_bean_crop",
-            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),3,DDModItems.GREEN_BEAN,DDModItems.GREEN_BEAN_SEEDS));
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),3,DDModItems.GREEN_BEAN,DDModItems.GREEN_BEAN_SEEDS,true));
     public static final DeferredBlock<Block> CHILI_CROP = BLOCKS.register("chili_crop",
-            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),5,DDModItems.CHILI,DDModItems.CHILI_SEEDS));
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),5,DDModItems.CHILI,DDModItems.CHILI_SEEDS,false));
 
     public static final DeferredBlock<Block> KIWI_BUDDING_CROP = BLOCKS.register("kiwi_budding_crop",
             () -> new BuddingKiwiBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
@@ -106,6 +90,18 @@ public class ModBlocks {
     public static final DeferredBlock<Block> VEGETABLE_STICKS_BLOCK = BLOCKS.register("vegetable_sticks_block",
             () -> new VegetableSticksBlock(Block.Properties.ofFullCopy(Blocks.CAKE),DDModItems.VEGETABLE_STICKS,false));
 
+    public static final DeferredBlock<Block> PEAR_PIE_BLOCK = BLOCKS.register("pear_pie_block",
+            () -> new PieBlock(Block.Properties.ofFullCopy(Blocks.CAKE), DDModItems.PEAR_PIE_SLICE));
+    public static final DeferredBlock<Block> LEMON_MERINGUE_PIE_BLOCK = BLOCKS.register("lemon_meringue_pie_block",
+            () -> new PieBlock(Block.Properties.ofFullCopy(Blocks.CAKE), DDModItems.LEMON_MERINGUE_PIE_SLICE));
+    public static final DeferredBlock<Block> BANOFFEE_PIE_BLOCK = BLOCKS.register("banoffee_pie_block",
+            () -> new PieBlock(Block.Properties.ofFullCopy(Blocks.CAKE), DDModItems.BANOFFEE_PIE_SLICE));
+    public static final DeferredBlock<Block> FRUIT_FLAN_BLOCK = BLOCKS.register("fruit_flan_block",
+            () -> new PieBlock(Block.Properties.ofFullCopy(Blocks.CAKE), DDModItems.FRUIT_FLAN_SLICE));
+
+    public static final DeferredBlock<Block> HAWAIIAN_PIZZA_BLOCK = BLOCKS.register("hawaiian_pizza_block",
+            () -> new PizzaBlock(Block.Properties.ofFullCopy(Blocks.CAKE), DDModItems.HAWAIIAN_PIZZA_SLICE));
+
     // Wild Crops
     public static final DeferredBlock<Block> WILD_BELL_PEPPER = BLOCKS.register("wild_bell_pepper",
             () -> new WildCropBlock(MobEffects.REGENERATION, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
@@ -121,6 +117,10 @@ public class ModBlocks {
             () -> new WildCropBlock(MobEffects.MOVEMENT_SLOWDOWN, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
     public static final DeferredBlock<Block> WILD_PEA = BLOCKS.register("wild_pea",
             () -> new WildCropBlock(MobEffects.CONFUSION, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+    public static final DeferredBlock<Block> WILD_KIWI = BLOCKS.register("wild_kiwi",
+            () -> new WildCropBlock(MobEffects.JUMP, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+    public static final DeferredBlock<Block> WILD_PINEAPPLE = BLOCKS.register("wild_pineapple",
+            () -> new WildCropBlock(MobEffects.BLINDNESS, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
 
     //Fruit Trees
     public static final DeferredBlock<Block> APPLE_TREE_SAPLING = BLOCKS.register("apple_tree_sapling",

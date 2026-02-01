@@ -36,7 +36,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(DDModItems.CELERY.get())
                 .add(DDModItems.CHILI_SEEDS.get())
                 .add(DDModItems.GREEN_BEAN_SEEDS.get())
-                .add(DDModItems.PEA_SEEDS.get());
+                .add(DDModItems.PEA_SEEDS.get())
+                .add(DDModItems.KIWI.get())
+                .add(DDModItems.PINEAPPLE.get());
     }
 
     private void registerNeoForgeTags() {
@@ -117,6 +119,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(DDCommonTags.STORAGE_BLOCKS_ITEM_CHILI).add(DDModItems.CHILI_CRATE.get());
         tag(DDCommonTags.STORAGE_BLOCKS_ITEM_GREEN_BEAN).add(DDModItems.GREEN_BEAN_CRATE.get());
         tag(DDCommonTags.STORAGE_BLOCKS_ITEM_PEA).add(DDModItems.PEA_CRATE.get());
+
+        tag(DDCommonTags.STORAGE_BLOCKS_ITEM_APPLE).add(DDModItems.APPLE_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_ITEM_BANANA).add(DDModItems.BANANA_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_ITEM_ORANGE).add(DDModItems.ORANGE_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_ITEM_LEMON).add(DDModItems.LEMON_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_ITEM_MANGO).add(DDModItems.MANGO_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_ITEM_PINEAPPLE).add(DDModItems.PINEAPPLE_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_ITEM_PEAR).add(DDModItems.PEAR_BAG.get());
+        tag(DDCommonTags.STORAGE_BLOCKS_ITEM_KIWI).add(DDModItems.KIWI_BAG.get());
     }
 
     private void registerSereneSeasonTags() {

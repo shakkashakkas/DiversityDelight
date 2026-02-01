@@ -1,4 +1,4 @@
-// 1.21.1	2026-01-14T00:11:50.0030444	Item Models: diversitydelight
+// 1.21.1	2026-01-24T20:46:51.9183299	Item Models: diversitydelight
 cb1093e1333e0ea4af402ed9e1a0a5016fd5ef3f assets/diversitydelight/models/item/apple_pear_crumble.json
 ea16c905e9e06823c57f825723002c83ca0a1898 assets/diversitydelight/models/item/apple_tree_sapling.json
 1bd7c5127c683d6e9d464ef4fcee184b0382fbb4 assets/diversitydelight/models/item/bacon_wrapped_green_beans.json
@@ -80,6 +80,7 @@ b3a793a9c4e4a4dfb454eb573980352da33fc5cc assets/diversitydelight/models/item/pin
 fbf91400bd0d567dea07d7aa2b4283b5de47cb6b assets/diversitydelight/models/item/smashed_peas_on_toast.json
 ed1ea08bf5b3f472139f90acb20d3008ee77b2df assets/diversitydelight/models/item/stuffed_bell_pepper.json
 e840c84eec51a2b8e5596584150093b376e562bc assets/diversitydelight/models/item/sweet_and_sour_chicken.json
+658b620d9b06de699794df8489179265d36cfc3f assets/diversitydelight/models/item/sweet_sticky_rice.json
 60bc7d1602c8e5bcf8a77b1bc4472bd280fa2634 assets/diversitydelight/models/item/teriyaki_chicken.json
 0d6bcfcf9e70b2e672933fcf50fe1b8a66ec4c67 assets/diversitydelight/models/item/tropical_salad.json
 a6181958655c1edca8e98be857a9a36fa4d3a3f6 assets/diversitydelight/models/item/vegetable_sticks.json
@@ -90,5 +91,7 @@ bca63926c6b95a65dca703b9edbdc0eff2e470c7 assets/diversitydelight/models/item/wil
 9c30bc6db5d73206dcd9ef591f63ebfccef320e9 assets/diversitydelight/models/item/wild_celery.json
 e80e2f9c1ebad6a802ad49f30a1d08709bde85a5 assets/diversitydelight/models/item/wild_chili.json
 a76f7e9bf8e81213d83d2634840e7ced391164f2 assets/diversitydelight/models/item/wild_green_bean.json
+81cac39bf68a66a9b75c99f02a119b086a3f4c86 assets/diversitydelight/models/item/wild_kiwi.json
 ec41e5fef242b6b004e93711d663a534b2d0086d assets/diversitydelight/models/item/wild_pea.json
+648e3bc2acc6e9e8d8d0a55320f5f0e09a7979e4 assets/diversitydelight/models/item/wild_pineapple.json
 957a6a75b5bcfe388cba419b79cfc4597145900c assets/diversitydelight/models/item/worm_bin_block.json

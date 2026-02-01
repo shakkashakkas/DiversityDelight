@@ -6,6 +6,14 @@
     "#c:storage_blocks/celery",
     "#c:storage_blocks/chili",
     "#c:storage_blocks/green_bean",
-    "#c:storage_blocks/pea"
+    "#c:storage_blocks/pea",
+    "#c:storage_blocks/apple",
+    "#c:storage_blocks/banana",
+    "#c:storage_blocks/orange",
+    "#c:storage_blocks/lemon",
+    "#c:storage_blocks/mango",
+    "#c:storage_blocks/pineapple",
+    "#c:storage_blocks/pear",
+    "#c:storage_blocks/kiwi"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "parent": "diversitydelight:block/pizza",
+  "textures": {
+    "particle": "diversitydelight:block/hawaiian_pizza_top",
+    "bottom": "diversitydelight:block/pie_bottom",
+    "side": "diversitydelight:block/pizza_side",
+    "top": "diversitydelight:block/hawaiian_pizza_top"
+  }
+}

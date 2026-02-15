@@ -64,11 +64,31 @@ public class ModFoodProperties {
     //HANDHELD
     public static final FoodProperties BACON_WRAPPED_GREEN_BEANS = new FoodProperties.Builder().nutrition(8).saturationModifier(0.75f)
             .build();
+    public static final FoodProperties BEEF_TACO = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
+            .build();
+    public static final FoodProperties COOKED_TOFU = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
+            .build();
+    public static final FoodProperties CORNBREAD = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
+            .build();
+    public static final FoodProperties CORN_FRITTER = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
+            .build();
     public static final FoodProperties FRITATA = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
+            .build();
+    public static final FoodProperties GRANOLA_BAR = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
+            .build();
+    public static final FoodProperties GRILLED_CORN = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
+            .build();
+    public static final FoodProperties OATMEAL_COOKIE = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
             .build();
     public static final FoodProperties SMASHED_PEAS_ON_TOAST = new FoodProperties.Builder().nutrition(9).saturationModifier(0.7f)
             .build();
     public static final FoodProperties STUFFED_BELL_PEPPER = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f)
+            .build();
+    public static final FoodProperties TACO_SHELL = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
+            .build();
+    public static final FoodProperties TOFU = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
+            .build();
+    public static final FoodProperties TRAIL_MIX = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
             .build();
     public static final FoodProperties VEGETABLE_STICKS = new FoodProperties.Builder().nutrition(5).saturationModifier(0.8f)
             .build();
@@ -88,6 +108,8 @@ public class ModFoodProperties {
     public static final FoodProperties LEMON_ICE_CREAM = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, BRIEF_DURATION, 0, false, false),1.0F)
             .build();
     public static final FoodProperties MANGO_ICE_CREAM = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, BRIEF_DURATION, 0, false, false),1.0F)
+            .build();
+    public static final FoodProperties PISTACHIO_ICE_CREAM = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).effect(() -> new MobEffectInstance(MobEffects.ABSORPTION, BRIEF_DURATION, 0, false, false),1.0F)
             .build();
     public static final FoodProperties CHOCOLATE_ICE_CREAM = new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, BRIEF_DURATION, 0, false, false),1.0F)
             .build();
@@ -117,10 +139,10 @@ public class ModFoodProperties {
             .effect(() -> comfort(SHORT_DURATION),1.0F).build();
 
     //BOWLS
+    public static final FoodProperties BAKED_BEANS = new FoodProperties.Builder().nutrition(12).saturationModifier(0.7f)
+            .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
     public static final FoodProperties CAULIFLOWER_SOUP = new FoodProperties.Builder().nutrition(12).saturationModifier(0.7f)
             .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
-    public static final FoodProperties CHILI_BEAN_SOUP = new FoodProperties.Builder().nutrition(7).saturationModifier(0.6f)
-            .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, SHORT_DURATION, 0, false, false),1.0F).build();
     public static final FoodProperties GUMBO = new FoodProperties.Builder().nutrition(15).saturationModifier(0.75f)
             .effect(() -> nourishment(MEDIUM_DURATION),1.0F).build();
     public static final FoodProperties TERIYAKI_CHICKEN = new FoodProperties.Builder().nutrition(14).saturationModifier(0.8f)
@@ -131,6 +153,8 @@ public class ModFoodProperties {
     public static final FoodProperties CEREAL_BOWL = new FoodProperties.Builder().nutrition(7).saturationModifier(0.7f)
             .build();
     public static final FoodProperties ORANGE_CHICKEN = new FoodProperties.Builder().nutrition(10).saturationModifier(0.7f)
+            .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
+    public static final FoodProperties PORRIDGE = new FoodProperties.Builder().nutrition(10).saturationModifier(0.7f)
             .effect(() -> comfort(MEDIUM_DURATION),1.0F).build();
     public static final FoodProperties SWEET_AND_SOUR_CHICKEN = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f)
             .effect(() -> nourishment(MEDIUM_DURATION),1.0F).build();
@@ -146,9 +170,15 @@ public class ModFoodProperties {
             .effect(() -> nourishment(SHORT_DURATION),1.0F).build();
     public static final FoodProperties CHICKEN_POT_PIE = new FoodProperties.Builder().nutrition(8).saturationModifier(0.75f)
             .effect(() -> comfort(LONG_DURATION),1.0F).build();
+    public static final FoodProperties CRUSTED_COD = new FoodProperties.Builder().nutrition(8).saturationModifier(0.75f)
+            .effect(() -> comfort(LONG_DURATION),1.0F).build();
+    public static final FoodProperties CRUSTED_MUTTON_CHOPS = new FoodProperties.Builder().nutrition(8).saturationModifier(0.75f)
+            .effect(() -> comfort(LONG_DURATION),1.0F).build();
+    public static final FoodProperties CRUSTED_PORKCHOP = new FoodProperties.Builder().nutrition(8).saturationModifier(0.75f)
+            .effect(() -> comfort(LONG_DURATION),1.0F).build();
     public static final FoodProperties GREEN_BEAN_CASSEROLE = new FoodProperties.Builder().nutrition(12).saturationModifier(0.75f)
             .effect(() -> comfort(LONG_DURATION),1.0F).build();
-    public static final FoodProperties GREEN_BEAN_STIR_FRY = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f)
+    public static final FoodProperties GREEN_BEAN_ALMONDINE = new FoodProperties.Builder().nutrition(12).saturationModifier(0.8f)
             .effect(() -> nourishment(MEDIUM_DURATION),1.0F).build();
     public static final FoodProperties MIXED_VEGETABLE_MEDLEY = new FoodProperties.Builder().nutrition(12).saturationModifier(0.75f)
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, MEDIUM_DURATION, 0, false, false),1.0F).build();

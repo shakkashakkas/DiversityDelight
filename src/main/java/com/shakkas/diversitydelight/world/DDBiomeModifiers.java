@@ -18,6 +18,9 @@ public class DDBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_MANGO  = registerKey("add_tree_mango");
     public static final ResourceKey<BiomeModifier> ADD_TREE_ORANGE = registerKey("add_tree_orange");
     public static final ResourceKey<BiomeModifier> ADD_TREE_LEMON  = registerKey("add_tree_lemon");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_ALMOND = registerKey("add_tree_almond");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_PISTACHIO = registerKey("add_tree_pistachio");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_WALNUT = registerKey("add_tree_walnut");
     public static final ResourceKey<BiomeModifier> ADD_TREE_BANANA = registerKey("add_tree_banana");
 
 
@@ -52,6 +55,24 @@ public class DDBiomeModifiers {
         context.register(ADD_TREE_LEMON, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(biomes.getOrThrow(Biomes.SAVANNA),biomes.getOrThrow(Biomes.WOODED_BADLANDS)),
                 HolderSet.direct(placedFeatures.getOrThrow(DDPlacedFeatures.LEMON_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
+        context.register(ADD_TREE_ALMOND, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.TAIGA),biomes.getOrThrow(Biomes.OLD_GROWTH_PINE_TAIGA)),
+                HolderSet.direct(placedFeatures.getOrThrow(DDPlacedFeatures.ALMOND_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
+        context.register(ADD_TREE_PISTACHIO, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.BIRCH_FOREST),biomes.getOrThrow(Biomes.OLD_GROWTH_BIRCH_FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(DDPlacedFeatures.PISTACHIO_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
+        ));
+
+        context.register(ADD_TREE_WALNUT, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(biomes.getOrThrow(Biomes.DARK_FOREST)),
+                HolderSet.direct(placedFeatures.getOrThrow(DDPlacedFeatures.WALNUT_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION
         ));
 

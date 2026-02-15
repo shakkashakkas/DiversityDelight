@@ -72,7 +72,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 );
         tag(Tags.Items.FOODS_SOUP)
                 .add(DDModItems.CAULIFLOWER_SOUP.get())
-                .add(DDModItems.CHILI_BEAN_SOUP.get())
+                .add(DDModItems.BAKED_BEANS.get())
                 .add(DDModItems.GUMBO.get());
     }
 

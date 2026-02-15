@@ -22,7 +22,10 @@ public class ModBlockEntities {
                     ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(),
                     ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(),
                     ModBlocks.EMERALD_PEAR_TREE_FRUITING_LEAVES.get(),
-                    ModBlocks.MANGO_TREE_FRUITING_LEAVES.get())
+                    ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(),
+                    ModBlocks.ALMOND_TREE_FRUITING_LEAVES.get(),
+                    ModBlocks.PISTACHIO_TREE_FRUITING_LEAVES.get(),
+                    ModBlocks.WALNUT_TREE_FRUITING_LEAVES.get())
                     .build(null));
 
     public static void register(IEventBus eventBus) {

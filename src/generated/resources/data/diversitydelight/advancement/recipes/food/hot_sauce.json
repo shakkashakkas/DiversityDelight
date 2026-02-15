@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_chili": {
+    "has_soy": {
       "conditions": {
         "items": [
           {
-            "items": "diversitydelight:chili"
+            "items": "diversitydelight:soy"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_chili"
+      "has_soy"
     ]
   ],
   "rewards": {

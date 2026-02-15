@@ -29,6 +29,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        basicItem(DDModItems.ALMOND.get());
         basicItem(DDModItems.BANANA.get());
         basicItem(DDModItems.BELL_PEPPER.get());
         basicItem(DDModItems.BELL_PEPPER_SEEDS.get());
@@ -41,17 +42,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.CELERY.get());
         basicItem(DDModItems.CHILI.get());
         basicItem(DDModItems.CHILI_SEEDS.get());
+        basicItem(DDModItems.CORN.get());
         basicItem(DDModItems.GREEN_BEAN.get());
         basicItem(DDModItems.GREEN_BEAN_SEEDS.get());
         basicItem(DDModItems.KIWI.get());
         basicItem(DDModItems.LEMON.get());
         basicItem(DDModItems.MANGO.get());
+        basicItem(DDModItems.OATS.get());
         basicItem(DDModItems.ORANGE.get());
         basicItem(DDModItems.PEA.get());
         basicItem(DDModItems.PEA_SEEDS.get());
+        basicItem(DDModItems.PEANUT.get());
         basicItem(DDModItems.PEAR.get());
         basicItem(DDModItems.PINEAPPLE.get());
         basicItem(DDModItems.PINEAPPLE_SLICE.get());
+        basicItem(DDModItems.PISTACHIO.get());
+        basicItem(DDModItems.SOY.get());
+        basicItem(DDModItems.SOY_BEANS.get());
+        basicItem(DDModItems.WALNUT.get());
         basicItem(DDModItems.EMERALD_PEAR.get());
         //HANDHELD
         basicItem(DDModItems.BACON_WRAPPED_GREEN_BEANS.get());
@@ -92,7 +100,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         //BOWLS
         basicItem(DDModItems.CAULIFLOWER_SOUP.get());
-        basicItem(DDModItems.CHILI_BEAN_SOUP.get());
+        basicItem(DDModItems.BAKED_BEANS.get());
         basicItem(DDModItems.GUMBO.get());
         basicItem(DDModItems.TERIYAKI_CHICKEN.get());
 
@@ -108,7 +116,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.CHICKEN_POT_PIE.get());
         basicItem(DDModItems.CHICKEN_POT_PIE_BLOCK.get());
         basicItem(DDModItems.GREEN_BEAN_CASSEROLE.get());
-        basicItem(DDModItems.GREEN_BEAN_STIR_FRY.get());
+        basicItem(DDModItems.GREEN_BEAN_ALMONDINE.get());
         basicItem(DDModItems.MIXED_VEGETABLE_MEDLEY.get());
         basicItem(DDModItems.PEA_PESTO_PASTA.get());
         basicItem(DDModItems.VEGETABLE_STICKS_BLOCK.get());
@@ -121,12 +129,35 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.MAYONNAISE.get());
         basicItem(DDModItems.HOT_SAUCE.get());
 
+        //GRAINS,NUTS,LEGUMES ADDITIONS:
+        basicItem(DDModItems.SOY_SAUCE.get());
+        basicItem(DDModItems.BEEF_TACO.get());
+        basicItem(DDModItems.COOKED_TOFU.get());
+        basicItem(DDModItems.TOFU.get());
+        basicItem(DDModItems.PORRIDGE.get());
+        basicItem(DDModItems.CORNBREAD.get());
+        basicItem(DDModItems.CORN_FRITTER.get());
+        basicItem(DDModItems.GRANOLA_BAR.get());
+        basicItem(DDModItems.GRILLED_CORN.get());
+        basicItem(DDModItems.OATMEAL_COOKIE.get());
+        basicItem(DDModItems.PISTACHIO_ICE_CREAM.get());
+        basicItem(DDModItems.TACO_SHELL.get());
+        basicItem(DDModItems.TRAIL_MIX.get());
+        basicItem(DDModItems.CRUSTED_COD.get());
+        basicItem(DDModItems.CRUSTED_MUTTON_CHOPS.get());
+        basicItem(DDModItems.CRUSTED_PORKCHOP.get());
+
+
         itemGeneratedModel(DDModItems.APPLE_TREE_SAPLING.get());
         itemGeneratedModel(DDModItems.ORANGE_TREE_SAPLING.get());
         itemGeneratedModel(DDModItems.LEMON_TREE_SAPLING.get());
         itemGeneratedModel(DDModItems.PEAR_TREE_SAPLING.get());
         itemGeneratedModel(DDModItems.MANGO_TREE_SAPLING.get());
         itemGeneratedModel(DDModItems.BANANA_TREE_SAPLING.get());
+        itemGeneratedModel(DDModItems.ALMOND_TREE_SAPLING.get());
+        itemGeneratedModel(DDModItems.PISTACHIO_TREE_SAPLING.get());
+        itemGeneratedModel(DDModItems.WALNUT_TREE_SAPLING.get());
+
 
         withExistingParent(DDModItems.WORM_BIN_BLOCK.getId().toString(), modLoc("block/worm_bin_contents0"));
         withExistingParent(DDModItems.BANANA_TREE_FROND.getId().toString(), modLoc("block/banana_tree_frond"));

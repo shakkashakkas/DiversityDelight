@@ -68,6 +68,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.LEMON_TREE_LOG.get(),
                 ModBlocks.PEAR_TREE_LOG.get(),
                 ModBlocks.MANGO_TREE_LOG.get(),
+                ModBlocks.ALMOND_TREE_LOG.get(),
+                ModBlocks.PISTACHIO_TREE_LOG.get(),
+                ModBlocks.WALNUT_TREE_LOG.get(),
                 ModBlocks.BANANA_TREE_STEM.get()
         );
 
@@ -78,7 +81,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(),
                 ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(),
                 ModBlocks.EMERALD_PEAR_TREE_FRUITING_LEAVES.get(),
-                ModBlocks.MANGO_TREE_FRUITING_LEAVES.get()
+                ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.ALMOND_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.PISTACHIO_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.WALNUT_TREE_FRUITING_LEAVES.get()
         );
 
         tag(net.minecraft.tags.BlockTags.CLIMBABLE).add(

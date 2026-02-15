@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "diversitydelight:item/chili_bean_soup"
-  }
-}

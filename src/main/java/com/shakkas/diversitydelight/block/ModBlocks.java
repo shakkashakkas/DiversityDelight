@@ -179,6 +179,35 @@ public class ModBlocks {
     public static final DeferredBlock<Block> BANANA_BUNCH = BLOCKS.register("banana_bunch",
             () -> new BananaBunch(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
+    public static final DeferredBlock<Block> ALMOND_TREE_SAPLING = BLOCKS.register("almond_tree_sapling",
+            () -> new SaplingBlock(DDTreeGrowers.ALMOND_FRUIT, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> ALMOND_TREE_LOG = BLOCKS.register("almond_tree_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> ALMOND_TREE_LEAVES = BLOCKS.register("almond_tree_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> ALMOND_TREE_FRUITING_LEAVES = BLOCKS.register("almond_tree_fruiting_leaves",
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), DDModItems.ALMOND,() -> ModFruitTreeGenetics.ALMOND,false));
+
+    public static final DeferredBlock<Block> PISTACHIO_TREE_SAPLING = BLOCKS.register("pistachio_tree_sapling",
+            () -> new SaplingBlock(DDTreeGrowers.PISTACHIO_FRUIT, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> PISTACHIO_TREE_LOG = BLOCKS.register("pistachio_tree_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> PISTACHIO_TREE_LEAVES = BLOCKS.register("pistachio_tree_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> PISTACHIO_TREE_FRUITING_LEAVES = BLOCKS.register("pistachio_tree_fruiting_leaves",
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), DDModItems.PISTACHIO, () -> ModFruitTreeGenetics.PISTACHIO, false));
+
+    public static final DeferredBlock<Block> WALNUT_TREE_SAPLING = BLOCKS.register("walnut_tree_sapling",
+            () -> new SaplingBlock(DDTreeGrowers.WALNUT_FRUIT, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+    public static final DeferredBlock<Block> WALNUT_TREE_LOG = BLOCKS.register("walnut_tree_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> WALNUT_TREE_LEAVES = BLOCKS.register("walnut_tree_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)));
+    public static final DeferredBlock<Block> WALNUT_TREE_FRUITING_LEAVES = BLOCKS.register("walnut_tree_fruiting_leaves",
+            () -> new FruitingLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES), DDModItems.WALNUT, () -> ModFruitTreeGenetics.WALNUT, false));
+
+
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

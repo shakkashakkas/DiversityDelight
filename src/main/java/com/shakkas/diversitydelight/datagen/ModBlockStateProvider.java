@@ -74,6 +74,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.PEAR_TREE_FRUITING_LEAVES.get());
         this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.EMERALD_PEAR_TREE_FRUITING_LEAVES.get());
         this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.MANGO_TREE_FRUITING_LEAVES.get());
+        this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.ALMOND_TREE_FRUITING_LEAVES.get());
+        this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.PISTACHIO_TREE_FRUITING_LEAVES.get());
+        this.fruitingLeavesBlock((FruitingLeavesBlock) ModBlocks.WALNUT_TREE_FRUITING_LEAVES.get());
+
 
         // Crop Crates
         this.crateBlock(ModBlocks.BELL_PEPPER_CRATE.get(), "bell_pepper");
@@ -111,6 +115,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.crossCutOutBlock(ModBlocks.PEAR_TREE_SAPLING.get());
         this.crossCutOutBlock(ModBlocks.MANGO_TREE_SAPLING.get());
         this.crossCutOutBlock(ModBlocks.BANANA_TREE_SAPLING.get());
+        this.crossCutOutBlock(ModBlocks.ALMOND_TREE_SAPLING.get());
+        this.crossCutOutBlock(ModBlocks.PISTACHIO_TREE_SAPLING.get());
+        this.crossCutOutBlock(ModBlocks.WALNUT_TREE_SAPLING.get());
+
 
         // Wild Crops
         this.crossCutOutBlock(ModBlocks.WILD_BELL_PEPPER.get());
@@ -132,6 +140,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leafBlock(ModBlocks.PEAR_TREE_LEAVES.get());
         logBlockAndItem(ModBlocks.MANGO_TREE_LOG.get());
         leafBlock(ModBlocks.MANGO_TREE_LEAVES.get());
+        logBlockAndItem(ModBlocks.ALMOND_TREE_LOG.get());
+        leafBlock(ModBlocks.ALMOND_TREE_LEAVES.get());
+        logBlockAndItem(ModBlocks.PISTACHIO_TREE_LOG.get());
+        leafBlock(ModBlocks.PISTACHIO_TREE_LEAVES.get());
+        logBlockAndItem(ModBlocks.WALNUT_TREE_LOG.get());
+        leafBlock(ModBlocks.WALNUT_TREE_LEAVES.get());
+
 
         //logBlockAndItem(ModBlocks.BANANA_TREE_STEM.get());
         bananaStemBlock((BananaStem) ModBlocks.BANANA_TREE_STEM.get());

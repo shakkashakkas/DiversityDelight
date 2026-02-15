@@ -18,20 +18,27 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(DDModItems.BROCCOLI.get()))
                     .title(Component.translatable("creativetab.diversitydelight.crop_items"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(DDModItems.ALMOND);
                         output.accept(DDModItems.BANANA);
                         output.accept(DDModItems.BELL_PEPPER);
                         output.accept(DDModItems.BROCCOLI);
                         output.accept(DDModItems.CAULIFLOWER);
                         output.accept(DDModItems.CELERY);
                         output.accept(DDModItems.CHILI);
+                        output.accept(DDModItems.CORN);
                         output.accept(DDModItems.GREEN_BEAN);
                         output.accept(DDModItems.KIWI);
                         output.accept(DDModItems.LEMON);
                         output.accept(DDModItems.MANGO);
+                        output.accept(DDModItems.OATS);
                         output.accept(DDModItems.ORANGE);
                         output.accept(DDModItems.PEA);
+                        output.accept(DDModItems.PEANUT);
                         output.accept(DDModItems.PEAR);
                         output.accept(DDModItems.PINEAPPLE);
+                        output.accept(DDModItems.PISTACHIO);
+                        output.accept(DDModItems.SOY);
+                        output.accept(DDModItems.WALNUT);
                         output.accept(DDModItems.BROCCOLI_FLORET);
                         output.accept(DDModItems.CAULIFLOWER_FLORET);
                         output.accept(DDModItems.PINEAPPLE_SLICE);
@@ -42,13 +49,25 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.CHILI_SEEDS);
                         output.accept(DDModItems.GREEN_BEAN_SEEDS);
                         output.accept(DDModItems.PEA_SEEDS);
+                        output.accept(DDModItems.SOY_BEANS);
 
                         //HANDHELD
                         output.accept(DDModItems.BACON_WRAPPED_GREEN_BEANS);
+                        output.accept(DDModItems.BEEF_TACO);
+                        output.accept(DDModItems.COOKED_TOFU);
+                        output.accept(DDModItems.CORNBREAD);
+                        output.accept(DDModItems.CORN_FRITTER);
                         output.accept(DDModItems.FRITATA);
+                        output.accept(DDModItems.GRANOLA_BAR);
+                        output.accept(DDModItems.GRILLED_CORN);
+                        output.accept(DDModItems.OATMEAL_COOKIE);
                         output.accept(DDModItems.SMASHED_PEAS_ON_TOAST);
                         output.accept(DDModItems.STUFFED_BELL_PEPPER);
+                        output.accept(DDModItems.TACO_SHELL);
+                        output.accept(DDModItems.TOFU);
+                        output.accept(DDModItems.TRAIL_MIX);
                         output.accept(DDModItems.VEGETABLE_STICKS);
+
 
                         output.accept(DDModItems.BANANA_BREAD);
                         output.accept(DDModItems.FRUIT_ROLLUP);
@@ -59,6 +78,7 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.ICE_CREAM_CONE);
                         output.accept(DDModItems.LEMON_ICE_CREAM);
                         output.accept(DDModItems.MANGO_ICE_CREAM);
+                        output.accept(DDModItems.PISTACHIO_ICE_CREAM);
                         output.accept(DDModItems.CHOCOLATE_ICE_CREAM);
                         output.accept(DDModItems.ORANGE_JUICE);
                         output.accept(DDModItems.PINEAPPLE_JUICE);
@@ -79,14 +99,15 @@ public class ModCreativeModeTabs {
 
 
                         //BOWLS
+                        output.accept(DDModItems.BAKED_BEANS);
                         output.accept(DDModItems.CAULIFLOWER_SOUP);
-                        output.accept(DDModItems.CHILI_BEAN_SOUP);
                         output.accept(DDModItems.GUMBO);
                         output.accept(DDModItems.TERIYAKI_CHICKEN);
 
                         output.accept(DDModItems.BANANA_CHIPS);
                         output.accept(DDModItems.CEREAL_BOWL);
                         output.accept(DDModItems.ORANGE_CHICKEN);
+                        output.accept(DDModItems.PORRIDGE);
                         output.accept(DDModItems.SWEET_AND_SOUR_CHICKEN);
                         output.accept(DDModItems.SWEET_STICKY_RICE);
                         output.accept(DDModItems.TROPICAL_SALAD);
@@ -96,8 +117,11 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.CAULIFLOWER_STEAK);
                         output.accept(DDModItems.CHICKEN_POT_PIE);
                         output.accept(DDModItems.CHICKEN_POT_PIE_BLOCK);
+                        output.accept(DDModItems.CRUSTED_COD);
+                        output.accept(DDModItems.CRUSTED_MUTTON_CHOPS);
+                        output.accept(DDModItems.CRUSTED_PORKCHOP);
                         output.accept(DDModItems.GREEN_BEAN_CASSEROLE);
-                        output.accept(DDModItems.GREEN_BEAN_STIR_FRY);
+                        output.accept(DDModItems.GREEN_BEAN_ALMONDINE);
                         output.accept(DDModItems.MIXED_VEGETABLE_MEDLEY);
                         output.accept(DDModItems.PEA_PESTO_PASTA);
                         output.accept(DDModItems.VEGETABLE_STICKS_BLOCK);
@@ -109,6 +133,7 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.MARMALADE);
                         output.accept(DDModItems.MAYONNAISE);
                         output.accept(DDModItems.HOT_SAUCE);
+                        output.accept(DDModItems.SOY_SAUCE);
 
                         //blocks
                         output.accept(DDModItems.WORM_BIN_BLOCK);
@@ -160,6 +185,22 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.BANANA_TREE_FROND);
                         output.accept(DDModItems.BANANA_TREE_STEM);
                         output.accept(DDModItems.BANANA_BUNCH);
+
+                        output.accept(DDModItems.ALMOND_TREE_SAPLING);
+                        output.accept(DDModItems.ALMOND_TREE_LOG);
+                        output.accept(DDModItems.ALMOND_TREE_LEAVES);
+                        output.accept(DDModItems.ALMOND_TREE_FRUITING_LEAVES);
+
+                        output.accept(DDModItems.PISTACHIO_TREE_SAPLING);
+                        output.accept(DDModItems.PISTACHIO_TREE_LOG);
+                        output.accept(DDModItems.PISTACHIO_TREE_LEAVES);
+                        output.accept(DDModItems.PISTACHIO_TREE_FRUITING_LEAVES);
+
+                        output.accept(DDModItems.WALNUT_TREE_SAPLING);
+                        output.accept(DDModItems.WALNUT_TREE_LOG);
+                        output.accept(DDModItems.WALNUT_TREE_LEAVES);
+                        output.accept(DDModItems.WALNUT_TREE_FRUITING_LEAVES);
+
 
                         output.accept(DDModItems.WILD_BELL_PEPPER);
                         output.accept(DDModItems.WILD_BROCCOLI);

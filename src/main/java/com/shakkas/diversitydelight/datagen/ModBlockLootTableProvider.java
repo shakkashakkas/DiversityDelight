@@ -152,6 +152,22 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.BANANA_TREE_FROND.get(), this.createLeavesDrops(ModBlocks.BANANA_TREE_FROND.get(),ModBlocks.BANANA_TREE_SAPLING.get(),0.55F));
         dropSelf(ModBlocks.BANANA_TREE_STEM.get());
 
+        dropSelf(ModBlocks.ALMOND_TREE_SAPLING.get());
+        dropSelf(ModBlocks.ALMOND_TREE_LOG.get());
+        this.add(ModBlocks.ALMOND_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.ALMOND_TREE_LEAVES.get(), ModBlocks.ALMOND_TREE_SAPLING.get(), 0.55F));
+        this.add(ModBlocks.ALMOND_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(Blocks.AIR, ModBlocks.ALMOND_TREE_SAPLING.get(), 0.55F));
+
+        dropSelf(ModBlocks.PISTACHIO_TREE_SAPLING.get());
+        dropSelf(ModBlocks.PISTACHIO_TREE_LOG.get());
+        this.add(ModBlocks.PISTACHIO_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.PISTACHIO_TREE_LEAVES.get(), ModBlocks.PISTACHIO_TREE_SAPLING.get(), 0.55F));
+        this.add(ModBlocks.PISTACHIO_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(Blocks.AIR, ModBlocks.PISTACHIO_TREE_SAPLING.get(), 0.55F));
+
+        dropSelf(ModBlocks.WALNUT_TREE_SAPLING.get());
+        dropSelf(ModBlocks.WALNUT_TREE_LOG.get());
+        this.add(ModBlocks.WALNUT_TREE_LEAVES.get(), this.createLeavesDrops(ModBlocks.WALNUT_TREE_LEAVES.get(), ModBlocks.WALNUT_TREE_SAPLING.get(), 0.55F));
+        this.add(ModBlocks.WALNUT_TREE_FRUITING_LEAVES.get(), this.createLeavesDrops(Blocks.AIR, ModBlocks.WALNUT_TREE_SAPLING.get(), 0.55F));
+
+
         dropOther(ModBlocks.KIWI_BUDDING_CROP.get(),DDModItems.KIWI.get());
         dropOther(ModBlocks.KIWI_CROP.get(),DDModItems.KIWI.get());
         dropOther(ModBlocks.GOLDEN_APPLE_TREE_FRUITING_LEAVES.get(), Blocks.AIR);

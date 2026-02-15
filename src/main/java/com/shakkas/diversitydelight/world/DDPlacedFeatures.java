@@ -21,6 +21,9 @@ public class DDPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MANGO_PLACED_KEY  = registerKey("mango_placed");
     public static final ResourceKey<PlacedFeature> ORANGE_PLACED_KEY = registerKey("orange_placed");
     public static final ResourceKey<PlacedFeature> LEMON_PLACED_KEY  = registerKey("lemon_placed");
+    public static final ResourceKey<PlacedFeature> ALMOND_PLACED_KEY = registerKey("almond_placed");
+    public static final ResourceKey<PlacedFeature> PISTACHIO_PLACED_KEY = registerKey("pistachio_placed");
+    public static final ResourceKey<PlacedFeature> WALNUT_PLACED_KEY = registerKey("walnut_placed");
     public static final ResourceKey<PlacedFeature> BANANA_PLACED_KEY = registerKey("banana_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -54,6 +57,25 @@ public class DDPlacedFeatures {
                         PlacementUtils.countExtra(0, 0.05f, 1),
                         ModBlocks.LEMON_TREE_SAPLING.get()
                 ));
+
+        register(context, ALMOND_PLACED_KEY, configuredFeatures.getOrThrow(DDConfiguredFeatures.ALMOND_FRUIT_KEY),
+                VegetationPlacements.treePlacement(
+                        PlacementUtils.countExtra(0, 0.05f, 1),
+                        ModBlocks.ALMOND_TREE_SAPLING.get()
+                ));
+
+        register(context, PISTACHIO_PLACED_KEY, configuredFeatures.getOrThrow(DDConfiguredFeatures.PISTACHIO_FRUIT_KEY),
+                VegetationPlacements.treePlacement(
+                        PlacementUtils.countExtra(0, 0.05f, 1),
+                        ModBlocks.PISTACHIO_TREE_SAPLING.get()
+                ));
+
+        register(context, WALNUT_PLACED_KEY, configuredFeatures.getOrThrow(DDConfiguredFeatures.WALNUT_FRUIT_KEY),
+                VegetationPlacements.treePlacement(
+                        PlacementUtils.countExtra(0, 0.05f, 1),
+                        ModBlocks.WALNUT_TREE_SAPLING.get()
+                ));
+
 
         register(context, BANANA_PLACED_KEY, configuredFeatures.getOrThrow(DDConfiguredFeatures.BANANA_FRUIT_KEY),
                 VegetationPlacements.treePlacement(

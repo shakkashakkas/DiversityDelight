@@ -299,6 +299,15 @@ public class ModCraftingRecipes {
                 .unlockedBy("has_egg", InventoryChangeTrigger.TriggerInstance.hasItems(Items.EGG))
                 .save(output);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.HOT_SAUCE.get(), 1)
+                .requires(DDModItems.SOY_BEANS.get())
+                .requires(DDModItems.SOY_BEANS.get())
+                .requires(DDModItems.SOY_BEANS.get())
+                .requires(Items.WHEAT)
+                .requires(Items.WHEAT)
+                .requires(Items.GLASS_BOTTLE)
+                .unlockedBy("has_soy", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.SOY.get()))
+                .save(output);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.SOY_SAUCE.get(), 1)
                 .requires(DDModItems.CHILI.get())
                 .requires(DDModItems.CHILI.get())
                 .requires(DDModItems.BELL_PEPPER.get())
@@ -326,6 +335,15 @@ public class ModCraftingRecipes {
                 .requires(ModItems.COOKED_BACON.get())
                 .requires(ModItems.COOKED_BACON.get())
                 .unlockedBy("has_green_bean", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.GREEN_BEAN.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.BEEF_TACO.get(), 1)
+                .requires(DDModItems.TACO_SHELL.get())
+                .requires(CommonTags.FOODS_COOKED_BEEF)
+                .requires(DDModItems.CHILI.get())
+                .requires(ModItems.TOMATO.get())
+                .requires(CommonTags.FOODS_CABBAGE)
+                .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.CORN.get()))
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.SMASHED_PEAS_ON_TOAST.get(), 1)
@@ -373,12 +391,40 @@ public class ModCraftingRecipes {
                 .unlockedBy("has_kiwi", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.KIWI.get()))
                 .save(output);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.CORN_FRITTER.get(), 2)
+                .requires(DDModItems.CORN.get())
+                .requires(DDModItems.CORN.get())
+                .requires(DDModItems.CORN.get())
+                .requires(Items.WHEAT)
+                .requires(Items.EGG)
+                .requires(CommonTags.FOODS_MILK)
+                .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.CORN.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.CORNBREAD.get(), 1)
+                .requires(DDModItems.CORN.get())
+                .requires(DDModItems.CORN.get())
+                .requires(DDModItems.CORN.get())
+                .requires(Items.EGG)
+                .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.CORN.get()))
+                .save(output);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.CHOCOLATE_ICE_CREAM.get(), 1)
                 .requires(Items.COCOA_BEANS)
                 .requires(CommonTags.FOODS_MILK)
                 .requires(Items.SNOWBALL)
                 .requires(DDModItems.ICE_CREAM_CONE.get())
                 .unlockedBy("has_ice_cream_cone", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ICE_CREAM_CONE.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.GRANOLA_BAR.get(), 1)
+                .requires(DDModItems.OATS.get())
+                .requires(DDModItems.WALNUT.get())
+                .requires(DDModItems.PISTACHIO.get())
+                .requires(DDModItems.ALMOND.get())
+                .requires(DDModItems.PEANUT.get())
+                .requires(Items.SWEET_BERRIES)
+                .unlockedBy("has_oats", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.OATS.get()))
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.LEMON_ICE_CREAM.get(), 1)
@@ -397,11 +443,29 @@ public class ModCraftingRecipes {
                 .unlockedBy("has_ice_cream_cone", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ICE_CREAM_CONE.get()))
                 .save(output);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.PISTACHIO_ICE_CREAM.get(), 1)
+                .requires(DDModItems.PISTACHIO.get())
+                .requires(DDModItems.PISTACHIO.get())
+                .requires(CommonTags.FOODS_MILK)
+                .requires(Items.SNOWBALL)
+                .requires(DDModItems.ICE_CREAM_CONE.get())
+                .unlockedBy("has_ice_cream_cone", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ICE_CREAM_CONE.get()))
+                .save(output);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.ICE_CREAM_CONE.get(), 3)
                 .requires(Items.EGG)
                 .requires(Items.WHEAT)
                 .requires(CommonTags.FOODS_MILK)
                 .unlockedBy("has_wheat", InventoryChangeTrigger.TriggerInstance.hasItems(Items.WHEAT))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.OATMEAL_COOKIE.get(), 3)
+                .requires(DDModItems.OATS.get())
+                .requires(DDModItems.OATS.get())
+                .requires(DDModItems.OATS.get())
+                .requires(Items.SUGAR)
+                .requires(Items.SWEET_BERRIES)
+                .unlockedBy("has_oats", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.OATS.get()))
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.FRUIT_ROLLUP.get(), 3)
@@ -428,6 +492,36 @@ public class ModCraftingRecipes {
                 .requires(Items.SUGAR)
                 .requires(Items.GLASS_BOTTLE)
                 .unlockedBy("has_pineapple", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PINEAPPLE.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.TACO_SHELL.get(), 2)
+                .requires(DDModItems.CORN)
+                .requires(DDModItems.CORN)
+                .requires(DDModItems.CORN)
+                .requires(Items.WATER_BUCKET)
+                .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.CORN.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.TOFU.get(), 2)
+                .requires(DDModItems.SOY_BEANS)
+                .requires(DDModItems.SOY_BEANS)
+                .requires(DDModItems.SOY_BEANS)
+                .requires(DDModItems.SOY_BEANS)
+                .requires(Items.WATER_BUCKET)
+                .unlockedBy("has_soy", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.SOY.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.TRAIL_MIX.get(), 3)
+                .requires(DDModItems.PEANUT)
+                .requires(DDModItems.PEANUT)
+                .requires(DDModItems.PISTACHIO)
+                .requires(DDModItems.PISTACHIO)
+                .requires(DDModItems.WALNUT)
+                .requires(DDModItems.WALNUT)
+                .requires(DDModItems.ALMOND)
+                .requires(DDModItems.ALMOND)
+                .requires(Items.PUMPKIN_SEEDS)
+                .unlockedBy("has_peanut", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEANUT.get()))
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.TROPICAL_SALAD.get(), 1)

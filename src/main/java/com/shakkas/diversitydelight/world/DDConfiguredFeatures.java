@@ -33,6 +33,9 @@ public class DDConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON_FRUIT_KEY = registerKey("lemon_fruit");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PEAR_FRUIT_KEY = registerKey("pear_fruit");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MANGO_FRUIT_KEY = registerKey("mango_fruit");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ALMOND_FRUIT_KEY = registerKey("almond_fruit");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PISTACHIO_FRUIT_KEY = registerKey("pistachio_fruit");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WALNUT_FRUIT_KEY = registerKey("walnut_fruit");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BANANA_FRUIT_KEY = registerKey("banana_fruit");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -64,6 +67,24 @@ public class DDConfiguredFeatures {
                 BlockStateProvider.simple(ModBlocks.MANGO_TREE_LOG.get()),
                 new ForkingTrunkPlacer(3, 2, 4),
                 new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.MANGO_TREE_LEAVES.get().defaultBlockState(), 4).add(ModBlocks.MANGO_TREE_FRUITING_LEAVES.get().defaultBlockState(), 1).build()),
+                new CherryFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(4), 0.25F, 0.5F, 0.16666667F, 0F),
+                new TwoLayersFeatureSize(1, 1, 0)).build());
+        register(context, ALMOND_FRUIT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.ALMOND_TREE_LOG.get()),
+                new ForkingTrunkPlacer(3, 2, 4),
+                new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.ALMOND_TREE_LEAVES.get().defaultBlockState(), 4).add(ModBlocks.ALMOND_TREE_FRUITING_LEAVES.get().defaultBlockState(), 1).build()),
+                new RandomSpreadFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2), 70),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+        register(context, PISTACHIO_FRUIT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.PISTACHIO_TREE_LOG.get()),
+                new ForkingTrunkPlacer(3, 2, 4),
+                new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.PISTACHIO_TREE_LEAVES.get().defaultBlockState(), 4).add(ModBlocks.PISTACHIO_TREE_FRUITING_LEAVES.get().defaultBlockState(), 1).build()),
+                new RandomSpreadFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2), 70),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+        register(context, WALNUT_FRUIT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.WALNUT_TREE_LOG.get()),
+                new ForkingTrunkPlacer(3, 2, 4),
+                new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(ModBlocks.WALNUT_TREE_LEAVES.get().defaultBlockState(), 4).add(ModBlocks.WALNUT_TREE_FRUITING_LEAVES.get().defaultBlockState(), 1).build()),
                 new CherryFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(4), 0.25F, 0.5F, 0.16666667F, 0F),
                 new TwoLayersFeatureSize(1, 1, 0)).build());
         register(context, BANANA_FRUIT_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(

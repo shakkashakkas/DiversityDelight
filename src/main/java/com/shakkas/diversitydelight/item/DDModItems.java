@@ -58,6 +58,8 @@ public class DDModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.MANGO)));
     public static final DeferredItem<Item> OATS = ITEMS.register("oats",
             () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
+    public static final DeferredItem<Item> OAT_SEEDS = ITEMS.register("oat_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.OATS_CROP.get(), new Item.Properties()));
     public static final DeferredItem<Item> ORANGE = ITEMS.register("orange",
             () -> new Item(new Item.Properties().food(ModFoodProperties.ORANGE)));
     public static final DeferredItem<Item> PEA = ITEMS.register("pea",
@@ -65,7 +67,7 @@ public class DDModItems {
     public static final DeferredItem<Item> PEA_SEEDS = ITEMS.register("pea_seeds",
             () -> new ItemNameBlockItem(ModBlocks.PEA_CROP.get(), new Item.Properties().food(ModFoodProperties.PEA_SEEDS)));
     public static final DeferredItem<Item> PEANUT = ITEMS.register("peanut",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
+            () -> new ItemNameBlockItem(ModBlocks.PEANUT_CROP.get(), new Item.Properties().food(ModFoodProperties.PEA_SEEDS)));
     public static final DeferredItem<Item> PEAR = ITEMS.register("pear",
             () -> new Item(new Item.Properties().food(ModFoodProperties.PEAR)));
     public static final DeferredItem<Item> PINEAPPLE = ITEMS.register("pineapple",
@@ -77,7 +79,7 @@ public class DDModItems {
     public static final DeferredItem<Item> SOY = ITEMS.register("soy",
             () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
     public static final DeferredItem<Item> SOY_BEANS = ITEMS.register("soy_beans",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
+            () -> new ItemNameBlockItem(ModBlocks.SOY_CROP.get(),new Item.Properties().food(ModFoodProperties.PINEAPPLE)));
     public static final DeferredItem<Item> WALNUT = ITEMS.register("walnut",
             () -> new Item(new Item.Properties().food(ModFoodProperties.BANANA)));
 

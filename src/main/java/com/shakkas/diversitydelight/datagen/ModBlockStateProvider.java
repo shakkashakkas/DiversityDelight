@@ -57,11 +57,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.customStageBlock(ModBlocks.BROCCOLI_CROP.get(), mcLoc("cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
         this.customStageBlock(ModBlocks.CAULIFLOWER_CROP.get(), mcLoc("cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
         this.customStageBlock(ModBlocks.CELERY_CROP.get(), mcLoc("crop"), "crop", CeleryCropBlock.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
-        this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.BELL_PEPPER_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
+        this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.BELL_PEPPER_CROP.get(), resourceBlock("crop_cross"), "cross", DoubleCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 3, 4, 5, 6));
         this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.PEA_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
         this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.GREEN_BEAN_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
         this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.CHILI_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
         this.customStageBlock(ModBlocks.PINEAPPLE_CROP.get(), resourceBlock("crop_cross"), "cross", PineappleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 4, 5));
+        this.customStageBlock(ModBlocks.OATS_CROP.get(), mcLoc("crop"), "crop", OatsCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7));
+        this.customStageBlock(ModBlocks.PEANUT_CROP.get(), mcLoc("crop"), "crop", PeanutCropBlock.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
+        this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.SOY_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 3, 4, 5, 6));
 
         this.customStageBlock(ModBlocks.KIWI_BUDDING_CROP.get(), resourceBlock("crop_cross"), "cross", BuddingKiwiBlock.AGE, Arrays.asList(0, 1, 2, 3));
         //this.customStageBlock(ModBlocks.KIWI_CROP.get(), mcLoc("cross"), "cross", KiwiVineBlock.VINE_AGE, Arrays.asList(0, 1, 2, 3));

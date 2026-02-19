@@ -49,6 +49,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.LEMON.get());
         basicItem(DDModItems.MANGO.get());
         basicItem(DDModItems.OATS.get());
+        basicItem(DDModItems.OAT_SEEDS.get());
         basicItem(DDModItems.ORANGE.get());
         basicItem(DDModItems.PEA.get());
         basicItem(DDModItems.PEA_SEEDS.get());

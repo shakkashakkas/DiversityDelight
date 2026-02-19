@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-15T19:34:12.7864646	Item Models: diversitydelight
+// 1.21.1	2026-02-16T18:33:21.5999017	Item Models: diversitydelight
 d21e24a1eb2da5f49a0a6f25d588ad0dfb125645 assets/diversitydelight/models/item/almond.json
 9b086300eee0f5d279f9b99664a5009b8ac52583 assets/diversitydelight/models/item/almond_tree_sapling.json
 cb1093e1333e0ea4af402ed9e1a0a5016fd5ef3f assets/diversitydelight/models/item/apple_pear_crumble.json
@@ -75,6 +75,7 @@ ed12e1dec708477e317af43a9b4393ff0b7ceec3 assets/diversitydelight/models/item/may
 2affaa443e642fcb47c6d9483ddf33d9880d1f2e assets/diversitydelight/models/item/mixed_vegetable_medley.json
 9b810185e5b9d37fafb420b9852f800f5047a90e assets/diversitydelight/models/item/oatmeal_cookie.json
 0a6e8ac19890c7adcb9f321e81906f9404e7fa84 assets/diversitydelight/models/item/oats.json
+8ba0bb20ed326e3e04f5c6d260061970f0bfc7e3 assets/diversitydelight/models/item/oat_seeds.json
 9dbdead0a5a33066378ccc09f7c513bfeb328fee assets/diversitydelight/models/item/orange.json
 a836faa5b2af925ab7336386962e08f05a03850b assets/diversitydelight/models/item/orange_chicken.json
 7496d0d15e66d6d0944a7db7089aa93708558eda assets/diversitydelight/models/item/orange_juice.json

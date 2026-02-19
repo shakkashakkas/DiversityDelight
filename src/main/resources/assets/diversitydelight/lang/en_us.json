@@ -19,6 +19,7 @@
   "item.diversitydelight.lemon": "Lemon",
   "item.diversitydelight.mango": "Mango",
   "item.diversitydelight.oats": "Oats",
+  "item.diversitydelight.oat_seeds": "Oats",
   "item.diversitydelight.orange": "Orange",
   "item.diversitydelight.pea": "Pea",
   "item.diversitydelight.pea_seeds": "Pea Seeds",
@@ -197,6 +198,12 @@
   "item.diversitydelight.fruit_probe.mode_mutation": "Set to mutation mode",
   "item.diversitydelight.fruit_probe.mode_yield": "Set to yield mode",
   "item.diversitydelight.fruit_probe.mode_growth": "Set to growth mode",
+
+  "effect.diversitydelight.relaxed": "Relaxed",
+  "effect.diversitydelight.sturdy": "Sturdy",
+  "effect.diversitydelight.lightfooted": "Lightfooted",
+  "effect.diversitydelight.enrichment": "Enrichment",
+  "effect.diversitydelight.immunity": "Immunity",
 
   "creativetab.diversitydelight.crop_items": "Diversity Delight",
 

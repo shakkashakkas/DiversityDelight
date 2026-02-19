@@ -46,6 +46,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PINEAPPLE_CROP = BLOCKS.register("pineapple_crop",
             () -> new PineappleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
+    public static final DeferredBlock<Block> OATS_CROP = BLOCKS.register("oats_crop",
+            () -> new OatsCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+    public static final DeferredBlock<Block> PEANUT_CROP = BLOCKS.register("peanut_crop",
+            () -> new PeanutCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CARROTS)));
+    public static final DeferredBlock<Block> SOY_CROP = BLOCKS.register("soy_crop",
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),5,DDModItems.SOY,DDModItems.SOY_BEANS,false));
+
 
     public static final DeferredBlock<Block> WORM_BIN_BLOCK = BLOCKS.register("worm_bin",
                 () -> new WormBinBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COMPOSTER)));

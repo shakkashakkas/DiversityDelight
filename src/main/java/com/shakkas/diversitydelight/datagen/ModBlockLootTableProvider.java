@@ -64,6 +64,20 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
                                 .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE))))));
 
+        this.add(ModBlocks.PEANUT_CROP.get(), block -> this.applyExplosionDecay(
+                block, LootTable.lootTable().withPool(LootPool.lootPool().when(
+                                LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.PEANUT_CROP.get())
+                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PeanutCropBlock.AGE, PeanutCropBlock.MAX_AGE))
+                        ).add(LootItem.lootTableItem(DDModItems.PEANUT.get()))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
+                        .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE))))));
+
+        LootItemCondition.Builder oatsLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.OATS_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OatsCropBlock.AGE, OatsCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.OATS_CROP.get(), this.createCropDrops(ModBlocks.OATS_CROP.get(),
+                DDModItems.OATS.get(), DDModItems.OAT_SEEDS.get(), oatsLootItemConditionBuilder));
+
 
         LootItemCondition.Builder bellPepperCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.BELL_PEPPER_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoubleCropBlock.AGE, DoubleCropBlock.MAX_AGE));
@@ -88,6 +102,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ModBlocks.CHILI_CROP.get(), this.createCropDrops(ModBlocks.CHILI_CROP.get(),
                 DDModItems.CHILI.get(), DDModItems.CHILI_SEEDS.get(), chiliCropLootItemConditionBuilder));
+
+        LootItemCondition.Builder soyCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.SOY_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoubleCropBlock.AGE, DoubleCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.SOY_CROP.get(), this.createCropDrops(ModBlocks.SOY_CROP.get(),
+                DDModItems.SOY.get(), DDModItems.SOY_BEANS.get(), soyCropLootItemConditionBuilder));
 
 
         dropSelf(ModBlocks.WORM_BIN_BLOCK.get());

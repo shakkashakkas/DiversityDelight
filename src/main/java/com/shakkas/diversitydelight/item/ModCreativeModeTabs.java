@@ -48,6 +48,7 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.CAULIFLOWER_SEEDS);
                         output.accept(DDModItems.CHILI_SEEDS);
                         output.accept(DDModItems.GREEN_BEAN_SEEDS);
+                        output.accept(DDModItems.OAT_SEEDS);
                         output.accept(DDModItems.PEA_SEEDS);
                         output.accept(DDModItems.SOY_BEANS);
 

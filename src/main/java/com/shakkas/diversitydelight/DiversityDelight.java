@@ -5,6 +5,7 @@ import com.mojang.logging.LogUtils;
 import com.shakkas.diversitydelight.block.ModBlocks;
 import com.shakkas.diversitydelight.block.entity.ModBlockEntities;
 import com.shakkas.diversitydelight.component.ModComponents;
+import com.shakkas.diversitydelight.effect.DDModEffects;
 import com.shakkas.diversitydelight.item.ModCreativeModeTabs;
 import com.shakkas.diversitydelight.item.DDModItems;
 import com.shakkas.diversitydelight.world.tree.DDPlacerTypes;
@@ -34,6 +35,7 @@ public class DiversityDelight {
         NeoForge.EVENT_BUS.register(this);
         ModCreativeModeTabs.register(modEventBus);
         DDModItems.register(modEventBus);
+        DDModEffects.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModComponents.register(modEventBus);
         ModBlockEntities.register(modEventBus);

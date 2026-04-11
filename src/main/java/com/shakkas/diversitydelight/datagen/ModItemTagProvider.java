@@ -65,7 +65,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(Tags.Items.FOODS_EDIBLE_WHEN_PLACED).add(
                 DDModItems.CHICKEN_POT_PIE_BLOCK.get(),
                 DDModItems.HAWAIIAN_PIZZA.get(),
-                DDModItems.BANOFFEE_PIE.get(),
                 DDModItems.LEMON_MERINGUE_PIE.get(),
                 DDModItems.PEAR_PIE.get(),
                 DDModItems.FRUIT_FLAN.get()

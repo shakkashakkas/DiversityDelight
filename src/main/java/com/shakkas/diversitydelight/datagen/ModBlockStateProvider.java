@@ -9,10 +9,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.*;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -54,17 +51,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        this.customStageBlock(ModBlocks.BROCCOLI_CROP.get(), mcLoc("cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
-        this.customStageBlock(ModBlocks.CAULIFLOWER_CROP.get(), mcLoc("cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
+        this.customStageBlock(ModBlocks.BROCCOLI_CROP.get(), resourceBlock("crop_cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
+        this.customStageBlock(ModBlocks.CAULIFLOWER_CROP.get(), resourceBlock("crop_cross"), "cross", ColeCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 2, 3, 3, 4));
         this.customStageBlock(ModBlocks.CELERY_CROP.get(), mcLoc("crop"), "crop", CeleryCropBlock.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
-        this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.BELL_PEPPER_CROP.get(), resourceBlock("crop_cross"), "cross", DoubleCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 3, 4, 5, 6));
+        this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.BELL_PEPPER_CROP.get(), resourceBlock("crop_cross"), "cross", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7));
         this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.PEA_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
-        this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.GREEN_BEAN_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
-        this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.CHILI_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
+        this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.GREEN_BEAN_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 3, 4, 5, 6));
+        this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.CHILI_CROP.get(), resourceBlock("crop_cross"), "cross", DoubleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 5, 6));
         this.customStageBlock(ModBlocks.PINEAPPLE_CROP.get(), resourceBlock("crop_cross"), "cross", PineappleCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 3, 4, 4, 5));
         this.customStageBlock(ModBlocks.OATS_CROP.get(), mcLoc("crop"), "crop", OatsCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7));
         this.customStageBlock(ModBlocks.PEANUT_CROP.get(), mcLoc("crop"), "crop", PeanutCropBlock.AGE, Arrays.asList(0, 0, 1, 1, 2, 2, 2, 3));
         this.customDoubleStageBlock((DoubleCropBlock) ModBlocks.SOY_CROP.get(), mcLoc("crop"), "crop", DoubleCropBlock.AGE, Arrays.asList(0, 1, 1, 2, 3, 4, 5, 6));
+        this.cornStageBlock((CornCropBlock) ModBlocks.CORN_CROP.get(), resourceBlock("crop_cross"), "cross", CornCropBlock.AGE, Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7));
 
         this.customStageBlock(ModBlocks.KIWI_BUDDING_CROP.get(), resourceBlock("crop_cross"), "cross", BuddingKiwiBlock.AGE, Arrays.asList(0, 1, 2, 3));
         //this.customStageBlock(ModBlocks.KIWI_CROP.get(), mcLoc("cross"), "cross", KiwiVineBlock.VINE_AGE, Arrays.asList(0, 1, 2, 3));
@@ -90,6 +88,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.crateBlock(ModBlocks.CHILI_CRATE.get(), "chili");
         this.crateBlock(ModBlocks.GREEN_BEAN_CRATE.get(), "green_bean");
         this.crateBlock(ModBlocks.PEA_CRATE.get(), "pea");
+        this.crateBlock(ModBlocks.SOY_CRATE.get(), "soy");
+        this.crateBlock(ModBlocks.CORN_CRATE.get(), "corn");
 
         this.bagBlock(ModBlocks.APPLE_BAG.get());
         this.bagBlock(ModBlocks.BANANA_BAG.get());
@@ -99,13 +99,16 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.bagBlock(ModBlocks.ORANGE_BAG.get());
         this.bagBlock(ModBlocks.PEAR_BAG.get());
         this.bagBlock(ModBlocks.PINEAPPLE_BAG.get());
+        this.bagBlock(ModBlocks.ALMOND_BAG.get());
+        this.bagBlock(ModBlocks.PISTACHIO_BAG.get());
+        this.bagBlock(ModBlocks.PEANUT_BAG.get());
+        this.bagBlock(ModBlocks.WALNUT_BAG.get());
 
         //Feasts
         this.feastBlock((FeastBlock) ModBlocks.CHICKEN_POT_PIE_BLOCK.get());
         this.feastBlock((FeastBlock) ModBlocks.VEGETABLE_STICKS_BLOCK.get());
 
         //Pies and Pizzas
-        this.pieBlock(ModBlocks.BANOFFEE_PIE_BLOCK.get());
         this.pieBlock(ModBlocks.FRUIT_FLAN_BLOCK.get());
         this.pieBlock(ModBlocks.LEMON_MERINGUE_PIE_BLOCK.get());
         this.pieBlock(ModBlocks.PEAR_PIE_BLOCK.get());
@@ -289,6 +292,39 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     int ageSuffix = state.getValue(ageProperty);
                     String upperSuffix = ((state.getValue(HALF) == DoubleBlockHalf.UPPER) && (ageSuffix >= block.getAgeForUpper())) ? "_upper" : "";
                     String stageName = blockName(block) + "_stage";
+                    stageName += suffixes.isEmpty() ? ageSuffix + upperSuffix : suffixes.get(Math.min(suffixes.size(), ageSuffix)) + upperSuffix;
+                    if (parent == null) {
+                        return ConfiguredModel.builder()
+                                .modelFile(models().cross(stageName, resourceBlock(stageName)).renderType("cutout")).build();
+                    }
+                    return ConfiguredModel.builder()
+                            .modelFile(models().singleTexture(stageName, parent, textureKey, resourceBlock(stageName)).renderType("cutout")).build();
+                });
+    }
+
+    public void cornStageBlock(CornCropBlock block, @Nullable ResourceLocation parent, String textureKey, IntegerProperty ageProperty, List<Integer> suffixes, Property<?>... ignored) {
+        getVariantBuilder(block)
+                .forAllStates(state -> {
+                    int ageSuffix = state.getValue(ageProperty);
+                    EnumProperty<CornCropBlock.Section> sectionProperty = block.getSectionProperty();
+                    CornCropBlock.Section section = state.getValue(sectionProperty);
+                    String stageName = blockName(block) + "_stage";
+                    String upperSuffix = "";
+                    switch (section) {
+                        case LOWER -> {
+                            upperSuffix = "";
+                        }
+                        case MIDDLE -> {
+                            if (ageSuffix >= 2) {
+                                upperSuffix = "_middle";
+                            }
+                        }
+                        case UPPER -> {
+                            if (ageSuffix >= 4) {
+                                upperSuffix = "_upper";
+                            }
+                        }
+                    }
                     stageName += suffixes.isEmpty() ? ageSuffix + upperSuffix : suffixes.get(Math.min(suffixes.size(), ageSuffix)) + upperSuffix;
                     if (parent == null) {
                         return ConfiguredModel.builder()

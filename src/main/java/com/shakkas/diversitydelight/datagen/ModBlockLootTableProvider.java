@@ -109,6 +109,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.SOY_CROP.get(), this.createCropDrops(ModBlocks.SOY_CROP.get(),
                 DDModItems.SOY.get(), DDModItems.SOY_BEANS.get(), soyCropLootItemConditionBuilder));
 
+        LootItemCondition.Builder cornCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, CornCropBlock.MAX_AGE));
+
+        this.add(ModBlocks.CORN_CROP.get(), this.createCropDrops(ModBlocks.CORN_CROP.get(),
+                DDModItems.CORN.get(), DDModItems.CORN_KERNELS.get(), cornCropLootItemConditionBuilder));
+
+
 
         dropSelf(ModBlocks.WORM_BIN_BLOCK.get());
 
@@ -132,6 +139,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.CHILI_CRATE.get());
         dropSelf(ModBlocks.GREEN_BEAN_CRATE.get());
         dropSelf(ModBlocks.PEA_CRATE.get());
+        dropSelf(ModBlocks.SOY_CRATE.get());
+        dropSelf(ModBlocks.CORN_CRATE.get());
 
         dropSelf(ModBlocks.APPLE_BAG.get());
         dropSelf(ModBlocks.BANANA_BAG.get());
@@ -141,6 +150,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ORANGE_BAG.get());
         dropSelf(ModBlocks.PEAR_BAG.get());
         dropSelf(ModBlocks.PINEAPPLE_BAG.get());
+        dropSelf(ModBlocks.ALMOND_BAG.get());
+        dropSelf(ModBlocks.PISTACHIO_BAG.get());
+        dropSelf(ModBlocks.PEANUT_BAG.get());
+        dropSelf(ModBlocks.WALNUT_BAG.get());
 
 
         //Fruit Tree
@@ -193,7 +206,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropOther(ModBlocks.GOLDEN_APPLE_TREE_FRUITING_LEAVES.get(), Blocks.AIR);
         dropOther(ModBlocks.EMERALD_PEAR_TREE_FRUITING_LEAVES.get(), Blocks.AIR);
 
-        dropWhenSilkTouch(ModBlocks.BANOFFEE_PIE_BLOCK.get());
         dropWhenSilkTouch(ModBlocks.LEMON_MERINGUE_PIE_BLOCK.get());
         dropWhenSilkTouch(ModBlocks.FRUIT_FLAN_BLOCK.get());
         dropWhenSilkTouch(ModBlocks.PEAR_PIE_BLOCK.get());

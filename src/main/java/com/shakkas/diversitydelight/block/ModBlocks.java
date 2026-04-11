@@ -37,7 +37,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> GREEN_BEAN_CROP = BLOCKS.register("green_bean_crop",
             () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),3,DDModItems.GREEN_BEAN,DDModItems.GREEN_BEAN_SEEDS,true));
     public static final DeferredBlock<Block> CHILI_CROP = BLOCKS.register("chili_crop",
-            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),5,DDModItems.CHILI,DDModItems.CHILI_SEEDS,false));
+            () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),3,DDModItems.CHILI,DDModItems.CHILI_SEEDS,false));
 
     public static final DeferredBlock<Block> KIWI_BUDDING_CROP = BLOCKS.register("kiwi_budding_crop",
             () -> new BuddingKiwiBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
@@ -52,6 +52,8 @@ public class ModBlocks {
             () -> new PeanutCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CARROTS)));
     public static final DeferredBlock<Block> SOY_CROP = BLOCKS.register("soy_crop",
             () -> new DoubleCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT),5,DDModItems.SOY,DDModItems.SOY_BEANS,false));
+      public static final DeferredBlock<Block> CORN_CROP = BLOCKS.register("corn_crop",
+              () -> new CornCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
 
 
     public static final DeferredBlock<Block> WORM_BIN_BLOCK = BLOCKS.register("worm_bin",
@@ -73,6 +75,11 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PEA_CRATE = BLOCKS.register("pea_crate",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
 
+    public static final DeferredBlock<Block> CORN_CRATE = BLOCKS.register("corn_crate",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> SOY_CRATE = BLOCKS.register("soy_crate",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.OAK_PLANKS).strength(2.0F, 3.0F).sound(SoundType.WOOD)));
+
     public static final DeferredBlock<Block> APPLE_BAG = BLOCKS.register("apple_bag",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
     public static final DeferredBlock<Block> BANANA_BAG = BLOCKS.register("banana_bag",
@@ -90,6 +97,15 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PINEAPPLE_BAG = BLOCKS.register("pineapple_bag",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
+    public static final DeferredBlock<Block> ALMOND_BAG = BLOCKS.register("almond_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> PISTACHIO_BAG = BLOCKS.register("pistachio_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> PEANUT_BAG = BLOCKS.register("peanut_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final DeferredBlock<Block> WALNUT_BAG = BLOCKS.register("walnut_bag",
+            () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+
 
     // Feasts
     public static final DeferredBlock<Block> CHICKEN_POT_PIE_BLOCK = BLOCKS.register("chicken_pot_pie_block",
@@ -101,8 +117,6 @@ public class ModBlocks {
             () -> new PieBlock(Block.Properties.ofFullCopy(Blocks.CAKE), DDModItems.PEAR_PIE_SLICE));
     public static final DeferredBlock<Block> LEMON_MERINGUE_PIE_BLOCK = BLOCKS.register("lemon_meringue_pie_block",
             () -> new PieBlock(Block.Properties.ofFullCopy(Blocks.CAKE), DDModItems.LEMON_MERINGUE_PIE_SLICE));
-    public static final DeferredBlock<Block> BANOFFEE_PIE_BLOCK = BLOCKS.register("banoffee_pie_block",
-            () -> new PieBlock(Block.Properties.ofFullCopy(Blocks.CAKE), DDModItems.BANOFFEE_PIE_SLICE));
     public static final DeferredBlock<Block> FRUIT_FLAN_BLOCK = BLOCKS.register("fruit_flan_block",
             () -> new PieBlock(Block.Properties.ofFullCopy(Blocks.CAKE), DDModItems.FRUIT_FLAN_SLICE));
 

@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-11T23:20:47.5656251	Tags for minecraft:item mod id diversitydelight
+// 1.21.1	2026-03-22T15:26:09.2660845	Tags for minecraft:item mod id diversitydelight
 74001fc21de6056968c6130b1d698daa7a6742f7 data/c/tags/item/crops/banana.json
 327519b60f26022bc05929e18773b07e3a132a1f data/c/tags/item/crops/bell_pepper.json
 3fd16d106a50c78968f630ccd4fde636ea88f29a data/c/tags/item/crops/broccoli.json
@@ -20,7 +20,7 @@ cb9eeba92a737fb02c0b8e562afe2f568e714fd8 data/c/tags/item/crops/pear.json
 9afd94d0ca2362fc78823cfaa2dc987db93a4376 data/c/tags/item/foods/cauliflower.json
 4012e78c518c50cdf17e370e392cbf3fbee191e5 data/c/tags/item/foods/celery.json
 7b00c062fe0d02e5c8c31d1048dd3c19fc8aa35f data/c/tags/item/foods/chili.json
-e5346ae88a8fe4d9b2925bd4724edf0b32042bb3 data/c/tags/item/foods/edible_when_placed.json
+37c9908152788745e4b1866b9c6304e2b8b54c68 data/c/tags/item/foods/edible_when_placed.json
 9dada7838082de60027ad170ee73edc1e2203a86 data/c/tags/item/foods/fruit.json
 993605a84028e32513a70ff5c8dc16c15a3b3a97 data/c/tags/item/foods/green_bean.json
 e909308654b77fa2556fc21267dd79fa5fa45378 data/c/tags/item/foods/kiwi.json

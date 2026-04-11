@@ -162,6 +162,7 @@ public class DoubleCropBlock extends CropBlock {
             }
         }
     }
+
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
         if (state.getValue(HALF) == DoubleBlockHalf.UPPER) {

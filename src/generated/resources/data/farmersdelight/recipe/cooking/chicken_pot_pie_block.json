@@ -13,13 +13,13 @@
       "item": "minecraft:carrot"
     },
     {
-      "tag": "c:crops/onion"
+      "item": "diversitydelight:corn"
     },
     {
       "tag": "c:foods/milk"
     },
     {
-      "item": "minecraft:egg"
+      "item": "farmersdelight:bone_broth"
     }
   ],
   "recipe_book_tab": "meals",

@@ -15,10 +15,10 @@
       "item": "minecraft:carrot"
     },
     {
-      "tag": "c:crops/bell_pepper"
+      "item": "diversitydelight:green_bean"
     },
     {
-      "item": "minecraft:brown_mushroom"
+      "item": "diversitydelight:corn"
     }
   ],
   "recipe_book_tab": "meals",

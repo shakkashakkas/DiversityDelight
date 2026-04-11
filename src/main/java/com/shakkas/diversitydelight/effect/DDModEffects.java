@@ -28,6 +28,10 @@ public class DDModEffects {
     );
     public static final Holder<MobEffect> IMMUNITY_EFFECT = MOB_EFFECTS.register("immunity", () -> new ModAttributeEffect(MobEffectCategory.BENEFICIAL, 0x36ebab)
     );
+    public static final Holder<MobEffect> PUNGENT_EFFECT = MOB_EFFECTS.register("pungent", () -> new ModAttributeEffect(MobEffectCategory.BENEFICIAL, 0x36ebab)
+    );
+    public static final Holder<MobEffect> GATHERING_EFFECT = MOB_EFFECTS.register("gathering", () -> new ModAttributeEffect(MobEffectCategory.BENEFICIAL, 0x36ebab)
+    );
 
 
     public static void register(IEventBus eventBus) {

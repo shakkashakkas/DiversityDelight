@@ -43,6 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.CHILI.get());
         basicItem(DDModItems.CHILI_SEEDS.get());
         basicItem(DDModItems.CORN.get());
+        basicItem(DDModItems.CORN_KERNELS.get());
         basicItem(DDModItems.GREEN_BEAN.get());
         basicItem(DDModItems.GREEN_BEAN_SEEDS.get());
         basicItem(DDModItems.KIWI.get());
@@ -64,36 +65,25 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.EMERALD_PEAR.get());
         //HANDHELD
         basicItem(DDModItems.BACON_WRAPPED_GREEN_BEANS.get());
-        basicItem(DDModItems.FRITATA.get());
-        basicItem(DDModItems.SMASHED_PEAS_ON_TOAST.get());
         basicItem(DDModItems.STUFFED_BELL_PEPPER.get());
         basicItem(DDModItems.VEGETABLE_STICKS.get());
 
         basicItem(DDModItems.BANANA_BREAD.get());
         basicItem(DDModItems.FRUIT_ROLLUP.get());
-        basicItem(DDModItems.POACHED_PEAR.get());
-        basicItem(DDModItems.LEMON_JELLY.get());
         basicItem(DDModItems.MANGO_JELLY.get());
         basicItem(DDModItems.KIWI_JELLY.get());
         basicItem(DDModItems.ICE_CREAM_CONE.get());
         basicItem(DDModItems.LEMON_ICE_CREAM.get());
-        basicItem(DDModItems.MANGO_ICE_CREAM.get());
         basicItem(DDModItems.CHOCOLATE_ICE_CREAM.get());
         basicItem(DDModItems.ORANGE_JUICE.get());
-        basicItem(DDModItems.PINEAPPLE_JUICE.get());
         basicItem(DDModItems.BANANA_MILK.get());
-        basicItem(DDModItems.MANGO_YOGHURT.get());
-        basicItem(DDModItems.ORANGE_YOGHURT.get());
-
 
         basicItem(DDModItems.HAWAIIAN_PIZZA.get());
-        basicItem(DDModItems.BANOFFEE_PIE.get());
         basicItem(DDModItems.LEMON_MERINGUE_PIE.get());
         basicItem(DDModItems.PEAR_PIE.get());
         basicItem(DDModItems.FRUIT_FLAN.get());
 
         basicItem(DDModItems.HAWAIIAN_PIZZA_SLICE.get());
-        basicItem(DDModItems.BANOFFEE_PIE_SLICE.get());
         basicItem(DDModItems.LEMON_MERINGUE_PIE_SLICE.get());
         basicItem(DDModItems.PEAR_PIE_SLICE.get());
         basicItem(DDModItems.FRUIT_FLAN_SLICE.get());
@@ -116,19 +106,20 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.CAULIFLOWER_STEAK.get());
         basicItem(DDModItems.CHICKEN_POT_PIE.get());
         basicItem(DDModItems.CHICKEN_POT_PIE_BLOCK.get());
-        basicItem(DDModItems.GREEN_BEAN_CASSEROLE.get());
         basicItem(DDModItems.GREEN_BEAN_ALMONDINE.get());
         basicItem(DDModItems.MIXED_VEGETABLE_MEDLEY.get());
         basicItem(DDModItems.PEA_PESTO_PASTA.get());
         basicItem(DDModItems.VEGETABLE_STICKS_BLOCK.get());
 
         basicItem(DDModItems.APPLE_PEAR_CRUMBLE.get());
+        basicItem(DDModItems.PEANUT_NOODLES.get());
 
         //CONDIMENTS
         basicItem(DDModItems.KETCHUP.get());
         basicItem(DDModItems.MARMALADE.get());
         basicItem(DDModItems.MAYONNAISE.get());
         basicItem(DDModItems.HOT_SAUCE.get());
+        basicItem(DDModItems.PEANUT_BUTTER.get());
 
         //GRAINS,NUTS,LEGUMES ADDITIONS:
         basicItem(DDModItems.SOY_SAUCE.get());
@@ -137,9 +128,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.TOFU.get());
         basicItem(DDModItems.PORRIDGE.get());
         basicItem(DDModItems.CORNBREAD.get());
-        basicItem(DDModItems.CORN_FRITTER.get());
         basicItem(DDModItems.GRANOLA_BAR.get());
-        basicItem(DDModItems.GRILLED_CORN.get());
         basicItem(DDModItems.OATMEAL_COOKIE.get());
         basicItem(DDModItems.PISTACHIO_ICE_CREAM.get());
         basicItem(DDModItems.TACO_SHELL.get());

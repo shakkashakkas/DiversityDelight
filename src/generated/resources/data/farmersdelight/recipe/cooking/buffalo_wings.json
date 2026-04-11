@@ -1,5 +1,6 @@
 {
   "type": "farmersdelight:cooking",
+  "cookingtime": 400,
   "experience": 1.0,
   "ingredients": [
     {
@@ -9,16 +10,16 @@
       "item": "farmersdelight:chicken_cuts"
     },
     {
-      "item": "minecraft:wheat"
+      "item": "diversitydelight:chili"
     },
     {
       "item": "diversitydelight:celery"
     },
     {
-      "item": "diversitydelight:pea_seeds"
+      "item": "diversitydelight:celery"
     },
     {
-      "item": "diversitydelight:pea_seeds"
+      "item": "diversitydelight:pea"
     }
   ],
   "recipe_book_tab": "meals",

@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/cross",
+  "parent": "diversitydelight:block/crop_cross",
   "render_type": "minecraft:cutout",
   "textures": {
     "cross": "diversitydelight:block/cauliflower_crop_stage1"

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "diversitydelight:item/smashed_peas_on_toast"
-  }
-}

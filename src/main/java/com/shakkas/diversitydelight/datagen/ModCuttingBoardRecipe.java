@@ -24,8 +24,6 @@ public class ModCuttingBoardRecipe {
     private static void cuttingFoodstuff(RecipeOutput output) {
         CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DDModItems.HAWAIIAN_PIZZA.get()), Ingredient.of(CommonTags.TOOLS_KNIFE), DDModItems.HAWAIIAN_PIZZA_SLICE.get(), 4)
                 .build(output);
-        CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DDModItems.BANOFFEE_PIE.get()), Ingredient.of(CommonTags.TOOLS_KNIFE), DDModItems.BANOFFEE_PIE_SLICE.get(), 4)
-                .build(output);
         CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DDModItems.LEMON_MERINGUE_PIE.get()), Ingredient.of(CommonTags.TOOLS_KNIFE), DDModItems.LEMON_MERINGUE_PIE_SLICE.get(), 4)
                 .build(output);
         CuttingBoardRecipeBuilder.cuttingRecipe(Ingredient.of(DDModItems.PEAR_PIE.get()), Ingredient.of(CommonTags.TOOLS_KNIFE), DDModItems.PEAR_PIE_SLICE.get(), 4)

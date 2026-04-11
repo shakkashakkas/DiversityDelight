@@ -1,5 +1,6 @@
 {
   "type": "farmersdelight:cooking",
+  "cookingtime": 400,
   "experience": 1.0,
   "ingredients": [
     {
@@ -9,10 +10,13 @@
       "tag": "c:crops/celery"
     },
     {
-      "tag": "c:crops/onion"
+      "item": "farmersdelight:bone_broth"
     },
     {
-      "tag": "c:foods/cooked_pork"
+      "tag": "c:foods/cooked_cod"
+    },
+    {
+      "tag": "c:foods/cooked_salmon"
     },
     {
       "tag": "c:crops/rice"

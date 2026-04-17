@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-11T13:29:03.6797937	Item Models: diversitydelight
+// 1.21.1	2026-04-17T17:07:15.4393268	Item Models: diversitydelight
 d21e24a1eb2da5f49a0a6f25d588ad0dfb125645 assets/diversitydelight/models/item/almond.json
 9b086300eee0f5d279f9b99664a5009b8ac52583 assets/diversitydelight/models/item/almond_tree_sapling.json
 cb1093e1333e0ea4af402ed9e1a0a5016fd5ef3f assets/diversitydelight/models/item/apple_pear_crumble.json
@@ -90,9 +90,8 @@ c32d4289d35710afa44642f29dd59d215bf697a5 assets/diversitydelight/models/item/pis
 1a0b357100a198b53219c7ed8099326615cf7148 assets/diversitydelight/models/item/porridge.json
 aef325eb5f50cc54051d09be2f608a7afccd029e assets/diversitydelight/models/item/soy.json
 5c92897ef75eba59b31f04bd626922e49e7b3285 assets/diversitydelight/models/item/soy_beans.json
-7b1c35efb5b5a2a47177f78b1f5fe46f5777598f assets/diversitydelight/models/item/soy_sauce.json
 ed1ea08bf5b3f472139f90acb20d3008ee77b2df assets/diversitydelight/models/item/stuffed_bell_pepper.json
-e840c84eec51a2b8e5596584150093b376e562bc assets/diversitydelight/models/item/sweet_and_sour_chicken.json
+cd7034e8a54b31aae988bfb0683ec9665b527399 assets/diversitydelight/models/item/sweet_and_sour_pork.json
 658b620d9b06de699794df8489179265d36cfc3f assets/diversitydelight/models/item/sweet_sticky_rice.json
 547fabaad6b6899420c37f2c45a1fcb8b5cb5644 assets/diversitydelight/models/item/taco_shell.json
 60bc7d1602c8e5bcf8a77b1bc4472bd280fa2634 assets/diversitydelight/models/item/teriyaki_chicken.json
@@ -108,8 +107,12 @@ bca63926c6b95a65dca703b9edbdc0eff2e470c7 assets/diversitydelight/models/item/wil
 135f6617975f1ce1d868cfdab4c71506b51734e3 assets/diversitydelight/models/item/wild_cauliflower.json
 9c30bc6db5d73206dcd9ef591f63ebfccef320e9 assets/diversitydelight/models/item/wild_celery.json
 e80e2f9c1ebad6a802ad49f30a1d08709bde85a5 assets/diversitydelight/models/item/wild_chili.json
+811d65f5a23a02c38c505d9c14174310a0df0f22 assets/diversitydelight/models/item/wild_corn.json
 a76f7e9bf8e81213d83d2634840e7ced391164f2 assets/diversitydelight/models/item/wild_green_bean.json
 81cac39bf68a66a9b75c99f02a119b086a3f4c86 assets/diversitydelight/models/item/wild_kiwi.json
+fbca9629f97c689050c651cc9a8b617b1c10dfb4 assets/diversitydelight/models/item/wild_oats.json
 ec41e5fef242b6b004e93711d663a534b2d0086d assets/diversitydelight/models/item/wild_pea.json
+cb026887a6b2bf2014a153a922a030fb92bd1cc4 assets/diversitydelight/models/item/wild_peanut.json
 648e3bc2acc6e9e8d8d0a55320f5f0e09a7979e4 assets/diversitydelight/models/item/wild_pineapple.json
+77de696d495d41db65e85f4124f53eaf14f21a09 assets/diversitydelight/models/item/wild_soy.json
 957a6a75b5bcfe388cba419b79cfc4597145900c assets/diversitydelight/models/item/worm_bin_block.json

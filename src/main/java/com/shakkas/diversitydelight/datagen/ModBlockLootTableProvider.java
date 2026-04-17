@@ -72,6 +72,14 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
                         .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE))))));
 
+        this.add(ModBlocks.CORN_CROP.get(), block -> this.applyExplosionDecay(
+                block, LootTable.lootTable().withPool(LootPool.lootPool().when(
+                                LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.CORN_CROP.get())
+                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, CornCropBlock.MAX_AGE))
+                        ).add(LootItem.lootTableItem(DDModItems.CORN.get()))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F)))
+                        .apply(ApplyBonusCount.addUniformBonusCount(registrylookup.getOrThrow(Enchantments.FORTUNE))))));
+
         LootItemCondition.Builder oatsLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.OATS_CROP.get())
                 .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OatsCropBlock.AGE, OatsCropBlock.MAX_AGE));
 
@@ -109,14 +117,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.SOY_CROP.get(), this.createCropDrops(ModBlocks.SOY_CROP.get(),
                 DDModItems.SOY.get(), DDModItems.SOY_BEANS.get(), soyCropLootItemConditionBuilder));
 
-        LootItemCondition.Builder cornCropLootItemConditionBuilder = LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.CORN_CROP.get())
-                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(CornCropBlock.AGE, CornCropBlock.MAX_AGE));
-
-        this.add(ModBlocks.CORN_CROP.get(), this.createCropDrops(ModBlocks.CORN_CROP.get(),
-                DDModItems.CORN.get(), DDModItems.CORN_KERNELS.get(), cornCropLootItemConditionBuilder));
-
-
-
         dropSelf(ModBlocks.WORM_BIN_BLOCK.get());
 
         // FEASTS
@@ -141,6 +141,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.PEA_CRATE.get());
         dropSelf(ModBlocks.SOY_CRATE.get());
         dropSelf(ModBlocks.CORN_CRATE.get());
+        dropSelf(ModBlocks.OAT_BALE.get());
 
         dropSelf(ModBlocks.APPLE_BAG.get());
         dropSelf(ModBlocks.BANANA_BAG.get());

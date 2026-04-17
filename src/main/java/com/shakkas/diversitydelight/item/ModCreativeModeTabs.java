@@ -98,7 +98,7 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.CEREAL_BOWL);
                         output.accept(DDModItems.ORANGE_CHICKEN);
                         output.accept(DDModItems.PORRIDGE);
-                        output.accept(DDModItems.SWEET_AND_SOUR_CHICKEN);
+                        output.accept(DDModItems.SWEET_AND_SOUR_PORK);
                         output.accept(DDModItems.SWEET_STICKY_RICE);
                         output.accept(DDModItems.TROPICAL_SALAD);
 
@@ -123,7 +123,7 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.MARMALADE);
                         output.accept(DDModItems.MAYONNAISE);
                         output.accept(DDModItems.HOT_SAUCE);
-                        output.accept(DDModItems.SOY_SAUCE);
+                        output.accept(DDModItems.PEANUT_BUTTER);
 
                         //blocks
                         output.accept(DDModItems.WORM_BIN_BLOCK);
@@ -137,6 +137,7 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.PEA_CRATE);
                         output.accept(DDModItems.CORN_CRATE);
                         output.accept(DDModItems.SOY_CRATE);
+                        output.accept(DDModItems.OAT_BALE);
 
                         output.accept(DDModItems.APPLE_BAG);
                         output.accept(DDModItems.BANANA_BAG);
@@ -207,6 +208,10 @@ public class ModCreativeModeTabs {
                         output.accept(DDModItems.WILD_PEA);
                         output.accept(DDModItems.WILD_KIWI);
                         output.accept(DDModItems.WILD_PINEAPPLE);
+                        output.accept(DDModItems.WILD_CORN);
+                        output.accept(DDModItems.WILD_OATS);
+                        output.accept(DDModItems.WILD_PEANUT);
+                        output.accept(DDModItems.WILD_SOY);
 
                         output.accept(DDModItems.FRUIT_PROBE);
                     }).build());

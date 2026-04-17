@@ -22,6 +22,8 @@ public class ModFoodProperties {
         return new MobEffectInstance(ModEffects.NOURISHMENT, duration, 0, false, false);
     }
 
+    public static final FoodProperties ALMOND = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2f)
+            .build();
     public static final FoodProperties BANANA = new FoodProperties.Builder().nutrition(2).saturationModifier(0.5f)
             .build();
     public static final FoodProperties BELL_PEPPER = new FoodProperties.Builder().nutrition(3).saturationModifier(0.3f)
@@ -38,6 +40,8 @@ public class ModFoodProperties {
             .build();
     public static final FoodProperties CHILI = new FoodProperties.Builder().nutrition(1).saturationModifier(0.1f)
             .build();
+    public static final FoodProperties CORN = new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f)
+            .build();
     public static final FoodProperties GREEN_BEAN = new FoodProperties.Builder().nutrition(1).saturationModifier(0.1f)
             .build();
     public static final FoodProperties KIWI = new FoodProperties.Builder().nutrition(2).saturationModifier(0.3f)
@@ -52,11 +56,19 @@ public class ModFoodProperties {
             .build();
     public static final FoodProperties PEA_SEEDS = new FoodProperties.Builder().nutrition(1).saturationModifier(0.1f)
             .build();
+    public static final FoodProperties PEANUT = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2f)
+            .build();
     public static final FoodProperties PEAR = new FoodProperties.Builder().nutrition(3).saturationModifier(0.3f)
             .build();
     public static final FoodProperties PINEAPPLE = new FoodProperties.Builder().nutrition(4).saturationModifier(0.3f)
             .build();
     public static final FoodProperties PINEAPPLE_SLICE = new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f)
+            .build();
+    public static final FoodProperties PISTACHIO = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2f)
+            .build();
+    public static final FoodProperties SOY = new FoodProperties.Builder().nutrition(1).saturationModifier(0.2f)
+            .build();
+    public static final FoodProperties WALNUT = new FoodProperties.Builder().nutrition(2).saturationModifier(0.2f)
             .build();
 
     public static final FoodProperties EMERALD_PEAR = new FoodProperties.Builder().nutrition(3).saturationModifier(0.3f).effect(() -> new MobEffectInstance(MobEffects.DIG_SPEED, 100, 1, false, true),1.0F).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 0, false, true),1.0F)
@@ -123,7 +135,7 @@ public class ModFoodProperties {
             .effect(() -> comfort(SHORT_DURATION),1.0F).build();
     public static final FoodProperties STUFFED_BELL_PEPPER = new FoodProperties.Builder().nutrition(9).saturationModifier(0.6f)
             .build();
-    public static final FoodProperties SWEET_AND_SOUR_CHICKEN = new FoodProperties.Builder().nutrition(9).saturationModifier(0.6f)
+    public static final FoodProperties SWEET_AND_SOUR_PORK = new FoodProperties.Builder().nutrition(9).saturationModifier(0.6f)
             .effect(() -> nourishment(MEDIUM_DURATION),1.0F).build();
 
 

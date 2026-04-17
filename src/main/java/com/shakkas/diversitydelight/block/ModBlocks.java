@@ -97,6 +97,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PINEAPPLE_BAG = BLOCKS.register("pineapple_bag",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
+    public static final DeferredBlock<Block> OAT_BALE = BLOCKS.register("oat_bale",
+            () -> new RotatedPillarBlock(Block.Properties.ofFullCopy(Blocks.HAY_BLOCK)));
+
     public static final DeferredBlock<Block> ALMOND_BAG = BLOCKS.register("almond_bag",
             () -> new Block(Block.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
     public static final DeferredBlock<Block> PISTACHIO_BAG = BLOCKS.register("pistachio_bag",
@@ -142,6 +145,14 @@ public class ModBlocks {
             () -> new WildCropBlock(MobEffects.JUMP, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
     public static final DeferredBlock<Block> WILD_PINEAPPLE = BLOCKS.register("wild_pineapple",
             () -> new WildCropBlock(MobEffects.BLINDNESS, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+    public static final DeferredBlock<Block> WILD_CORN = BLOCKS.register("wild_corn",
+            () -> new WildCropBlock(MobEffects.WEAKNESS, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+    public static final DeferredBlock<Block> WILD_OATS = BLOCKS.register("wild_oats",
+            () -> new WildCropBlock(MobEffects.HUNGER, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+    public static final DeferredBlock<Block> WILD_PEANUT = BLOCKS.register("wild_peanut",
+            () -> new WildCropBlock(MobEffects.DAMAGE_BOOST, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
+    public static final DeferredBlock<Block> WILD_SOY = BLOCKS.register("wild_soy",
+            () -> new WildCropBlock(MobEffects.UNLUCK, 6, Block.Properties.ofFullCopy(Blocks.TALL_GRASS)));
 
     //Fruit Trees
     public static final DeferredBlock<Block> APPLE_TREE_SAPLING = BLOCKS.register("apple_tree_sapling",

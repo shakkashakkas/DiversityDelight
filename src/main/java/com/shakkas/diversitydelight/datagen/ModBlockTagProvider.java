@@ -138,14 +138,21 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.BANANA_BUNCH.get(),
                 ModBlocks.MANGO_TREE_FRUITING_LEAVES.get(),
                 ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(),
-                ModBlocks.PINEAPPLE_CROP.get());
+                ModBlocks.ALMOND_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.PISTACHIO_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.WALNUT_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.CORN_CROP.get(),
+                ModBlocks.PEANUT_CROP.get(),
+                ModBlocks.SOY_CROP.get()
+                );
         tag(CompatibilityTags.SERENE_SEASONS_AUTUMN_CROPS_BLOCK).add(
                 ModBlocks.BROCCOLI_CROP.get(),
                 ModBlocks.BANANA_BUNCH.get(),
                 ModBlocks.KIWI_CROP.get(),
                 ModBlocks.KIWI_BUDDING_CROP.get(),
                 ModBlocks.PEAR_TREE_FRUITING_LEAVES.get(),
-                ModBlocks.PINEAPPLE_CROP.get());
+                ModBlocks.PINEAPPLE_CROP.get(),
+                ModBlocks.OATS_CROP.get());
         tag(CompatibilityTags.SERENE_SEASONS_WINTER_CROPS_BLOCK).add(
                 ModBlocks.BROCCOLI_CROP.get(),
                 ModBlocks.CAULIFLOWER_CROP.get(),
@@ -155,6 +162,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 ModBlocks.CELERY_CROP.get(),
                 ModBlocks.PEA_CROP.get(),
                 ModBlocks.ORANGE_TREE_FRUITING_LEAVES.get(),
-                ModBlocks.LEMON_TREE_FRUITING_LEAVES.get());
+                ModBlocks.LEMON_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.ALMOND_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.PISTACHIO_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.WALNUT_TREE_FRUITING_LEAVES.get(),
+                ModBlocks.PEANUT_CROP.get(),
+                ModBlocks.SOY_CROP.get());
     }
 }

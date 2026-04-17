@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-08T12:54:42.9710573	Loot Tables
+// 1.21.1	2026-04-13T14:22:40.9164436	Loot Tables
 53af49c2ff1c0a7ecd9472b8aa555c3117f58434 data/diversitydelight/loot_table/blocks/almond_bag.json
 f8a07a6ba6dbb52294d407afb9e762428a0335b1 data/diversitydelight/loot_table/blocks/almond_tree_fruiting_leaves.json
 57529d37618dc0f1063d2e78b116c175bb26278e data/diversitydelight/loot_table/blocks/almond_tree_leaves.json
@@ -25,7 +25,7 @@ ccb1ee333ac0292b4b2fd99b9aaefcfeec366ef0 data/diversitydelight/loot_table/blocks
 e14f02c5e7c59c85e44d32fa7e68502a3ece0538 data/diversitydelight/loot_table/blocks/chili_crate.json
 6e9b42cf455114b7d4c859fe56c2eab869b92d5f data/diversitydelight/loot_table/blocks/chili_crop.json
 d092d361d3471506a797b3a2d5e23244abd2696c data/diversitydelight/loot_table/blocks/corn_crate.json
-2bee680789ea61ee26bf9876cf6cc7b32b195fc3 data/diversitydelight/loot_table/blocks/corn_crop.json
+9e682649165e2cb96cade1e4a0ea74151991be6e data/diversitydelight/loot_table/blocks/corn_crop.json
 921cbfd6880b1bdd935802ef4f3d97a1ff1f73c2 data/diversitydelight/loot_table/blocks/emerald_pear_tree_fruiting_leaves.json
 ceaff9c9acd24f72dbd612d7e4190e0ca088d872 data/diversitydelight/loot_table/blocks/fruit_flan_block.json
 1002f9eeb76b212812b89165fd86ef5f0e704648 data/diversitydelight/loot_table/blocks/golden_apple_tree_fruiting_leaves.json
@@ -47,6 +47,7 @@ a3daa88254ed16e054638ea65dfee38b00978540 data/diversitydelight/loot_table/blocks
 5f14f44021186a5e366d03c7b1b44a0310e4b7ec data/diversitydelight/loot_table/blocks/mango_tree_log.json
 c7bb1cb62d8bd34ed8943e9ed007aba980218d63 data/diversitydelight/loot_table/blocks/mango_tree_sapling.json
 568ad36c4cb0cd48bfd9d453b47688a185f13df9 data/diversitydelight/loot_table/blocks/oats_crop.json
+93598be6933d2bbb8ed5c60a21906f099948afa2 data/diversitydelight/loot_table/blocks/oat_bale.json
 0ea64d42b3f28d6105b1c547ccdf76d7d30c9b8e data/diversitydelight/loot_table/blocks/orange_bag.json
 bba10fff8e368c077b44d0724b68af16c6df22d3 data/diversitydelight/loot_table/blocks/orange_tree_fruiting_leaves.json
 a2f8fbd7ec03fd719910ee97df1c6d04e1586147 data/diversitydelight/loot_table/blocks/orange_tree_leaves.json

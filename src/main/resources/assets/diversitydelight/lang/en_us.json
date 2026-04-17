@@ -83,7 +83,7 @@
   "item.diversitydelight.cereal_bowl": "Cereal Bowl",
   "item.diversitydelight.orange_chicken": "Orange Chicken",
   "item.diversitydelight.porridge": "Porridge",
-  "item.diversitydelight.sweet_and_sour_chicken": "Sweet And Sour Chicken",
+  "item.diversitydelight.sweet_and_sour_pork": "Sweet And Sour Pork",
   "item.diversitydelight.sweet_sticky_rice": "Sweet Sticky Rice",
   "item.diversitydelight.tropical_salad": "Tropical Salad",
 
@@ -107,7 +107,6 @@
   "item.diversitydelight.mayonnaise": "Mayonnaise",
   "item.diversitydelight.marmalade": "Marmalade",
   "item.diversitydelight.hot_sauce": "Hot Sauce",
-  "item.diversitydelight.soy_sauce": "Soy Sauce",
   "item.diversitydelight.peanut_butter": "Peanut Butter",
 
   "block.diversitydelight.bell_pepper_crate": "Bell Pepper Crate",
@@ -119,6 +118,7 @@
   "block.diversitydelight.pea_crate": "Pea Crate",
   "block.diversitydelight.corn_crate": "Corn Crate",
   "block.diversitydelight.soy_crate": "Soy Crate",
+  "block.diversitydelight.oat_bale": "Oat Bale",
 
   "block.diversitydelight.apple_bag": "Apple Bag",
   "block.diversitydelight.banana_bag": "Banana Bag",
@@ -190,6 +190,10 @@
   "block.diversitydelight.wild_pea": "Wild Pea",
   "block.diversitydelight.wild_kiwi": "Wild Kiwi",
   "block.diversitydelight.wild_pineapple": "Wild Pineapple",
+  "block.diversitydelight.wild_corn": "Wild Corn",
+  "block.diversitydelight.wild_oats": "Wild Oats",
+  "block.diversitydelight.wild_peanut": "Wild Peanut",
+  "block.diversitydelight.wild_soy": "Wild Soy",
 
   "item.diversitydelight.fruit_probe": "Fruit Probe",
   "item.diversitydelight.fruit_probe.mode_mutation": "Set to mutation mode",

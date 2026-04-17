@@ -261,10 +261,10 @@ public class ModCookingRecipes {
                 .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
                 .build(output);
 
-        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.SWEET_AND_SOUR_CHICKEN.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
+        CookingPotRecipeBuilder.cookingPotRecipe(DDModItems.SWEET_AND_SOUR_PORK.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
                 .addIngredient(DDModItems.BELL_PEPPER.get())
                 .addIngredient(DDCommonTags.FOODS_PINEAPPLE)
-                .addIngredient(CommonTags.FOODS_COOKED_CHICKEN)
+                .addIngredient(CommonTags.FOODS_COOKED_PORK)
                 .addIngredient(ModItems.RICE.get())
                 .addIngredient(ModItems.ONION.get())
                 .unlockedByItems("has_pineapple", DDModItems.PINEAPPLE)

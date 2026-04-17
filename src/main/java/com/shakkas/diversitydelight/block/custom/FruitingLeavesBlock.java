@@ -70,8 +70,14 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
                 int growthChance = getGrowthChance(level,pos,getGrowthGene(level,pos));
                 if (age < this.getMaxAge()) {
                     if (CommonHooks.canCropGrow(level, pos, state, (random.nextInt(growthChance) == 0))) {
-                        level.setBlock(pos, state.setValue(AGE,age+1), 2);
+                        int newAge = age+1;
+                        level.setBlock(pos, state.setValue(AGE,newAge), 2);
                         CommonHooks.fireCropGrowPost(level, pos, state);
+                        if (newAge == MAX_AGE) {
+                            if (level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+                                fruitingLeavesBlockEntity.setPollinated();
+                            }
+                        }
                     }
                 }
             }
@@ -107,6 +113,13 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
         int skyLightFactor = level.canSeeSky(pos) ? 1 : 0;
         int lightLevelFactor = level.getRawBrightness(pos,0);
         return baseChance/((growthGene+1) + ((lightLevelFactor/5)+1) + skyLightFactor);
+    }
+
+    public boolean getPollinationStatus(Level level, BlockPos pos) {
+        if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+            return fruitingLeavesBlockEntity.isPollinated;
+        }
+        return false;
     }
 
     protected Item getCropDrop() {
@@ -145,12 +158,17 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
 
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        int growthBonus = Mth.nextInt(level.random, 1, 2);
+        int growthBonus = Mth.nextInt(level.random, 0, 1);
         int newAge = getAge(state) + growthBonus;
         if (newAge > MAX_AGE) {
             newAge = MAX_AGE;
         }
         level.setBlock(pos, state.setValue(AGE, newAge), 2);
+        if (newAge == MAX_AGE) {
+            if (level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+                fruitingLeavesBlockEntity.setPollinated();
+            }
+        }
     }
 
     @Override
@@ -161,7 +179,7 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
             popResource(level, pos, new ItemStack(getCropDrop(), quantity));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             level.setBlock(pos, state.setValue(AGE, 0), 2);
-            if(level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+            if (level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
                 fruitingLeavesBlockEntity.resetPollination();
             }
             return InteractionResult.SUCCESS;
@@ -178,10 +196,12 @@ public class FruitingLeavesBlock extends LeavesBlock implements BonemealableBloc
     @Override
     public void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
         super.onPlace(state, level, pos, oldState, movedByPiston);
-        if (!level.isClientSide && oldState.getBlock() != state.getBlock()) {
-            if (level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
-                FruitTreeGeneticsProperties genetics = treeGenetics.get();
-                fruitingLeavesBlockEntity.freshGenetics(genetics);
+        if (!level.isClientSide) {
+            if (oldState.getBlock() != state.getBlock()) {
+                if (level.getBlockEntity(pos) instanceof FruitingLeavesBlockEntity fruitingLeavesBlockEntity) {
+                    FruitTreeGeneticsProperties genetics = treeGenetics.get();
+                    fruitingLeavesBlockEntity.freshGenetics(genetics);
+                }
             }
         }
     }

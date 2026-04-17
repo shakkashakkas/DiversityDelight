@@ -1,5 +1,8 @@
 {
   "values": {
+    "diversitydelight:almond": {
+      "chance": 0.45
+    },
     "diversitydelight:banana": {
       "chance": 0.45
     },
@@ -30,6 +33,12 @@
     "diversitydelight:chili_seeds": {
       "chance": 0.25
     },
+    "diversitydelight:corn": {
+      "chance": 0.45
+    },
+    "diversitydelight:corn_kernels": {
+      "chance": 0.25
+    },
     "diversitydelight:green_bean": {
       "chance": 0.45
     },
@@ -45,6 +54,12 @@
     "diversitydelight:mango": {
       "chance": 0.45
     },
+    "diversitydelight:oat_seeds": {
+      "chance": 0.25
+    },
+    "diversitydelight:oats": {
+      "chance": 0.45
+    },
     "diversitydelight:orange": {
       "chance": 0.45
     },
@@ -54,10 +69,25 @@
     "diversitydelight:pea_seeds": {
       "chance": 0.25
     },
+    "diversitydelight:peanut": {
+      "chance": 0.25
+    },
     "diversitydelight:pear": {
       "chance": 0.45
     },
     "diversitydelight:pineapple": {
+      "chance": 0.45
+    },
+    "diversitydelight:pistachio": {
+      "chance": 0.45
+    },
+    "diversitydelight:soy": {
+      "chance": 0.45
+    },
+    "diversitydelight:soy_beans": {
+      "chance": 0.25
+    },
+    "diversitydelight:walnut": {
       "chance": 0.45
     }
   }

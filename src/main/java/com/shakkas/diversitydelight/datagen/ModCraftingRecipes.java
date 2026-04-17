@@ -96,6 +96,14 @@ public class ModCraftingRecipes {
                 .unlockedBy("has_soy", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.SOY.get()))
                 .save(output);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.OAT_BALE.get(), 1)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', DDModItems.OATS.get())
+                .unlockedBy("has_oats", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.OATS.get()))
+                .save(output);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, DDModItems.APPLE_BAG.get(), 1)
                 .pattern("###")
                 .pattern("###")
@@ -265,6 +273,21 @@ public class ModCraftingRecipes {
                 .unlockedBy("has_pea_crate", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEA_CRATE.get()))
                 .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "pea_from_crate"));
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.SOY, 9)
+                .requires(DDModItems.SOY_CRATE.get())
+                .unlockedBy("has_soy_crate", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.SOY_CRATE.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "soy_from_crate"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.CORN, 9)
+                .requires(DDModItems.CORN_CRATE.get())
+                .unlockedBy("has_corn_crate", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.CORN_CRATE.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "corn_from_crate"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.OATS, 9)
+                .requires(DDModItems.OAT_BALE.get())
+                .unlockedBy("has_oat_bale", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.OAT_BALE.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "oats_from_bale"));
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.BELL_PEPPER_SEEDS.get())
                 .requires(DDModItems.BELL_PEPPER.get())
                 .unlockedBy("has_bell_pepper", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.BELL_PEPPER.get()))
@@ -283,6 +306,11 @@ public class ModCraftingRecipes {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.PEA_SEEDS.get())
                 .requires(DDModItems.PEA.get())
                 .unlockedBy("has_pea", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEA.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.CORN_KERNELS.get(),2)
+                .requires(DDModItems.CORN.get())
+                .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.CORN.get()))
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.APPLE, 9)
@@ -325,6 +353,25 @@ public class ModCraftingRecipes {
                 .unlockedBy("has_pineapple_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PINEAPPLE_BAG.get()))
                 .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "pineapple_from_bag"));
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.ALMOND, 9)
+                .requires(DDModItems.ALMOND_BAG.get())
+                .unlockedBy("has_almond_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ALMOND_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "almond_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.PEANUT, 9)
+                .requires(DDModItems.PEANUT_BAG.get())
+                .unlockedBy("has_peanut_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEANUT_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "peanut_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.PISTACHIO, 9)
+                .requires(DDModItems.PISTACHIO_BAG.get())
+                .unlockedBy("has_pistachio_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PISTACHIO_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "pistachio_from_bag"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.WALNUT, 9)
+                .requires(DDModItems.WALNUT_BAG.get())
+                .unlockedBy("has_walnut_bag", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.WALNUT_BAG.get()))
+                .save(output, ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "walnut_from_bag"));
     }
 
     private static void recipesFoodstuffs(RecipeOutput output) {
@@ -355,15 +402,7 @@ public class ModCraftingRecipes {
                 .requires(Items.GLASS_BOTTLE)
                 .unlockedBy("has_soy", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.SOY.get()))
                 .save(output);
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.SOY_SAUCE.get(), 1)
-                .requires(DDModItems.CHILI.get())
-                .requires(DDModItems.CHILI.get())
-                .requires(DDModItems.BELL_PEPPER.get())
-                .requires(ModItems.APPLE_CIDER.get())
-                .requires(ModItems.ONION.get())
-                .requires(Items.GLASS_BOTTLE)
-                .unlockedBy("has_chili", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.CHILI.get()))
-                .save(output);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.MARMALADE.get(), 1)
                 .requires(DDModItems.ORANGE.get())
                 .requires(DDModItems.ORANGE.get())

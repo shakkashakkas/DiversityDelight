@@ -98,7 +98,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.BANANA_CHIPS.get());
         basicItem(DDModItems.CEREAL_BOWL.get());
         basicItem(DDModItems.ORANGE_CHICKEN.get());
-        basicItem(DDModItems.SWEET_AND_SOUR_CHICKEN.get());
+        basicItem(DDModItems.SWEET_AND_SOUR_PORK.get());
         basicItem(DDModItems.SWEET_STICKY_RICE.get());
         basicItem(DDModItems.TROPICAL_SALAD.get());
         //PLATES
@@ -122,7 +122,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(DDModItems.PEANUT_BUTTER.get());
 
         //GRAINS,NUTS,LEGUMES ADDITIONS:
-        basicItem(DDModItems.SOY_SAUCE.get());
         basicItem(DDModItems.BEEF_TACO.get());
         basicItem(DDModItems.COOKED_TOFU.get());
         basicItem(DDModItems.TOFU.get());
@@ -161,6 +160,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         itemGeneratedModel(DDModItems.WILD_PEA.get());
         itemGeneratedModel(DDModItems.WILD_KIWI.get());
         itemGeneratedModel(DDModItems.WILD_PINEAPPLE.get());
+        itemGeneratedModel(DDModItems.WILD_CORN.get());
+        itemGeneratedModel(DDModItems.WILD_OATS.get());
+        itemGeneratedModel(DDModItems.WILD_PEANUT.get());
+        itemGeneratedModel(DDModItems.WILD_SOY.get());
 
 
 

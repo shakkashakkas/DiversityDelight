@@ -17,5 +17,6 @@ public class ModRecipeProvider extends RecipeProvider {
         ModCuttingBoardRecipe.register(output);
         ModCraftingRecipes.register(output);
         ModCookingRecipes.register(output);
+        ModSmeltingRecipes.register(output);
     }
 }

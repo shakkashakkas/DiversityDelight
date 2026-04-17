@@ -38,7 +38,39 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(DDModItems.GREEN_BEAN_SEEDS.get())
                 .add(DDModItems.PEA_SEEDS.get())
                 .add(DDModItems.KIWI.get())
-                .add(DDModItems.PINEAPPLE.get());
+                .add(DDModItems.PINEAPPLE.get())
+                .add(DDModItems.OAT_SEEDS.get())
+                .add(DDModItems.SOY_BEANS.get())
+                .add(DDModItems.CORN_KERNELS.get());
+
+        tag(net.minecraft.tags.ItemTags.MEAT)
+                .add(DDModItems.COOKED_TOFU.get());
+        tag(net.minecraft.tags.ItemTags.CHICKEN_FOOD)
+                .add(DDModItems.BELL_PEPPER_SEEDS.get())
+                .add(DDModItems.BROCCOLI_SEEDS.get())
+                .add(DDModItems.CAULIFLOWER_SEEDS.get())
+                .add(DDModItems.CHILI_SEEDS.get())
+                .add(DDModItems.GREEN_BEAN_SEEDS.get())
+                .add(DDModItems.PEA_SEEDS.get())
+                .add(DDModItems.OAT_SEEDS.get())
+                .add(DDModItems.SOY_BEANS.get())
+                .add(DDModItems.CORN_KERNELS.get());
+        tag(net.minecraft.tags.ItemTags.PIG_FOOD)
+                .add(DDModItems.CORN.get())
+                .add(DDModItems.OATS.get())
+                .add(DDModItems.SOY.get())
+                .add(DDModItems.PEA.get())
+                .add(DDModItems.GREEN_BEAN.get())
+                .add(DDModItems.BROCCOLI.get())
+                .add(DDModItems.CAULIFLOWER.get())
+                .add(DDModItems.CELERY.get())
+                .add(DDModItems.BELL_PEPPER.get());
+        tag(net.minecraft.tags.ItemTags.COW_FOOD)
+                .add(DDModItems.CORN.get())
+                .add(DDModItems.OATS.get());
+        tag(net.minecraft.tags.ItemTags.SHEEP_FOOD)
+                .add(DDModItems.CORN.get())
+                .add(DDModItems.OATS.get());
     }
 
     private void registerNeoForgeTags() {
@@ -108,8 +140,28 @@ public class ModItemTagProvider extends ItemTagsProvider {
         tag(DDCommonTags.FOODS_PEAR).add(DDModItems.PEAR.get());
         tag(DDCommonTags.FOODS_PINEAPPLE).add(DDModItems.PINEAPPLE.get(), DDModItems.PINEAPPLE_SLICE.get());
 
+        tag(DDCommonTags.CROPS_OATS).add(DDModItems.OATS.get());
+        tag(DDCommonTags.CROPS_CORN).add(DDModItems.CORN.get());
 
-        tag(DDCommonTags.FOODS_LEAFY_GREEN).addTags(DDCommonTags.FOODS_BROCCOLI, DDCommonTags.FOODS_CAULIFLOWER);
+        tag(DDCommonTags.CROPS_SOY).add(DDModItems.SOY.get(),DDModItems.SOY_BEANS.get());
+        tag(DDCommonTags.CROPS_PEANUT).add(DDModItems.PEANUT.get());
+
+        tag(DDCommonTags.CROPS_ALMOND).add(DDModItems.ALMOND.get());
+        tag(DDCommonTags.CROPS_WALNUT).add(DDModItems.WALNUT.get());
+        tag(DDCommonTags.CROPS_PISTACHIO).add(DDModItems.PISTACHIO.get());
+
+        tag(DDCommonTags.FOODS_OATS).add(DDModItems.OATS.get());
+        tag(DDCommonTags.FOODS_CORN).add(DDModItems.CORN.get());
+
+        tag(DDCommonTags.FOODS_SOY).add(DDModItems.SOY.get(),DDModItems.SOY_BEANS.get());
+        tag(DDCommonTags.FOODS_PEANUT).add(DDModItems.PEANUT.get());
+
+        tag(DDCommonTags.FOODS_ALMOND).add(DDModItems.ALMOND.get());
+        tag(DDCommonTags.FOODS_WALNUT).add(DDModItems.WALNUT.get());
+        tag(DDCommonTags.FOODS_PISTACHIO).add(DDModItems.PISTACHIO.get());
+
+        tag(DDCommonTags.FOODS_LEAFY_GREEN).addTags(DDCommonTags.FOODS_BROCCOLI, DDCommonTags.FOODS_CAULIFLOWER, DDCommonTags.FOODS_CELERY);
+        tag(DDCommonTags.FOODS_NUTS).addTags(DDCommonTags.FOODS_ALMOND, DDCommonTags.FOODS_PEANUT,DDCommonTags.FOODS_PISTACHIO,DDCommonTags.FOODS_WALNUT);
 
         tag(DDCommonTags.STORAGE_BLOCKS_ITEM_BELL_PEPPER).add(DDModItems.BELL_PEPPER_CRATE.get());
         tag(DDCommonTags.STORAGE_BLOCKS_ITEM_BROCCOLI).add(DDModItems.BROCCOLI_CRATE.get());
@@ -138,14 +190,21 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(DDModItems.BANANA.get())
                 .add(DDModItems.MANGO.get())
                 .add(DDModItems.PEAR.get())
-                .add(DDModItems.PINEAPPLE.get()
+                .add(DDModItems.PINEAPPLE.get())
+                .add(DDModItems.ALMOND.get())
+                .add(DDModItems.PISTACHIO.get())
+                .add(DDModItems.WALNUT.get())
+                .add(DDModItems.CORN.get())
+                .add(DDModItems.SOY.get())
+                .add(DDModItems.PEANUT.get()
                 );
         tag(CompatibilityTags.SERENE_SEASONS_AUTUMN_CROPS)
                 .add(DDModItems.BROCCOLI.get())
                 .add(DDModItems.BANANA.get())
                 .add(DDModItems.KIWI.get())
                 .add(DDModItems.PEAR.get())
-                .add(DDModItems.PINEAPPLE.get()
+                .add(DDModItems.PINEAPPLE.get())
+                .add(DDModItems.OATS.get()
                 );
         tag(CompatibilityTags.SERENE_SEASONS_WINTER_CROPS)
                 .add(DDModItems.BROCCOLI.get())
@@ -157,7 +216,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(DDModItems.CELERY.get())
                 .add(DDModItems.PEA.get())
                 .add(DDModItems.ORANGE.get())
-                .add(DDModItems.LEMON.get()
+                .add(DDModItems.LEMON.get())
+                .add(DDModItems.ALMOND.get())
+                .add(DDModItems.PISTACHIO.get())
+                .add(DDModItems.WALNUT.get())
+                .add(DDModItems.SOY.get())
+                .add(DDModItems.PEANUT.get()
                 );
     }
 }

@@ -1,5 +1,8 @@
 package com.shakkas.diversitydelight.mixins;
 
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.llamalad7.mixinextras.sugar.Local;
 import com.shakkas.diversitydelight.block.custom.FruitingLeavesBlock;
 import com.shakkas.diversitydelight.block.entity.FruitingLeavesBlockEntity;
 import net.minecraft.core.BlockPos;
@@ -18,9 +21,11 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import javax.annotation.Nullable;
+import java.util.function.Predicate;
 
 @Mixin(targets = "net.minecraft.world.entity.animal.Bee$BeePollinateGoal")
 public abstract class BeePollinateGoalMixIn {
@@ -59,7 +64,9 @@ public abstract class BeePollinateGoalMixIn {
                             }
                         }
                     }
+
                 }
+                fruitingLeavesBlockEntity.setPollinated();
                 updatePollinationStatus(compound,hasPollinatedFlower);
             }
         }
@@ -80,5 +87,16 @@ public abstract class BeePollinateGoalMixIn {
         else {
             compound.putBoolean("hasPollinatedFlower",true);
         }
+    }
+
+    @WrapOperation(method = "findNearestBlock", at = @At(value = "INVOKE", target = "Ljava/util/function/Predicate;test(Ljava/lang/Object;)Z"))
+    private boolean isValidFlowerTarget(Predicate<BlockState> predicate, Object obj, Operation<Boolean> original, @Local BlockPos.MutableBlockPos blockpos$mutableblockpos) {
+        BlockState state = (BlockState) obj;
+        if (state.getBlock() instanceof FruitingLeavesBlock fruitingLeavesBlock) {
+            if (fruitingLeavesBlock.getPollinationStatus(this$0.level(),blockpos$mutableblockpos)) {
+                return false;
+            }
+        }
+        return original.call(predicate,obj);
     }
 }

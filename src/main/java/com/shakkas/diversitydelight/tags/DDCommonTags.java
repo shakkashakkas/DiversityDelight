@@ -59,6 +59,25 @@ public class DDCommonTags {
     public static final TagKey<Item> CROPS_PEAR = commonItemTag("crops/pear");
     public static final TagKey<Item> CROPS_PINEAPPLE = commonItemTag("crops/pineapple");
 
+    public static final TagKey<Item> FOODS_OATS = commonItemTag("foods/oats");
+    public static final TagKey<Item> FOODS_CORN = commonItemTag("foods/corn");
+
+    public static final TagKey<Item> FOODS_SOY = commonItemTag("foods/soy");
+    public static final TagKey<Item> FOODS_PEANUT = commonItemTag("foods/peanut");
+
+    public static final TagKey<Item> FOODS_ALMOND = commonItemTag("foods/almond");
+    public static final TagKey<Item> FOODS_WALNUT = commonItemTag("foods/walnut");
+    public static final TagKey<Item> FOODS_PISTACHIO = commonItemTag("foods/pistachio");
+
+    public static final TagKey<Item> CROPS_OATS = commonItemTag("crops/oats");
+    public static final TagKey<Item> CROPS_CORN = commonItemTag("crops/corn");
+
+    public static final TagKey<Item> CROPS_SOY = commonItemTag("crops/soy");
+    public static final TagKey<Item> CROPS_PEANUT = commonItemTag("crops/peanut");
+
+    public static final TagKey<Item> CROPS_ALMOND = commonItemTag("crops/almond");
+    public static final TagKey<Item> CROPS_WALNUT = commonItemTag("crops/walnut");
+    public static final TagKey<Item> CROPS_PISTACHIO = commonItemTag("crops/pistachio");
 
     public static final TagKey<Item> STORAGE_BLOCKS_ITEM_BELL_PEPPER = commonItemTag("storage_blocks/bell_pepper");
     public static final TagKey<Item> STORAGE_BLOCKS_ITEM_BROCCOLI = commonItemTag("storage_blocks/broccoli");
@@ -78,6 +97,7 @@ public class DDCommonTags {
     public static final TagKey<Item> STORAGE_BLOCKS_ITEM_KIWI = commonItemTag("storage_blocks/kiwi");
 
     public static final TagKey<Item> FOODS_LEAFY_GREEN = commonItemTag("foods/leafy_green");
+    public static final TagKey<Item> FOODS_NUTS = commonItemTag("foods/nuts");
 
     private static TagKey<Block> commonBlockTag(String path) {
         return BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", path));

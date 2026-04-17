@@ -103,6 +103,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.bagBlock(ModBlocks.PISTACHIO_BAG.get());
         this.bagBlock(ModBlocks.PEANUT_BAG.get());
         this.bagBlock(ModBlocks.WALNUT_BAG.get());
+        logBlockAndItem(ModBlocks.OAT_BALE.get());
 
         //Feasts
         this.feastBlock((FeastBlock) ModBlocks.CHICKEN_POT_PIE_BLOCK.get());
@@ -110,8 +111,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         //Pies and Pizzas
         this.pieBlock(ModBlocks.FRUIT_FLAN_BLOCK.get());
-        this.pieBlock(ModBlocks.LEMON_MERINGUE_PIE_BLOCK.get());
         this.pieBlock(ModBlocks.PEAR_PIE_BLOCK.get());
+        this.pieBlock(ModBlocks.LEMON_MERINGUE_PIE_BLOCK.get());
         this.pieBlock(ModBlocks.HAWAIIAN_PIZZA_BLOCK.get());
 
         // Saplings
@@ -136,6 +137,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         this.crossCutOutBlock(ModBlocks.WILD_PEA.get());
         this.crossCutOutBlock(ModBlocks.WILD_KIWI.get());
         this.crossCutOutBlock(ModBlocks.WILD_PINEAPPLE.get());
+        this.crossCutOutBlock(ModBlocks.WILD_CORN.get());
+        this.crossCutOutBlock(ModBlocks.WILD_OATS.get());
+        this.crossCutOutBlock(ModBlocks.WILD_PEANUT.get());
+        this.crossCutOutBlock(ModBlocks.WILD_SOY.get());
 
         leafBlock(ModBlocks.APPLE_TREE_LEAVES.get());
         logBlockAndItem(ModBlocks.ORANGE_TREE_LOG.get());

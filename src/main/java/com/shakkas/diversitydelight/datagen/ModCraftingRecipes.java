@@ -235,6 +235,21 @@ public class ModCraftingRecipes {
                 .requires(DDModItems.BANANA_TREE_STEM.get())
                 .unlockedBy("has_banana_tree_stem", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.BANANA_TREE_STEM.get()))
                 .save(output,ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "jungle_planks_from_banana_tree_stem"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.DARK_OAK_PLANKS, 4)
+                .requires(DDModItems.ALMOND_TREE_LOG.get())
+                .unlockedBy("has_almond_tree_log", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ALMOND_TREE_LOG.get()))
+                .save(output,ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "dark_oak_planks_from_almond_tree_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.BIRCH_PLANKS, 4)
+                .requires(DDModItems.PISTACHIO_TREE_LOG.get())
+                .unlockedBy("has_pistachio_tree_log", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PISTACHIO_TREE_LOG.get()))
+                .save(output,ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "birch_planks_from_pistachio_tree_log"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.OAK_PLANKS, 4)
+                .requires(DDModItems.WALNUT_TREE_LOG.get())
+                .unlockedBy("has_walnut_tree_log", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.WALNUT_TREE_LOG.get()))
+                .save(output,ResourceLocation.fromNamespaceAndPath(DiversityDelight.MODID, "oak_planks_from_walnut_tree_log"));
     }
 
     private static void recipesMaterials(RecipeOutput output) {
@@ -311,6 +326,11 @@ public class ModCraftingRecipes {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.CORN_KERNELS.get(),2)
                 .requires(DDModItems.CORN.get())
                 .unlockedBy("has_corn", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.CORN.get()))
+                .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.SOY_BEANS.get(),2)
+                .requires(DDModItems.SOY.get())
+                .unlockedBy("has_soy", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.SOY.get()))
                 .save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, Items.APPLE, 9)

@@ -42,6 +42,7 @@ public class DoubleCropBlock extends CropBlock {
     private final Supplier<Item> cropDrop;
     private final Supplier<Item> seedDrop;
     private final boolean isTall;
+    private final int FRUITING_AGE = 5;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
 
     public int getAgeForUpper() {
@@ -143,8 +144,9 @@ public class DoubleCropBlock extends CropBlock {
             int age = this.getAge(state);
             boolean upperExists = level.getBlockState(pos.above()).is(this);
             float speed = getGrowthSpeed(state, level, pos);
+            float maturity = (age < FRUITING_AGE) ? 1 : 2;
 
-            if (CommonHooks.canCropGrow(level, pos, state, random.nextInt((int) (25.0F / speed) + 1) == 0)) {
+            if (CommonHooks.canCropGrow(level, pos, state, random.nextInt((int) ((25.0F / speed) + 1))*maturity == 0)) {
                 if (age < this.getMaxAge()) {
                     level.setBlock(pos, this.getStateForAge(age + 1).setValue(HALF,DoubleBlockHalf.LOWER), 2);
                     CommonHooks.fireCropGrowPost(level, pos, state);
@@ -194,14 +196,14 @@ public class DoubleCropBlock extends CropBlock {
             popResource(level, pos, new ItemStack(this.getCropDrop(), quantity));
             level.playSound(null, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             if (state.getValue(HALF) == DoubleBlockHalf.LOWER) {
-                level.setBlock(pos, state.setValue(getAgeProperty(), 5), 2);
+                level.setBlock(pos, state.setValue(getAgeProperty(), FRUITING_AGE), 2);
                 if (upperExists) {
-                    level.setBlock(pos.above(), this.defaultBlockState().setValue(AGE,5).setValue(HALF,DoubleBlockHalf.UPPER), 2);
+                    level.setBlock(pos.above(), this.defaultBlockState().setValue(AGE,FRUITING_AGE).setValue(HALF,DoubleBlockHalf.UPPER), 2);
                 }
             }
             else {
-                level.setBlock(pos, this.defaultBlockState().setValue(AGE,5).setValue(HALF,DoubleBlockHalf.UPPER), 2);
-                level.setBlock(pos.below(), this.defaultBlockState().setValue(AGE,5).setValue(HALF,DoubleBlockHalf.LOWER), 2);
+                level.setBlock(pos, this.defaultBlockState().setValue(AGE,FRUITING_AGE).setValue(HALF,DoubleBlockHalf.UPPER), 2);
+                level.setBlock(pos.below(), this.defaultBlockState().setValue(AGE,FRUITING_AGE).setValue(HALF,DoubleBlockHalf.LOWER), 2);
             }
 
             return InteractionResult.SUCCESS;

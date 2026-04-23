@@ -432,6 +432,16 @@ public class ModCraftingRecipes {
                 .requires(Items.GLASS_BOTTLE)
                 .unlockedBy("has_orange", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.ORANGE.get()))
                 .save(output);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.PEANUT_BUTTER.get(), 1)
+                .requires(DDModItems.PEANUT.get())
+                .requires(DDModItems.PEANUT.get())
+                .requires(DDModItems.PEANUT.get())
+                .requires(DDModItems.PEANUT.get())
+                .requires(Items.SUGAR)
+                .requires(Items.GLASS_BOTTLE)
+                .unlockedBy("has_peanut", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.PEANUT.get()))
+                .save(output);
     }
 
     private static void recipesCraftedMeals(RecipeOutput output) {
@@ -502,10 +512,10 @@ public class ModCraftingRecipes {
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, DDModItems.GRANOLA_BAR.get(), 1)
                 .requires(DDModItems.OATS.get())
-                .requires(DDModItems.WALNUT.get())
-                .requires(DDModItems.PISTACHIO.get())
-                .requires(DDModItems.ALMOND.get())
-                .requires(DDModItems.PEANUT.get())
+                .requires(DDModItems.OATS.get())
+                .requires(DDCommonTags.FOODS_NUTS)
+                .requires(DDCommonTags.FOODS_NUTS)
+                .requires(DDCommonTags.FOODS_NUTS)
                 .requires(Items.SWEET_BERRIES)
                 .unlockedBy("has_oats", InventoryChangeTrigger.TriggerInstance.hasItems(DDModItems.OATS.get()))
                 .save(output);

@@ -2,10 +2,12 @@
   "required": true,
   "package": "com.shakkas.diversitydelight.mixins",
   "compatibilityLevel": "JAVA_21",
+  "plugin": "com.shakkas.diversitydelight.mixins.DDMixinPlugin",
   "mixins": [
     "ItemRendererMixIn",
     "BeeMixIn",
-    "BeePollinateGoalMixIn"
+    "BeePollinateGoalMixIn",
+    "BeePollinateGoalProductiveBeesMixIn"
   ],
   "injectors": {
     "defaultRequire": 1
